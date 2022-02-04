@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-051 Barry Burton
+  m_EditorClassIdentifier: 
+  Name: Barry Burton
+  ID: CH-051
+  Edition: Mercenaries
+  CardEffect: 'Level 1 (7): When Barry defeats an infected with 70 or less health
+    look at the top card of the mansion. If that card is an infected that has less
+    health than the infected that Barry defeated before it this turn automatically
+    defeat that infected'
+  Health: 110
+  Lvl1Req: 7
+  Lvl2Req: 999

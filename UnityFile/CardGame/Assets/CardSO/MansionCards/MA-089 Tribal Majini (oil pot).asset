@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: MA-089 Tribal Majini (oil pot)
+  m_EditorClassIdentifier: 
+  Name: Tribal Majini (oil pot)
+  ID: MA-089
+  Edition: Mercenaries
+  CardEffect: When revealed each player removes the top card from a pile of their
+    choice in the resource area from the game
+  Type: Infected
+  Cost: 0
+  Ammo: 0
+  Damage: 10
+  Health: 15
+  Decorations: 1

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: AC-043 The Mercenaries
+  m_EditorClassIdentifier: 
+  Name: The Mercenaries
+  ID: AC-043
+  Edition: Mercenaries
+  CardEffect: Choose another player. That player reveals his hand and discards a
+    weapon of your choice. One of your characters deals an additional X damage during
+    this turn where X equals the damage of the discarded weapon
+  Type: Action
+  Cost: 70
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

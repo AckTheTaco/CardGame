@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-020 Claire Redfield
+  m_EditorClassIdentifier: 
+  Name: Claire Redfield
+  ID: CH-020
+  Edition: Alliance
+  CardEffect: 'Level 1 (3): When you trash a "Green Herb" or "Red Herb" from your
+    hand Claire deals an additional 20 damage during this turn; Level 2 (7): When
+    you trash a "Green Herb" and a "Red Herb" from your hand double all damage Claire
+    deals during this turn'
+  Health: 80
+  Lvl1Req: 3
+  Lvl2Req: 7

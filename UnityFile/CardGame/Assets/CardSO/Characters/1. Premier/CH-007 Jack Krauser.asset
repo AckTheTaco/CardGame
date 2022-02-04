@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-007 Jack Krauser
+  m_EditorClassIdentifier: 
+  Name: Jack Krauser
+  ID: CH-007
+  Edition: Premier
+  CardEffect: "Level 1 (1): At the beginning of your turn you may gain one \u201CKnife\u201D
+    weapon from the resource area; Level 2 (7): All your \u201CKnife\u201D weapons
+    get +5 damage"
+  Health: 80
+  Lvl1Req: 1
+  Lvl2Req: 7

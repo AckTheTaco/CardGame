@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: AC-042 Fight or Flight
+  m_EditorClassIdentifier: 
+  Name: Fight or Flight
+  ID: AC-042
+  Edition: Mercenaries
+  CardEffect: You get +2 cards. When an infected is revealed you may trash this card
+    from your hand. If you do move that infected to the bottom of the mansion if
+    it has more health than an exploring character
+  Type: Action
+  Cost: 40
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

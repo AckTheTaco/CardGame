@@ -1,0 +1,5 @@
+IT-001,Green Herb,Premier,Item,20,null,null,Trash this item to heal a character's health by 20~ or~ trash 2 green herbs to heal a character's health by 60
+IT-003,First Aid Spray,Premier,Item,60,null,null,Trash this item to fully heal one character
+IT-004,Red Herb,Alliance,Item,20,null,null,"Trash this item and a ""Green Herb"" to fully heal all characters"
+IT-005,First Aid Spray,Mercenaries,Item,50,null,null,If your character has 30 or less health~ heal his health by 50. Otherwise~ heal his health by 30. Then~ trash this item
+IT-001,Green Herb (2),Alliance,Item,20,null,null,Trash this item to heal a character's health by 20~ or~ trash two green herbs to heal a character's health by 60

@@ -1,0 +1,99 @@
+MA-022,Lurker,Alliance,Infected,10,10,1,null
+MA-023,Infected Bat,Alliance,Infected,15,20,1,This infected gets +20 health if it is being attacked with another infected
+MA-035,Los Illuminados Monk,Alliance,Infected,15,20,3,This infected gets +5 health and +5 damage for each infected attached to the exploring main character
+MA-027,Zombie (male),Alliance,Infected,20,10,1,null
+MA-028,Kipepeo (Las Plagas),Alliance,Infected,20,20,1,null
+MA-030,Cephalo (Las Plagas),Alliance,Infected,25,20,2,When defeated~ choose a player. That player must explore on his next turn
+MA-033,Zombie Horde,Alliance,Infected,30,20,2,null
+MA-037,Guardian of Insanity,Alliance,Infected,30,20,2,When revealed~ each characters takes 10 damage
+MA-024,Licker Beta,Alliance,Infected,35,20,3,null
+MA-036,Reaper,Alliance,Infected,35,40,4,If not defeated with damage equal to its health~ trash 1 card with the highest cost attached to your partner
+MA-026,Garrador,Alliance,Infected,50,40,4,null
+MA-032,Iron Maiden,Alliance,Infected,50,30,4,null
+MA-034,Nosferatu,Alliance,Infected,55,30,4,null
+MA-025,Duvalia (Las Plagas),Alliance,Infected,60,40,5,"When this infected kills a character~ the player with the most decorations gains five ""Ammo x 10"" cards "
+MA-031,Proto Tyrant,Alliance,Infected,60,40,5,When revealed~ all non-exploring characters with 50 or more health take 40 damage
+MA-029,Albert Wesker,Alliance,Infected,90,70,8,All other revealed infected get +10 health and +10 damage this turn
+MA-038,Explosive Barrel,Alliance,Event,null,null,null,When revealed~ if the exploring characters are dealing 80 or more total damage~ each of them takes 30 damage. Otherwise~ your characters collectively deal an additional 30 damage and you get +1 explore. Then. Remove this event from the game 
+MA-029,Collapsing Floor Trap,Alliance,Event,null,null,null,When revealed~ reveal the top two cards of the mansion. Your characters are now battling any revealed infected. Shuffle any non-infected cards revealed in this way into the mansion. Then~ emove this event from the game
+MA-040,Laser Targeting Device,Alliance,Event,null,null,null,When revealed~ look at the top card of the mansion. If it is an infected~ attach it to your character~ then shuffle the LTD back into the mansion. Otherwise~ shuffle the revealed card and the LTD into the mansion 
+MA-059,Militia (flail),Nightmare,Infected,15,10,1,null
+MA-062,Novistador,Nightmare,Infected,15,10,1,When revealed~ if the exploring player has three or more actions in his play area~ this infected cannot be defeated this turn
+MA-063,Zombie Security Guard,Nightmare,Infected,15,10,1,When defeated~ the exploring player gets +20 gold and +1 buy this turn
+MA-060,Militia (stun rod),Nightmare,Infected,20,10,1,null
+MA-064,Zombie Technician,Nightmare,Infected,20,20,2,null
+MA-066,Ivy,Nightmare,Infected,20,20,1,When defeated~ the exploring player heals his characters by 20
+MA-058,Colmillos,Nightmare,Infected,30,20,2,null
+MA-061,Militia (rocket launcher),Nightmare,Infected,30,0,2,When revealed~ the exploring characters each take 50 damage minus 10 for each card in you inventory
+MA-067,Neptune,Nightmare,Infected,30,10,2,When revealed~ this infected gets +30 damage if an exploring character has 30 or more damage on him
+MA-069,Cerberus ,Nightmare,Infected,30,10,1,When revealed~ this infected gets -20 health if the exploring player is using 2 or more weapons
+MA-056,Regenerator,Nightmare,Infected,40,20,4,When revealed~ all weapons that are being used each get -10 damage this turn
+MA-065,Verdugo,Nightmare,Infected,40,30,4,When revealed~ if the exploring player has 5 or fewer cards in his inventory~ this infected cannot be defeated this turn
+MA-068,Hunter,Nightmare,Infected,40,30,4,When revealed~ the player with the most decorations lowers each of his character's maximum health by 20
+MA-057,Jack Krauser,Nightmare,Infected,50,30,4,When defeated~ the exploring player may gain the top card from any one pile in the resource area
+MA-055,Bitores Mendez,Nightmare,Infected,70,50,6,When defeated~ the exploring player takes an extra turn after this one
+MA-054,Osmund Saddler,Nightmare,Infected,90,60,8,"If not defeated~ the exploring player gains one ""Ammo x 10"" card~ then an ""Ammo x 10"" card for each level of his highest level character. Then~ shuffle this infected into the mansion"
+MA-070,Treasure Map,Nightmare,Item,null,null,null,When revealed~ you may attach this card to your character. During your turn~ you may remove this card from the game. If you do~ you get +3 cards and +20 gold during this turn
+MA-071,Hidden Treasure,Nightmare,Item,null,null,null,When revealed~ you get +30 gold and +1 buy during this turn. Remove this card from the game
+MA-072,P.R.L. 412,Nightmare,Event,null,null,null,When revealed~ reveal the top card of the mansion. If it is an infected~ the player with the lowest decoration count automatically defeats it. Then~ remove this card from the game. If the revealed card is not an infected~ shuffle that card and the P.R.L. 412 into the mansion
+MA-044,Grave Zombie,Outbreak,Infected,10,10,1,null
+MA-045,Wasp,Outbreak,Infected,15,0,2,When revealed~ the exploring characters each take 20 damage
+MA-051,Zombie Cop,Outbreak,Infected,15,10,1,null
+MA-049,Reinforced Zombie,Outbreak,Infected,20,10,1,While this infected is attached to a character~ that character's decoration requirements for level 2 are reduced by 1
+MA-052,Eliminator,Outbreak,Infected,20,20,2,null
+MA-046,Web Spinner,Outbreak,Infected,30,10,3,If not defeated~ increase the exploring character's infection level by 1
+MA-047,Reinforced Licker,Outbreak,Infected,30,20,3,When revealed~ weapons with 0 ammo requirement deal 0 damage this turn
+MA-050,Grave Digger,Outbreak,Infected,30,30,3,null
+MA-042,Yawn,Outbreak,Infected,40,30,4,When revealed~ if the exploring character's infection level is 5 or less~ increase it by 2. Otherwise~ increase it by 1
+MA-048,Crimson Head,Outbreak,Infected,40,20,4,When revealed~ if the exploring character has at least 1 attached infected with “Zombie” in it's name~ this infected gets +10 health and +10 damage this turn
+MA-053,Lisa Trevor,Outbreak,Infected,40,20,0,When defeated~ increase your character's infection level by 1~ then move this infected to the bottom of the mansion
+MA-043,Nemesis (2nd form),Outbreak,Infected,60,40,5,When revealed~ increase the infection level of all characters by 1
+MA-041,Tyrant T-002,Outbreak,Infected,90,70,8,If not defeated~ increase the exploring character's infection level by 1 plus his current ability level. Then~ shuffle this infected into the mansion
+MA-054,Kevlar Jacket,Outbreak,Item,null,null,null,When revealed~ attach this item to your character. When that character would receive any damage~ you may move this card to the bottom of the mansion. If you do~ that character receives no damage during this turn
+MA-055,Antivirus,Outbreak,Item,null,null,null,When revealed~ if the exploring character's infection level is 6 or higher~ you may decrease it by 3. Then~ either move this card to the bottom of the mansion or remove it from the game
+MA-057,Rock Trap,Outbreak,Event,null,null,null,When revealed~ the exploring characters each take 10 damage for each action card in your play area. Then~ remove this event from the game
+MA-056,Laser Trap,Outbreak,Event,null,null,null,When revealed~ the exploring characters each take 20 damage for each different card type in tour play area. Then~ remove this card from the game
+MA-005,Bui Kitchwa,Premier,Infected,10,10,1,null
+MA-001,Majini,Premier,Infected,15,10,1,null
+MA-003,Zombie (female),Premier,Infected,15,10,1,When defeated~ choose a player. That player cannot play actions on his next turn
+MA-004,Zombie Butcher,Premier,Infected,15,10,1,When defeated~ choose a player. That player skips his next turn
+MA-002,Zombie (male),Premier,Infected,20,20,1,null
+MA-011,Dr. Salvador,Premier,Infected,20,15,2,null
+MA-015,Cerberus,Premier,Infected,25,10,2,null
+MA-009,Mimicry Marcus,Premier,Infected,30,20,2,null
+MA-017,Executioner,Premier,Infected,30,25,3,null
+MA-006,Licker,Premier,Infected,40,30,3,null
+MA-008,Hunter,Premier,Infected,40,30,4,If not defeated~ trash two cards from the exploring player's discard pile
+MA-014,Gatling Gun Majini,Premier,Infected,40,25,4,This infected deals +5 damage for every 10 ammo in the exploring player's play area
+MA-016,El Gigante,Premier,Infected,40,40,4,null
+MA-007,Nemesis (T-Type),Premier,Infected,60,40,5,When revealed~ all characters take 20 damage
+MA-010,Uroboros Aheri,Premier,Infected,90,70,8,If not defeated~ shuffle this infected into the mansion
+IT-002,Yellow Herb,Premier,Item,null,null,null,When revealed~ attach this card to your character. Increase that character's maximum health by 10~ then heal that character by 10
+MA-013,Gatling Gun Case,Premier,Token,null,null,null,Gain one “Gattling Gun” weapon. Then~ remove this card from the game
+MA-012,Rocket Launcher Case,Premier,Token,null,null,null,Gain one “Rocket Launcher” weapon. Then~ remove this card from the game
+MA-078,Red Executioner,Mercenaries,Infected,80,60,8,If not defeated~ move the infected with the highest decoration value that is attached to the exploring character or from the combo pile of that character's player to the bottom of the mansion. Then~ shuffle this infected into the mansion
+MA-073,Town Majini,Mercenaries,Infected,10,10,1,When defeated~ choose another player. That player gains one “Ammo x 10” card
+MA-074,Town Majini (shovel),Mercenaries,Infected,20,20,1,When defeated~ choose a player. That player trashes one card from his hand and replaces it with one “Ammo x 10” card
+MA-075,Giant Majini,Mercenaries,Infected,50,30,4,If not defeated~ if there are fewer than 18 resource piles remaining~ all characters' maximum health is reduced by 20
+MA-076,Base Majini (gun),Mercenaries,Infected,20,20,2,When revealed~ each player removes 1 XP on one of his skills from the game
+MA-077,Chicken,Mercenaries,Infected,5,5,3,This infected is worth 0 decorations while in a combo pile by itself
+MA-079,Big Man Majini,Mercenaries,Infected,40,20,3,If not defeated~ the exploring characters' player gains two “Ammo x 10” cards
+MA-080,Chainsaw Majini,Mercenaries,Infected,50,30,4,When revealed~ the player(s) with the lowest decorations may move up to two cards from their discard pile to the discard pile of the player(s) with the highest decorations
+MA-081,Los Illuminados (shield),Mercenaries,Infected,30,10,2,When revealed~ lower the damage of the weapon(s) the exploring characters are using with the lowest ammo requirement to 0 during this turn
+MA-082,J.J.,Mercenaries,Infected,50,40,4,If not defeated~ the exploring characters' player trashes the top two cards of his inventory. If that player has less than two cards in his inventory~ he trashes his inventory
+MA-083,Los Ganados (male),Mercenaries,Infected,10,15,1,When revealed~ this infected gets +10 health this turn for each infected with the same name as it that are attached to any characters
+MA-084,Los Ganados (female),Mercenaries,Infected,10,10,1,When revealed~ this infected gets +5 health during this turn for each infected attached to the exploring character
+MA-085,Adjule,Mercenaries,Infected,25,20,2,When revealed~ this infected gets -10 damage during this turn if the exploring characters have 3 or more XP on them
+MA-086,Los Illuminados (scythe),Mercenaries,Infected,25,20,2,When revealed~ each player passes one card from his hand (if any) to the player to their left
+MA-087,Venomous Snake,Mercenaries,Infected,10,10,1,null
+MA-088,Tribal Majini (bow),Mercenaries,Infected,15,10,1,When defeated~ the exploring characters' player may move one card in the resource area to an opponent's discard pile
+MA-089,Tribal Majini (oil pot),Mercenaries,Infected,15,10,1,When revealed~ each player removes the top card from a pile of their choice in the resource area from the game
+MA-090,Tribal Majini (shield),Mercenaries,Infected,25,20,2,If not defeated~ trash one weapon with a cost of 40 or less that one of the exploring characters is using
+MA-091,Crocodile,Mercenaries,Infected,40,30,3,When revealed~ each player removes the top card from a pile of their choice in the resource area from the game
+MA-092,Town Majini (motorcycle),Mercenaries,Infected,25,10,2,When revealed~ all players gain one copy of the lowest cost card in the resource area. If cards are tied for lowest cost~ players choose which card they gain
+MA-093,Los Ganados (handscythe),Mercenaries,Infected,20,10,2,When defeated~ the exploring characters' player draws one additional card at the end of this turn
+MA-094,Los Ganados (pitchfork),Mercenaries,Infected,25,20,2,When defeated~ the exploring characters' player may trash one card from any player's discard pile
+MA-095,Los Ganados,Mercenaries,Infected,20,20,1,null
+MA-096,Los Illuminados (bow),Mercenaries,Infected,30,10,2,When defeated~ the exploring characters' player may give 20 damage to any character
+MA-097,Militia (bow),Mercenaries,Infected,20,20,1,null
+MA-098,Base Majini (shield),Mercenaries,Infected,30,10,2,When defeated~ the exploring characters' player may move one card from his hand or discard pile to another player's discard pile

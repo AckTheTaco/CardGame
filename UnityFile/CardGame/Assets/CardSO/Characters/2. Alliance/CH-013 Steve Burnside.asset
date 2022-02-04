@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-013 Steve Burnside
+  m_EditorClassIdentifier: 
+  Name: Steve Burnside
+  ID: CH-013
+  Edition: Alliance
+  CardEffect: 'Level 1 (4): At the beginning of your turn heal Steve by 10; Level
+    2 (8): During your turn you may discard an "Uroboros Injection" from your hand.
+    If you do heal Steve by 20 and he deals an additional 30 damage this turn'
+  Health: 70
+  Lvl1Req: 4
+  Lvl2Req: 8

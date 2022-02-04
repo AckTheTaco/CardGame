@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-042 Leon S. Kennedy
+  m_EditorClassIdentifier: 
+  Name: Leon S. Kennedy
+  ID: CH-042
+  Edition: Nightmare
+  CardEffect: 'Level 1 (3): When Leon defeats an infected you may trash a card from
+    your discard pile. If you do gain a card with a cost up to 20 more than the trashed
+    card; Level 2 (6): When you gain a card you get +1 card'
+  Health: 80
+  Lvl1Req: 3
+  Lvl2Req: 6

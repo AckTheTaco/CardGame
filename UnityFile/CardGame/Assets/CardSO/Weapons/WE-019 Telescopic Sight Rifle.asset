@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: WE-019 Telescopic Sight Rifle
+  m_EditorClassIdentifier: 
+  Name: Telescopic Sight Rifle
+  ID: WE-019
+  Edition: Alliance
+  CardEffect: When your character explores reveal cards from the bottom of the mansion
+    instead of the top
+  Type: Rifle
+  Cost: 50
+  Ammo: 50
+  Damage: 30
+  Health: 0
+  Decorations: 0

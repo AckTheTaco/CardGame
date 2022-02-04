@@ -1,0 +1,58 @@
+AC-001,Mansion Foyer,Premier,Action,30,,,You get +2 Cards
+AC-002,Deadly Aim,Premier,Action,50,,,You get +20 ammo. All weapons played this turn get +10 damage
+AC-003,Shattered Memories,Premier,Action,20,,,Trash up to two cards from your discard pile. Then~ trash this card 
+AC-004,Escape from the Dead City,Premier,Action,70,,,You get +1 card and +2 actions
+AC-005,Reload,Premier,Action,50,,,You get +20 ammo. Return one weapon from your discard pile to your hand
+AC-006,The Merchant,Premier,Action,50,,,You get +10 gold~ +1 card~ and +1 buy
+AC-007,Umbrella Corporation,Premier,Action,50,,,You get +2 cards. Put one card from your hand on top of your inventory
+AC-008,Back to Back,Premier,Action,30,,,You get +10 gold and +1 action. If one of your characters is attacked~ you may discard this card to give one weapon being used -20 damage this turn  
+AC-009,Item Management,Premier,Action,30,,,Trash one ammunition card. Gain an ammunition card that costs up to 30 gold more than the trashed card
+AC-010,Ominous Battle,Premier,Action,60,,,You get +10 gold and +3 cards. Then~ trash a card from your hand
+AC-011,Master of Unlocking,Premier,Action,30,,,You get +1 action. Each other player reveals the top card of his inventory. You may gain one revealed weapon. Then~ discard all the other revealed cards
+AC-012,Struggle for Survival,Premier,Action,30,,,You get +1 action and +1 explore. You may discard this card to reduce the damage of one weapon being used with a cost of 40 gold or less to 0 
+AC-013,Partners,Alliance,Action,30,,,You get +20 ammo and +2 actions. Attach this to your partner if you have one. If this card is attached to your partner at the beginning of the turn~ you get +1 action during this turn
+AC-014,Star-Crossed Duo,Alliance,Action,40,,,You get +2 cards and +1 buy. Attach this card to your partner if you have one. When your character explores~ if your partner is leading with this card attached~ one of your partner's weapons deals +10 damage this turn
+AC-015,Great Ambition,Alliance,Action,50,,,You get +10 gold and +1 action. If you have no partner~ you get +2 cards
+AC-016,Archrival,Alliance,Action,30,,,You get +2 cards. All players discard down to one or fewer cards attached to their partners
+AC-017,Fierce Battle,Alliance,Action,80,,,You get +4 cards. Choose another player. That player gets +1 card.
+AC-018,Uroboros Injection,Alliance,Action,60,,,You get +2 actions and +1 buy. During another player's turn~ you may trash this card to give +20 health to a revealed infected of your choice
+AC-019,Quirck of Fate,Alliance,Action,30,,,You get +1 action. Trash a card from your hand~ then draw a card.
+AC-020,Cornered,Alliance,Action,30,,,"Attach this card to your partner if you have one. At the beginning of your turn~ if there are two ""Cornered"" cards attached to your partner~ trash both. Then~ gain 3 cards with a total combined cost of 100 or less gold and move them to the top of your inventory in any order"
+AC-021,Gathering Forces,Alliance,Action,90,,,You get +20 gold~ +1 action~ and +1 buy. Any cards you gain this turn go to your hand instead of your discard pile.
+AC-022,Desperate Forces,Alliance,Action,70,,,You get +20 ammo and +1 action. Choose a weapon type. All weapons of that type get +10 damage this turn
+AC-023,Power of the t-Virus,Outbreak,Action,20,,,Choose one of your characters. That character deals an additional 20 damage this turn. Then~ you may trash this card to get +20 gold this turn. At the end of this turn~ if you explored or attacked an infected character~ increase your infection level by one
+AC-024,I have this …,Outbreak,Action,40,,,You get +1 card and +1 action. You may reveal a weapon with a cost of 50 or more from your hand. If you do~ you get +1 card
+AC-025,Wesker's Secret,Outbreak,Action,40,,,You get +2 cards. Look at the top four cards of the mansion. If there is an “Antivirus” card among them~ you may reveal it and move it to the top of the mansion. Then~ move all non-revealed cards to the bottom of the mansion in any order
+AC-026,Injection,Outbreak,Action,30,,,You get +1 action. Discard any number of cards from your hand~ then draw the same amount. Then~ you may trash this card. If you do~ decrease your character's infection level by one
+AC-027,By Any Means Necessary,Outbreak,Action,40,,,You get +2 actions. Decrease your character's infection level by any amount. Then~ increase your your character's infection level by the same amount~ minus one
+AC-028,Higher Priorities,Outbreak,Action,70,,,Choose one: you get +3 cards~ or~ +2 actions
+AC-029,Parting Ways,Outbreak,Action,30,,,You get +1 action. You may trash a card from your hand. If you do~ gain a card from the resource area costing up to 20 more than the trashed card
+AC-030,Returned Favor,Outbreak,Action,50,,,You get +2 cards. Attach this card to your character. At the beginning of your turn~ if this card is attached to your character~ you get +1 card. Then~ discard this card
+AC-031,The Gathering Darkness,Outbreak,Action,50,,,Choose another player and trash this card. That player reveals his hand and trashes an ammunition card with the highest cost~ if any. For each 10 ammo provided by the trashed card~ that player moves one “Ammo x 10” card to their hand. 
+IN-001,Claw [infection],Outbreak,Action,null,,,This card deals 10 damage when played. The player controlling a character that you attack can only play one action on his next turn
+IN-002,Virulent Frenzy [infection],Outbreak,Action,null,,,Look at the top three cards of your inventory. Trash all non-infection cards. Move the rest to the top of your inventory in any order
+IN-003,Bile Vomit [infection],Outbreak,Action,null,,,This card deals 5 damage when played. The character that you are attacking takes 5 damage for each other “Bile Vomit” used this turn
+IN-004,Slough Armor [infection],Outbreak,Action,null,,,When your infected character is attacked~ you may discard this card from your hand. If you do~ reduce the damage of one weapon being used by 20
+IN-005,Drag [infection],Outbreak,Action,null,,,While there are two or more non-infected characters still in the game~ a character that you attack this turn cannot attack you back on its next turn
+IN-006,Devour [infection],Outbreak,Action,null,,,This card deals 5 damage when played. Heal your infected character's health by 20 
+IN-007,Infection [infection],Outbreak,Action,null,,,Increase the infection level of the character you are attacking by 1
+AC-032,Lonewolf,Nightmare,Action,80,,,You get +10 ammo. When one of your characters explores~ select one weapon he is using. That weapon gets +5 damage this turn for each card in your discard pile 
+AC-033,High Value Targets,Nightmare,Action,60,,,You get +1 action. You get +5 gold and +5 ammo during this turn for each card in your inventory
+AC-034,Raccoon City PD,Nightmare,Action,50,,,You get +20 ammo. Discard cards from the top of your inventory until you reveal a weapon. Move that weapon to your hand
+AC-035,PDA,Nightmare,Action,20,,,Look at up to the top three cards of your inventory. Trash one of those cards~ then return the others to the top or bottom of your inventory in any order
+AC-036,Toe to Toe,Nightmare,Action,70,,,You get +1 action. Draw one card for every five cards in your inventory
+AC-037,A Gift?,Nightmare,Action,30,,,You get +2 cards. Discard your inventory
+AC-038,Mind Control,Nightmare,Action,80,,,Choose another player. That player reveals his hand. Choose an action card with a cost of 70 or less. That player discards that card~ then~ you copy its bonus icons and effects twice
+AC-039,Long Awaited Dawn,Nightmare,Action,50,,,You get +2 actions. Move up to two cards from a player's discard pile to the top of his inventory in any order
+AC-040,Vengeful Intention,Nightmare,Action,40,,,You get +2 cards. Your character takes 10 damage. You may play as many actions as you like this turn. Each time you play another action this turn~ your character takes 10 damage 
+AC-041,Symbol of Evil,Nightmare,Action,40,,,Attach this card to your character. At the beginning of your turn~ if that character has 10 or less health~ trash this card. Otherwise~ that character takes 10 damage and you get +1 card
+AC-042,Fight or Flight,Mercenaries,Action,40,,,You get +2 cards. When an infected is revealed~ you may trash this card from your hand. If you do~ move that infected to the bottom of the mansion if it has more health than an exploring character
+AC-043,The Mercenaries,Mercenaries,Action,70,,,Choose another player. That player reveals his hand and discards a weapon of your choice. One of your characters deals an additional X damage during this turn~ where X equals the damage of the discarded weapon
+AC-044,Boundless Battlefield,Mercenaries,Action,50,,,You get +3 cards and +1 action. Discard two cards~ then trash one card from your hand
+AC-045,Coup de Grace,Mercenaries,Action,30,,,You get +2 actions. When you explore~ select a weapon that one of your characters is using. That weapon gets +10 damage during this turn for every 5 XP on your character~ up to a maximum of +20 damage
+AC-046,Melee,Mercenaries,Action,20,,,You get +20 ammo and +1 card. One of your characters deals an additional 10 damage during this turn. If you're playing Mercenaries Mode~ remove this card from the game. Then~ increase the amount of turns remaining by one
+AC-047,Anticipation,Mercenaries,Action,20,,,Trash two cards from your hand. If those cards shared the same card type~ you get +20 gold during this turn
+AC-048,Backstab,Mercenaries,Action,40,,,You get +1 action. When one of your characters explores during this turn~ select a player. If you do~ that player moves 1 XP from one of his character's skills to your character. Then~ that player discards a card from his hand
+AC-049,Battle Hardened,Mercenaries,Action,30,,,You get +1 action. Move any number of cards from your hand to the bottom of your inventory~ then draw the same amount. Then~ you may remove 1 XP on one of your characters from the game. If you do~ you get +1 card
+AC-050,Resuscitate,Mercenaries,Action,40,,,You get +20 gold and +1 buy. When a character would have its health reduced to 0 or less~ you may trash this card from your hand or play area. If you do~ set that character's health to 10 instead
+AC-051,Tear Gas,Mercenaries,Action,70,,,You get +1 action. Discard cards from the top of your inventory until you discard a weapon. If you discarded a weapon~ one of your characters deals an additional 10 damage during this turn for each card discarded

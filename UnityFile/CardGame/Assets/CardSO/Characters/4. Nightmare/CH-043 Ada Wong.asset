@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-043 Ada Wong
+  m_EditorClassIdentifier: 
+  Name: Ada Wong
+  ID: CH-043
+  Edition: Nightmare
+  CardEffect: 'Level 1 (1): During your turn if Ada takes damage you get +2 cards;
+    Level 2 (10): When Ada''s health would be reduced to 0 or less set it to 10 instead'
+  Health: 70
+  Lvl1Req: 1
+  Lvl2Req: 10

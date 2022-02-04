@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: AC-044 Boundless Battlefield
+  m_EditorClassIdentifier: 
+  Name: Boundless Battlefield
+  ID: AC-044
+  Edition: Mercenaries
+  CardEffect: You get +3 cards and +1 action. Discard two cards then trash one card
+    from your hand
+  Type: Action
+  Cost: 50
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

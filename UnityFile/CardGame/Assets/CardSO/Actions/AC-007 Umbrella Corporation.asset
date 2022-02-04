@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: AC-007 Umbrella Corporation
+  m_EditorClassIdentifier: 
+  Name: Umbrella Corporation
+  ID: AC-007
+  Edition: Premier
+  CardEffect: You get +2 cards. Put one card from your hand on top of your inventory
+  Type: Action
+  Cost: 50
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

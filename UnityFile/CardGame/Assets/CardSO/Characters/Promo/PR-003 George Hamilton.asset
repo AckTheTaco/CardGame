@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: PR-003 George Hamilton
+  m_EditorClassIdentifier: 
+  Name: George Hamilton
+  ID: PR-003
+  Edition: Promo
+  CardEffect: "Level 1 (2): During your turn you may trash an \"Herb\" from your
+    hand. If it was a \"Green Herb\" you get +1 action. If it was a \"Red Herb\"
+    you get +1 explore; Level 2 (6): At the beginning of your turn you may reveal
+    X \"Herb\" cards in your hand. You get +1 card for each \u201CHerb\u201D revealed
+    this way"
+  Health: 80
+  Lvl1Req: 2
+  Lvl2Req: 6

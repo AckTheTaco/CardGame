@@ -1,0 +1,48 @@
+AM-001,Ammo x 10,Premier,Ammo,0,null,null,null
+AM-002,Ammo x 20,Premier,Ammo,30,null,null,null
+AM-003,Ammo x 30,Premier,Ammo,60,null,null,null
+MA-018,Time Bonus +1,Premier,Bonus,null,null,null,null
+MA-019,Time Bonus +2,Premier,Bonus,null,null,null,null
+MA-020,Time Bonus +3,Premier,Bonus,null,null,null,null
+MA-021,Combo Bonus,Premier,Bonus,null,null,null,null
+AM-001,Ammo x 10,Alliance,Ammo,0,null,null,null
+AM-002,Ammo x 20,Alliance,Ammo,30,null,null,null
+AM-003,Ammo x 30,Alliance,Ammo,60,null,null,null
+MA-018,Time Bonus +1,Alliance,Bonus,null,null,null,null
+MA-019,Time Bonus +2,Alliance,Bonus,null,null,null,null
+MA-020,Time Bonus +3,Alliance,Bonus,null,null,null,null
+MA-021,Combo Bonus,Alliance,Bonus,null,null,null,null
+AM-004,Treasure,Alliance,Ammo,40,null,null,You get +30 gold this turn
+AM-001,Ammo x 10,Mercenaries,Ammo,0,null,null,When you trash this card~ you get +10 gold during this turn
+AM-002,Ammo x 20,Mercenaries,Ammo,30,null,null,When you defeat an infected~ if this ammunition is in your play area~ you may trash it and gain one “Ammo x 30” card. You may use this effect only once per turn
+AM-003,Ammo x 30,Mercenaries,Ammo,60,null,null,At the end of your turn~ if this ammunition is in your play area and you did not explore during this turn~ you may move this card to the top of your inventory
+SK-001,Extension LV. 1,Mercenaries,Skill,1 XP,null,null,At the beginning of your turn~ if there are five or more infected attached to all characters in total or if your team has ten or more decorations~ you get +20 ammo during this turn 
+SK-002,Extension LV. 2,Mercenaries,Skill,4 XP,null,null,At the beginning of your turn~ if there are ten or more infected attached to all characters in total or if your team has twenty or more decorations~ your character deals an additional 10 damage during this turn. Then~ heal your character's health by 20 
+SK-003,Extension LV. 3,Mercenaries,Skill,5 XP,null,null,At the beginning of your turn~ if there are fifteen or more infected attached to all characters in total or if your team has thirty or more decorations~ you get +1 explore during this turn
+SK-004,Medic LV. 1,Mercenaries,Skill,1 XP,null,null,When you would heal your character~ you may heal that amount plus 10 instead
+SK-005,Medic LV. 2,Mercenaries,Skill,2 XP,null,null,When you heal your character~ you may trash one card from your discard pile
+SK-006,Medic LV. 3,Mercenaries,Skill,5 XP,null,null,At the beginning of your turn~ heal your character's health by 20. If your character was already at maximum health~ you may get +1 explore instead
+SK-007,Luck LV. 1,Mercenaries,Skill,1 XP,null,null,While your character is at 20 or more health~ if that character would have its health reduced to 0 or less~ it takes 10 damage instead
+SK-008,Luck LV. 2,Mercenaries,Skill,3 XP,null,null,When your character would receive any damage~ you may negate that damage. If you do~ remove all XP on this skill from the game
+SK-009,Luck LV. 3,Mercenaries,Skill,5 XP,null,null,This skill has the same effect(s) as your other activated skills. If you are playing Mercenaries Mode~ your teammate gets your other activated skill effect(s) instead
+SK-010,Toughness LV. 1,Mercenaries,Skill,2 XP,null,null,When you or your character would be affected by an infected's effect~ you may remove all XP on this skill from the game. If you do~ you or your character are not affected by that effect
+SK-011,Toughness LV. 2,Mercenaries,Skill,3 XP,null,null,Reduce all damage your character takes by 10
+SK-012,Toughness LV. 3,Mercenaries,Skill,4 XP,null,null,When you or your character would be affected by an infected's effect~ you may remove all XP on this skill from the game. If you do~ choose another player or character. That player or character is affected instead
+SK-013,Reversal LV. 1,Mercenaries,Skill,2 XP,null,null,During your turn~ you can give your character 10 damage. If you do~ remove all XP on this skill from the game. Then~ you get +3 cards and +1 action during this turn
+SK-014,Reversal LV. 2,Mercenaries,Skill,3 XP,null,null,During your turn~ you can give your character 20 damage. If you do~ trash up to two cards from your discard pile
+SK-015,Reversal LV. 3,Mercenaries,Skill,4 XP,null,null,When your character explores~ you may remove all XP on the skill from the game. If you do~ your character deals an additional X damage during this turn~ where X equals the mount of damage on that character
+SK-016,Smart Reload LV. 1,Mercenaries,Skill,3 XP,null,null,During your turn~ you may trash an “Ammo” card with a cost of 0 from your hand. If you do~ gain an “Ammo” card with a cost of 30 or less
+SK-017,Smart Reload LV. 2,Mercenaries,Skill,4 XP,null,null,At the beginning of your turn~ you get +10 gold and +10 ammo during this turn
+SK-018,Smart Reload LV. 3,Mercenaries,Skill,5 XP,null,null,During your turn~ while your character is not exploring~ you may move a weapon from your play area to the top of your inventory
+SK-019,Weapon Master LV. 1,Mercenaries,Skill,3 XP,null,null,During your turn~ you may name a weapon type. If you do~ all of your weapons of that type have -10 ammo requirement during this turn
+SK-020,Weapon Master LV. 2,Mercenaries,Skill,5 XP,null,null,When your character explores~ all weapons that character is using get +5 damage during this turn
+SK-021,Weapon Master LV. 3,Mercenaries,Skill,6 XP,null,null,When your character explores~ you may apply the effect of one weapon that character is using twice
+SK-022,Giant Killing LV. 1,Mercenaries,Skill,2 XP,null,null,While your character is exploring~ if an infected with 40 or more health is revealed~ reduce that infected's damage to 0 during this turn
+SK-023,Giant Killing LV. 2,Mercenaries,Skill,4 XP,null,null,While your character is exploring~ if an infected with 40 or more health is revealed~ you may have your character deal an additional 20 damage during this turn
+SK-024,Giant Killing LV. 3,Mercenaries,Skill,6 XP,null,null,While your character is exploring~ if an infected with 40 or more health is revealed~ you may have all of the weapons that character is using each get +10 damage during this turn
+SK-025,Maximizer LV. 1,Mercenaries,Skill,2 XP,null,null,When your character defeats an infected worth two or more decorations~ you get one XP
+SK-026,Maximizer LV. 2,Mercenaries,Skill,3 XP,null,null,During your turn~ you may remove one XP on your character from the game. If you do~ trash one card from your hand
+SK-027,Maximizer LV. 3,Mercenaries,Skill,4 XP,null,null,When your character explores~ you may remove any amount of XP on your character from the game. If you do~ one weapon that character is using gets +10 damage during this turn for each XP removed
+SK-028,Handgun Technique LV. 1,Mercenaries,Skill,4 XP,null,null,All of your “Pistol” weapons have -10 ammo requirement 
+SK-029,Handgun Technique LV. 2,Mercenaries,Skill,5 XP,null,null,"At the beginning of your turn~ you may reveal two ""Pistol"" weapons in your hand. If you do~ you get +1 explore during this turn"
+SK-030,Handgun Technique LV. 3,Mercenaries,Skill,6 XP,null,null,When your character explores~ every “Pistol” weapon that character is using gets +10 damage during this turn

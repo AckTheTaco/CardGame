@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: AC-031 The Gathering Darkness
+  m_EditorClassIdentifier: 
+  Name: The Gathering Darkness
+  ID: AC-031
+  Edition: Outbreak
+  CardEffect: "Choose another player and trash this card. That player reveals his
+    hand and trashes an ammunition card with the highest cost if any. For each 10
+    ammo provided by the trashed card that player moves one \u201CAmmo x 10\u201D
+    card to their hand. "
+  Type: Action
+  Cost: 50
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

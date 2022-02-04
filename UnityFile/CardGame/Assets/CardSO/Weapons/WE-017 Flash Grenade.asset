@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: WE-017 Flash Grenade
+  m_EditorClassIdentifier: 
+  Name: Flash Grenade
+  ID: WE-017
+  Edition: Alliance
+  CardEffect: '"The next time a ""Las Plagas"" infected is revealed this turn defeat
+    it immediately. While your characters are exploring you may move one infected
+    with 20 or less health to the bottom of the mansion. Trash this card after use"'
+  Type: Explosive
+  Cost: 20
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

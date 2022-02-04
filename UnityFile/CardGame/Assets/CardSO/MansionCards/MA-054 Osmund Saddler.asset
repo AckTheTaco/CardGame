@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: MA-054 Osmund Saddler
+  m_EditorClassIdentifier: 
+  Name: Osmund Saddler
+  ID: MA-054
+  Edition: Nightmare
+  CardEffect: '"If not defeated the exploring player gains one ""Ammo x 10"" card
+    then an ""Ammo x 10"" card for each level of his highest level character. Then
+    shuffle this infected into the mansion"'
+  Type: Infected
+  Cost: 0
+  Ammo: 0
+  Damage: 60
+  Health: 90
+  Decorations: 8

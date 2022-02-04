@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: MA-093 Los Ganados (handscythe)
+  m_EditorClassIdentifier: 
+  Name: Los Ganados (handscythe)
+  ID: MA-093
+  Edition: Mercenaries
+  CardEffect: When defeated the exploring characters' player draws one additional
+    card at the end of this turn
+  Type: Infected
+  Cost: 0
+  Ammo: 0
+  Damage: 10
+  Health: 20
+  Decorations: 2

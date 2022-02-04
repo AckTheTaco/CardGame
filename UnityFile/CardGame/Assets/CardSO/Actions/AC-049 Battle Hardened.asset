@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: AC-049 Battle Hardened
+  m_EditorClassIdentifier: 
+  Name: Battle Hardened
+  ID: AC-049
+  Edition: Mercenaries
+  CardEffect: You get +1 action. Move any number of cards from your hand to the bottom
+    of your inventory then draw the same amount. Then you may remove 1 XP on one
+    of your characters from the game. If you do you get +1 card
+  Type: Action
+  Cost: 30
+  Ammo: 0
+  Damage: 0
+  Health: 0
+  Decorations: 0

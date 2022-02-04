@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
+  m_Name: MA-057 Jack Krauser
+  m_EditorClassIdentifier: 
+  Name: Jack Krauser
+  ID: MA-057
+  Edition: Nightmare
+  CardEffect: When defeated the exploring player may gain the top card from any one
+    pile in the resource area
+  Type: Infected
+  Cost: 0
+  Ammo: 0
+  Damage: 30
+  Health: 50
+  Decorations: 4

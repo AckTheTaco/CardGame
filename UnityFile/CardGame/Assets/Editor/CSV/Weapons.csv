@@ -1,0 +1,52 @@
+WE-017,Flash Grenade,Alliance,Explosive,20,0,0,"The next time a ""Las Plagas"" infected is revealed this turn~ defeat it immediately. While your characters are exploring~ you may move one infected with 20 or less health to the bottom of the mansion. Trash this card after use"
+WE-018,Grenade Launcher [F. Grenade],Alliance,Explosive,80,0,20,"All ""Explosive"" weapons your character uses this turn go to your discard pile instead of being trashed"
+WE-019,Telescopic Sight Rifle,Alliance,Rifle,50,50,30,When your character explores~ reveal cards from the bottom of the mansion instead of the top
+WE-020,Riot Shotgun,Alliance,Shotgun,70,60,45,You get +1 explore this turn
+WE-021,Triple Barreled Shotgun [Riot Shotgun],Alliance,Shotgun,90,80,50,You get +2 explore this turn. This weapon gets +10 damage for each infected your characters are battling this turn
+WE-022,Russian Assault Rifle,Alliance,Machine Gun,40,X,X,"You cannot use more than 20 ammo for ""X"""
+WE-023,Signature Special [R. A. Rifle],Alliance,Machine Gun,70,X,X,"You cannot use more than 60 ammo for ""X"""
+WE-024,Flamethrower,Alliance,null,90,0,X,"""X"" = 5 times the number of cards in your discard pile"
+WE-025,Blowback Pistol,Alliance,Pistol,40,30,20,"You can discard any number of ""Pistol"" cards from your hand when you play this weapon. It gets +10 damage this turn for each card discarded this way"
+WE-005,Survival Knife [Combat Knife],Alliance,Knife,50,0,10,"This weapon gets +5 damage for each other ""Knife"" weapon your character is using this turn"
+WE-010,Burst-Fire Handgun [Handgun],Alliance,Pistol,60,30,20,This weapon gets +20 damage this turn if your character is using more than 1 weapon
+WE-050,Reliable Blade,Mercenaries,Knife,0,0,5,When you defeat one or more infected this turn~ you may choose to get +10 gold. If you do~ trash this weapon at end of turn
+WE-049,Custom Standard Sidearm,Mercenaries,Pistol,20,20,10,You can give this weapon +20 damage this turn. If you do~ trash this weapon at end of turn
+WE-043,Ibex Standard,Mercenaries,Pistol,30,10,10,You may pay 20 ammo. If you do~ this weapon gets +10 damage this turn
+WE-044,Custom Pump-Action Shotgun,Mercenaries,Shotgun,50,40,30,When your character defeats an infected this turn~ you may move one card from your hand or discard pile to another player's discard pile
+WE-045,Custom Full-Bore Machine Gun,Mercenaries,Machine Gun,40,30,20,When you defeat one or more infected during this turn~ gain 1 XP
+WE-046,Custom Lightning Hawk,Mercenaries,Magnum,80,40,40,You may remove any amount of XP on your character from the game. If you do~ this weapon gets +10 damage during this turn for every XP removed
+WE-047,Custom Bolt-Action Rifle,Mercenaries,Rifle,60,50,40,If you have 3 or more XP on your character~ this weapon gets +10 damage during this turn
+WE-048,Hunting Bow,Mercenaries,Bow,100,0,20,If there are no actions in your play area~ this weapon gets +10 damage during this turn. While this weapon is in your play area~ you cannot play actions
+WE-038,Machine Pistol w/Stock,Nightmare,Machine Gun,40,30,20,You get +20 gold this turn
+WE-039,Gangster's Machine Gun [M. Pistol],Nightmare,Machine Gun,80,50,50,This weapon gets +10 damage this turn for each “Machine Gun” weapon in your discard pile
+WE-036,Single Shot Rifle w/Scope,Nightmare,Rifle,50,40,30,Choose a player. That player discards a card from his hand
+WE-037,Special Ops Rifle [S.S. Rifle],Nightmare,Rifle,80,50,50,Each non-exploring player discards a card from his hand
+WE-035,Broken Butterfly,Nightmare,Magnum,80,40,40,This weapon gets +20 damage this turn if you have 10 or more cards in your inventory
+WE-034,Mine Thrower,Nightmare,Explosive,120,0,0,"This weapon gets +10 damage this turn for each ""Ammo"" card in your play area"
+WE-032,Silver Ghost,Nightmare,Pistol,30,10,10,You get +1 card and +1 action this turn
+WE-033,Punisher [S. Ghost],Nightmare,Pistol,70,30,30,You get +2 cards and +1 action this turn
+WE-040,Flashbang,Nightmare,Explosive,20,0,10,You get +1 explore this turn. While your characters are exploring~ all revealed infected with 40 or less health deal 0 damage. Trash this card after use
+WE-041,HE Grenade,Nightmare,Explosive,40,0,20,null
+WE-042,Incendiary Grenade,Nightmare,Explosive,30,0,10,This weapon gets +5 damage for each infected your characters are battling this turn
+WE-026,Standard Sidearm,Outbreak,Pistol,30,10,10,This weapon gets +5 damage for each non-item gained this turn
+WE-027,Samurai Edge [S. Sidearm],Outbreak,Pistol,70,60,30,This weapon gets +20 damage for each card gained this turn
+WE-028,Stun Rod,Outbreak,Melee,30,0,10,You get + 1 explore this turn. While your character is battling two or more infected~ you may move one of those infected with 20 or less health to the top of the mansion
+WE-029,Lightning Hawk,Outbreak,Magnum,100,60,60,null
+WE-030,Hand Cannon [L. Hawk],Outbreak,Magnum,120,80,80,Trash one ammunition from your play area. This card cannot be attached to characters
+WE-031,Night Scope Rocket Launcher,Outbreak,Explosive,80,0,60,While it is night-time outside the game~ this weapon gets +20 damage. Trash this card after use
+WE-009,Handgun,Premier,Pistol,20,20,10,null
+WE-004,Combat Knife,Premier,Knife,0,0,5,null
+WE-011,Assault Machine Gun,Premier,Machine Gun,30,40,20,null
+WE-012,Full-Bore Machine Gun [A. Machine Gun],Premier,Machine Gun,100,70,40,If you have more than 100 ammo in your play area~ this weapon gets +30 damage this turn
+WE-013,Pump Action Shotgun,Premier,Shotgun,40,40,25,You get +1 explore this turn
+WE-014,Automatic Shotgun [P.A. Shotgun],Premier,Shotgun,80,80,50,You get +1 explore this turn. The first time you reveal an infected with 40 or less health this turn~ defeat it immediately
+WE-007,Gatling Gun,Premier,Minigun,110,X,X,null
+WE-008,Rocket Launcher,Premier,Explosive,130,0,90,Trash this card after use
+WE-006,Six Shooter,Premier,Magnum,90,50,50,null
+WE-001,Grenade,Premier,Explosive,40,0,15,This weapon does 5 damage to each adjacent player. Trash this card after use
+WE-015,Bolt-Action Rifle,Premier,Rifle,50,50,20,Reveal the top card of your inventory. If the revealed card has a cost of 40 or more~ this weapon gets +30 damage this turn
+WE-002,Longbow,Premier,Bow,110,0,25,null
+WE-003,Submission,Premier,Melee,20,0,5,This weapon gets +5 damage this turn if your character's health is 80 or more; (versus mode) The attacked player must also discard a weapon from his hand
+WE-005,Survival Knife [Combat Knife],Premier,Knife,50,0,10,"This weapon gets +5 damage for each other ""Knife"" weapon your character is using this turn"
+WE-010,Burst-Fire Handgun [Handgun],Premier,Pistol,60,30,20,This weapon gets +20 damage this turn if your character is using more than 1 weapon
+WE-016,Semi-Automatic Rifle [B.A. Rifle],Premier,Rifle,90,70,30,This weapon gets +20 damage for each action played this turn

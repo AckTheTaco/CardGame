@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-041 Albert Wesker
+  m_EditorClassIdentifier: 
+  Name: Albert Wesker
+  ID: CH-041
+  Edition: Nightmare
+  CardEffect: 'Level 1 (1): At the beginning of your turn if only one other player''s
+    character has 30 or less health you may choose to get +1 card; Level 2 (6): During
+    your turn you may choose to have the aforementioned player discard one card'
+  Health: 110
+  Lvl1Req: 1
+  Lvl2Req: 6

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-049 Albert Wesker
+  m_EditorClassIdentifier: 
+  Name: Albert Wesker
+  ID: CH-049
+  Edition: Mercenaries
+  CardEffect: 'Level 1 (7): When Albert would take any damage while exploring you
+    may lower that damage by 10 for every card in your hand'
+  Health: 110
+  Lvl1Req: 7
+  Lvl2Req: 999

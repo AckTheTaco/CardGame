@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16fceddc17a7234aaeb76be2f2198f6, type: 3}
+  m_Name: CH-038 Mikhail Victor
+  m_EditorClassIdentifier: 
+  Name: Mikhail Victor
+  ID: CH-038
+  Edition: Nightmare
+  CardEffect: 'Level 1 (0): Weapons cost you 10 less to buy; Level 2 (5): While Mikhail
+    is using weapons with different weapon types he deals an additional 10 damage'
+  Health: 80
+  Lvl1Req: 0
+  Lvl2Req: 5
