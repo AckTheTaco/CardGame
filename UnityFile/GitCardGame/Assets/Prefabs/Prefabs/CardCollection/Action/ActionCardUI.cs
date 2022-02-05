@@ -9,7 +9,7 @@ public class ActionCardUI : MonoBehaviour
    
     public CompleteCard refCard;
 
-
+     // this is an action card
     
     public TMP_Text cardNameText;
     public TMP_Text cardCostText;
