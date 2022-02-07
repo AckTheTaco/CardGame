@@ -1174,6 +1174,8 @@ GameObject:
   m_Component:
   - component: {fileID: 559352125385291316}
   - component: {fileID: 559352125385291319}
+  - component: {fileID: -8609127994111023790}
+  - component: {fileID: 8339616461943150223}
   m_Layer: 5
   m_Name: ItemCardUI
   m_TagString: Untagged
@@ -1220,6 +1222,30 @@ MonoBehaviour:
   cardEffectText: {fileID: 559352124590881133}
   cardEditionText: {fileID: 559352124797111117}
   cardIDText: {fileID: 559352124000268231}
+--- !u!114 &-8609127994111023790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559352125385291317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea71ffdb42d6c6a4fb93f1a9659b8eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &8339616461943150223
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559352125385291317}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1257652261287011843
 GameObject:
   m_ObjectHideFlags: 0

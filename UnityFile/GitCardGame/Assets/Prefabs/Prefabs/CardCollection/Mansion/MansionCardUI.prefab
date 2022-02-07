@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 664878433361296887}
   - component: {fileID: 8308772326590684669}
+  - component: {fileID: 4407235703117358920}
   m_Layer: 5
   m_Name: MansionCardUI
   m_TagString: Untagged
@@ -135,6 +136,26 @@ MonoBehaviour:
   cardDamageText: {fileID: 3974565378519932998}
   cardDecorationsText: {fileID: 2842170522398818040}
   cardEffectText: {fileID: 664878434114810542}
+--- !u!114 &4407235703117358920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664878433361296886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 51.95
+  m_MinHeight: 73.9
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &664878433599136647
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +649,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.25
+  m_fontSize: 16.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1234,7 +1255,7 @@ MonoBehaviour:
   m_text: ID-999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: eec9258f1aff9044fae4be60c44c5499, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

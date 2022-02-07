@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Mansion Database", menuName = "Assets/Cards/Databases/New Mansion Database")]
 public class MansionDatabaseClass : ScriptableObject
 {
-   public List<CompleteCard> thisMansion; 
+   public List<CompleteCard> thisMansion;
+   public static MansionDatabaseClass instance; 
 }

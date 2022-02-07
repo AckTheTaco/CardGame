@@ -101,6 +101,13 @@ public class ResourceArea : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        //Debug.Log(CardHandler.pile17[0]);
+        //Debug.Log(usingScenario.thisCollection[0]);
+        //Debug.Log(GameObject.Find("pile17").GetComponentsInChildren<WeaponCardUI>());
+       // Debug.Log(GameObject.Find("pile1").transform.GetChild(0).GetComponent("ItemCardUI").GetComponent("ref Card").ToString());
+    }
 
 
     // void CreateItemCard(ItemCardUI itemCard, )

@@ -852,6 +852,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6635916239274606493}
   - component: {fileID: 88925648244985799}
+  - component: {fileID: 6245604585150306732}
+  - component: {fileID: 6013632695297864768}
   m_Layer: 5
   m_Name: WeaponCardUI
   m_TagString: Untagged
@@ -901,6 +903,30 @@ MonoBehaviour:
   cardWeaponType: {fileID: 3919709627063325596}
   cardEditionText: {fileID: 6635916240028304100}
   cardIDText: {fileID: 6635916239785109102}
+--- !u!114 &6245604585150306732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635916239274606492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea71ffdb42d6c6a4fb93f1a9659b8eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &6013632695297864768
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635916239274606492}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &6635916239647881790
 GameObject:
   m_ObjectHideFlags: 0

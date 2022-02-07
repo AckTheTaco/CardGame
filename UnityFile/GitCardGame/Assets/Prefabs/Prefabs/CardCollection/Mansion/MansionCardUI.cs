@@ -6,7 +6,7 @@ using TMPro;
 
 public class MansionCardUI : MonoBehaviour
 {
-    public MansionClass refCard;
+    public CompleteCard refCard;
 
     
     public TMP_Text cardNameText;

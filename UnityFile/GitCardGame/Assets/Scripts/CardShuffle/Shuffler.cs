@@ -22,7 +22,7 @@ public class Shuffler
 
             }
             //return thisDeck;
-            Debug.Log("The Deck is now Shuffled");
+            // Debug.Log("The Deck is now Shuffled");
             
         }
     }

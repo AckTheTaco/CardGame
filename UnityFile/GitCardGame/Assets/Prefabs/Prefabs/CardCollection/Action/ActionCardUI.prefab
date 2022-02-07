@@ -163,6 +163,8 @@ GameObject:
   - component: {fileID: 7369907926111877590}
   - component: {fileID: 6828461423262650587}
   - component: {fileID: 4075416662626758921}
+  - component: {fileID: -1494349094449526696}
+  - component: {fileID: -662249490233162409}
   m_Layer: 5
   m_Name: ActionCardUI
   m_TagString: Untagged
@@ -229,6 +231,30 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &-1494349094449526696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369907926111877591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea71ffdb42d6c6a4fb93f1a9659b8eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &-662249490233162409
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7369907926111877591}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7369907926227678571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1151,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.95
+  m_fontSize: 8.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
