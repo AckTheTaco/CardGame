@@ -20,7 +20,7 @@ public class CardHandler : MonoBehaviour
 
     [SerializeField]public  List<CompleteCard> PlayerDeck;
     [SerializeField]public  List<CompleteCard> PlayerHand = new List<CompleteCard>();
-    [SerializeField]public  List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
+    [SerializeField]public  static List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
     public static int MansionCount;
     public static int HandCount;
     public static int DiscardCount;
