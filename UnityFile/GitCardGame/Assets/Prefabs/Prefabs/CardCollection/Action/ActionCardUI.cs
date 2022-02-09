@@ -8,6 +8,7 @@ public class ActionCardUI : MonoBehaviour
 {
    
     public CompleteCard refCard;
+    
 
      // this is an action card
     

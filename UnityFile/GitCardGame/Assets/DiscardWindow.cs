@@ -12,13 +12,13 @@ public class DiscardWindow : MonoBehaviour
   public void OpenDiscardZone()
   {
     gameObject.SetActive(true);
-    Debug.Log(CardHandler.DiscardCount);
+    // Debug.Log(CardHandler.DiscardCount);
 
-    for (int i = 0; i < CardHandler.DiscardCount; i++)
-    {
-        Debug.Log(CardHandler.PlayerDiscard[i]);
-        DisplayCard();    
-    }
+    // for (int i = 0; i < CardHandler.DiscardCount; i++)
+    // {
+    //     Debug.Log(CardHandler.PlayerDiscard[i]);
+    //     DisplayCard();    
+    // }
 
   }
 
