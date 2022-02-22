@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
         handCount = CardHandler.HandCount;
         discardCount = CardHandler.DiscardCount;
         mansionCount = CardHandler.MansionCount;
-
-        
     }
 
 

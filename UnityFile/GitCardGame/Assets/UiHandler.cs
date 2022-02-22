@@ -38,10 +38,5 @@ public class UiHandler : MonoBehaviour
         ExploreText.text = "Explores: " + GameManager.Explore.ToString();
         GoldText.text = "Gold: " + GameManager.Gold.ToString();
         XPText.text = "Decorations: " + GameManager.XP.ToString();
-
-        
-
-
-
     }
 }

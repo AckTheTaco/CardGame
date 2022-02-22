@@ -81,7 +81,7 @@ public class CardHandler : MonoBehaviour
     void Update()
     {
         MansionCount = MansionDeck.Count;
-        HandCount = PlayerDeck.Count;
+        HandCount = PlayerHand.Count;
         DiscardCount = PlayerDiscard.Count;
         DecCount = PlayerDeck.Count;
     }

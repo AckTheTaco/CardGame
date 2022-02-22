@@ -8,23 +8,36 @@ public class DiscardWindow : MonoBehaviour
     [SerializeField] private ItemCardUI _itemCard; 
     [SerializeField] private WeaponCardUI _weaponCard;
 
+    [SerializeField] private GameObject _UIUpdater;
+
 
   public void OpenDiscardZone()
   {
     gameObject.SetActive(true);
     Debug.Log(CardHandler.DiscardCount);
+    _actionCard.refCard = null;
+    _itemCard.refCard = null;
+    _weaponCard.refCard = null;
 
-    for (int i = 0; i < CardHandler.DiscardCount; i++)
-    {
-        Debug.Log(CardHandler.PlayerDiscard[i]);
-        //DisplayCard();    
-    }
+     //Debug.Log(CardHandler.PlayerDiscard[i]);
+        DisplayCard();
+
+    // for (int i = 0; i < CardHandler.DiscardCount; i++)
+    // {
+           
+    // }
 
   }
 
   public void CloseDiscardZone()
   {
-      gameObject.SetActive(false);
+    foreach (Transform child in GameObject.Find("DiscardHolder").transform)
+    {
+      Destroy(child.gameObject);
+    } 
+
+    gameObject.SetActive(false);
+   
   }
 
 
@@ -33,64 +46,13 @@ public class DiscardWindow : MonoBehaviour
   private void DisplayCard()
   {
     var discardCount = CardHandler.DiscardCount;
-    
       
       for (int i = 0; i < discardCount; i++)
         {
-            var TopDiscard = CardHandler.PlayerDiscard[i];
-            //string pile = "pile"+(i+1);
-           
-            
-            
-            if (TopDiscard.Type == "Action")
-            {
-                
-                 
-                var actionClone = _actionCard;
-                 
-                actionClone.refCard = TopDiscard;
-                ScriptableObject.Instantiate(actionClone, new Vector3(0,0) , Quaternion.identity, GameObject.Find("DiscardHolder").transform);
-                actionClone.name = TopDiscard.ToString();
+          var TopDiscard = CardHandler.PlayerDiscard[i];
+          Debug.Log(CardHandler.PlayerDiscard[i]);
 
-                actionClone.refCard = null;
-              
-                Debug.Log($"I Made an {TopDiscard.Name} {TopDiscard.Type} in the discardPile");
-                
-            }
-            else if (TopDiscard.Type == "Item" || TopDiscard.Type == "Ammo")
-            {
-                
-                var itemClone = _itemCard;
-
-                itemClone.refCard = TopDiscard;
-
-                Instantiate(itemClone, new Vector3(0,0) , Quaternion.identity, GameObject.Find("DiscardHolder").transform);
-                itemClone.name = TopDiscard.ToString();
-
-                itemClone.refCard = null;
-                
-                Debug.Log($"I Made an {TopDiscard.Name} {TopDiscard.Type} in the discardPile");
-               
-                
-            }
-            else
-            // if (TopDiscard.Type != "Item" && TopDiscard.Type != "Ammo" && TopDiscard.Type != "Action")
-            {
-                var weaponClone = _weaponCard;
-
-                weaponClone.refCard = TopDiscard;
-                Instantiate(weaponClone, new Vector3(0,0) , Quaternion.identity, GameObject.Find("DiscardHolder").transform);
-                weaponClone.name = TopDiscard.ToString();
-
-                weaponClone.refCard = null;
-
-                Debug.Log($"I Made an {TopDiscard.Name} {TopDiscard.Type} in the discardPile");
-                
-            }
-
-            
-            
-
+          _UIUpdater.GetComponent<ResourceArea>().CreateCardUI(TopDiscard, GameObject.Find("DiscardHolder").transform);
         } 
   }
 }

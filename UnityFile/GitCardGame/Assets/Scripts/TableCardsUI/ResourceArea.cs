@@ -31,12 +31,17 @@ public class ResourceArea : MonoBehaviour
     
     private void Start()
     {
+
+        actionPile.refCard = null;
+        itemPile.refCard = null;
+        weaponPile.refCard = null;
+        
         usingScenario  = ScriptableObject.Instantiate(CardHandler.Scenario); // Matches the UI ot the CardHandlers lists and cards
         
         
 
-        Debug.Log(usingScenario.thisCollection.Count);
-        Debug.Log("this is the amount" + usingScenario.Amount());
+        //Debug.Log(usingScenario.thisCollection.Count);
+        Debug.Log("Amount of Card piles in scenario " + usingScenario.Amount());
 
         
         
@@ -112,9 +117,55 @@ public class ResourceArea : MonoBehaviour
        // Debug.Log(GameObject.Find("pile1").transform.GetChild(0).GetComponent("ItemCardUI").GetComponent("ref Card").ToString());
     }
 
+    
+    [SerializeField] private ActionCardUI _actionCard;
+    [SerializeField] private ItemCardUI _itemCard; 
+    [SerializeField] private WeaponCardUI _weaponCard;
 
-    // void CreateItemCard(ItemCardUI itemCard, )
-    // {
+    
+    public void CreateCardUI(CompleteCard _thisCard, Transform _location)
+    {
+        
 
-    // }
+        if (_thisCard.Type == "Action")
+        {
+            var actionClone = _actionCard;
+
+            actionClone.refCard = _thisCard;
+            actionClone.name = _thisCard.ToString();
+
+            ScriptableObject.Instantiate(actionClone, new Vector3(0,0) , Quaternion.identity, _location);
+
+            actionClone.refCard = null;
+
+            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+        } 
+        else if (_thisCard.Type == "Item" || _thisCard.Type == "Ammo")
+        {
+            var itemClone = _itemCard;
+
+            itemClone.refCard = _thisCard;
+            itemClone.name = _thisCard.name.ToString();
+
+            ScriptableObject.Instantiate(itemClone, new Vector3(0,0) , Quaternion.identity, _location);
+
+            itemClone.refCard = null;
+
+            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+        }       
+            else
+        {
+            var weaponClone = _weaponCard;
+
+            weaponClone.refCard = _thisCard;
+            weaponClone.name = _thisCard.ToString();
+
+            ScriptableObject.Instantiate(weaponClone, new Vector3(0,0) , Quaternion.identity, _location);
+
+            weaponClone.refCard = null;
+
+            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+        }
+    }
+
 }

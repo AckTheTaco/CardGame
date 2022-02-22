@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class UpdateCardUI : MonoBehaviour
 {
 
-    //public CardClass thisCard;
+    //public CardClass _thisCard;
 
     public List<ACardClass> DisplayCard = new List<ACardClass>();
 
@@ -79,6 +79,55 @@ public class UpdateCardUI : MonoBehaviour
 
     }
 
-   
- 
+    [SerializeField] private ActionCardUI _actionCard;
+    [SerializeField] private ItemCardUI _itemCard; 
+    [SerializeField] private WeaponCardUI _weaponCard;
+
+    
+    public void CreateCardUI(CompleteCard _thisCard, Transform _location)
+    {
+        
+
+        if (_thisCard.Type == "Action")
+        {
+            var actionClone = _actionCard;
+
+            actionClone.refCard = _thisCard;
+            actionClone.name = _thisCard.ToString();
+
+            ScriptableObject.Instantiate(actionClone, new Vector3(0,0) , Quaternion.identity, _location);
+
+            actionClone.refCard = null;
+
+            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+        } 
+        else if (_thisCard.Type == "Item" || _thisCard.Type == "Ammo")
+        {
+            var itemClone = _itemCard;
+
+            itemClone.refCard = _thisCard;
+            itemClone.name = _thisCard.name.ToString();
+
+            ScriptableObject.Instantiate(itemClone, new Vector3(0,0) , Quaternion.identity, _location);
+
+            itemClone.refCard = null;
+
+            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+        }       
+            else
+        {
+            var weaponClone = _weaponCard;
+
+            weaponClone.refCard = _thisCard;
+            weaponClone.name = _thisCard.ToString();
+
+            ScriptableObject.Instantiate(weaponClone, new Vector3(0,0) , Quaternion.identity, _location);
+
+            weaponClone.refCard = null;
+
+            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+        }
+    }
+
+    
 }
