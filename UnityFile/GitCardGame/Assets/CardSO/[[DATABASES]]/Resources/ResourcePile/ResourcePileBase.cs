@@ -6,5 +6,7 @@ using UnityEngine;
 public class ResourcePileBase : ScriptableObject
 {
     public List<CompleteCard> thesePiles;
+
+
     
 }

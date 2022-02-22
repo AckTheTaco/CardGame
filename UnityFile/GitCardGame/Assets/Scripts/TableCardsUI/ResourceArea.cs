@@ -36,6 +36,9 @@ public class ResourceArea : MonoBehaviour
         
 
         Debug.Log(usingScenario.thisCollection.Count);
+        Debug.Log("this is the amount" + usingScenario.Amount());
+
+        
         
         #region TopCardAssignementInResourceArea
             
