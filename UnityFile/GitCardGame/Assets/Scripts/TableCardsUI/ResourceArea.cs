@@ -82,7 +82,7 @@ public class ResourceArea : MonoBehaviour
 
                 itemPileClone.refCard = null;
                 
-                Debug.Log($"I Made an {TopCardOfPile.Name} {TopCardOfPile.Type} on {pile}");
+                //Debug.Log($"I Made an {TopCardOfPile.Name} {TopCardOfPile.Type} on {pile}");
                
                 
             }
@@ -97,7 +97,7 @@ public class ResourceArea : MonoBehaviour
 
                 weaponPileClone.refCard = null;
 
-                Debug.Log($"I Made an {TopCardOfPile.Name} {TopCardOfPile.Type} on {pile}");
+                //Debug.Log($"I Made an {TopCardOfPile.Name} {TopCardOfPile.Type} on {pile}");
                 
             }
 

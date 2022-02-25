@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public static int Ammo, Gold, Buy, Explore, Action, Damage,  XP;
 
     [SerializeField] private  CharacterClass avatar;
+    [Space]
+    [SerializeField] private GameObject UI_Handler;
 
     void Start()
     {

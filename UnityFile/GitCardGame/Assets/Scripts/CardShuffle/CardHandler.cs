@@ -6,7 +6,9 @@ using TMPro;
 
 public class CardHandler : MonoBehaviour
 {
-
+    [Space]
+    [SerializeField] private GameObject _uiHandler;
+    [Space]
    public EmptyPlayerDeck StartingInventory;
    public MansionDatabaseClass MansionData;
 
@@ -20,7 +22,8 @@ public class CardHandler : MonoBehaviour
 
     [SerializeField]public  List<CompleteCard> PlayerDeck;
     [SerializeField]public  List<CompleteCard> PlayerHand = new List<CompleteCard>();
-    [SerializeField]public  static List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
+    [SerializeField]public  List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
+    [SerializeField]public  static List<CompleteCard> staticPlayerDiscard;
     public static int MansionCount;
     public static int HandCount;
     public static int DiscardCount;
@@ -80,6 +83,7 @@ public class CardHandler : MonoBehaviour
     }
     void Update()
     {
+        staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
         MansionCount = MansionDeck.Count;
         HandCount = PlayerHand.Count;
         DiscardCount = PlayerDiscard.Count;
@@ -135,60 +139,64 @@ public class CardHandler : MonoBehaviour
             for (int i = 0; i < n; i++)
             {
                 toDeck.Add(fromDeck[0]);
+                _uiHandler.GetComponent<UiHandler>().CreateCardUI(fromDeck[0], GameObject.Find("PlayerHandHolder").transform);
                 fromDeck.RemoveAt(0);
             }
         }
     }
 
-    public void NewTurnDraw()
-    {
-        int PDC = PlayerDeck.Count;
-        if ( PDC < 5)
-        {
-            if (PDC == 0)
-            {
-                Shuffler.ShuffleDeck(PlayerDiscard);
-                PlayerDeck = new List<CompleteCard>(PlayerDiscard);
-                PlayerDiscard.Clear();
-                for (int i = 0; i <= PDC; i++)
-                {
-                    PlayerHand.Add(PlayerDeck[i]);
-                }
-            }
-            else
-            {
-                for (int i = 0; i <= PDC; i++)
-                {
-                    PlayerHand.Add(PlayerDeck[i]);
-                }
-                PlayerDeck.Clear();
-                Shuffler.ShuffleDeck(PlayerDiscard);
-                PlayerDeck = new List<CompleteCard>(PlayerDiscard);
-                PlayerDiscard.Clear();
-                DrawACard((5-PlayerHand.Count), PlayerDeck,PlayerHand);
-            }
-        }
-        else
-        {
-            for (int i =0; i < 5; i++)
-            {
-                PlayerHand.Add(PlayerDeck[0]);
-                PlayerDeck.RemoveAt(0);
-            }
-        }
-    }
+    // public void NewTurnDraw()
+    // {
+    //     int PDC = PlayerDeck.Count;
+    //     if ( PDC < 5 && PlayerDiscard.Count > 0)
+    //     {
+    //         if (PDC == 0)
+    //         {
+    //             Shuffler.ShuffleDeck(PlayerDiscard);
+    //             PlayerDeck = new List<CompleteCard>(PlayerDiscard);
+    //             PlayerDiscard.Clear();
+    //             for (int i = 0; i <= PDC; i++)
+    //             {
+    //                 PlayerHand.Add(PlayerDeck[i]);
+    //                 _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerDeck[i], GameObject.Find("PlayerHandHolder").transform);
+    //             }
+    //         }
+    //         else
+    //         {
+    //             for (int i = 0; i <= PDC; i++)
+    //             {
+    //                 PlayerHand.Add(PlayerDeck[i]);
+    //                 _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerDeck[i], GameObject.Find("PlayerHandHolder").transform);
+    //             }
+    //             PlayerDeck.Clear();
+    //             Shuffler.ShuffleDeck(PlayerDiscard);
+    //             PlayerDeck = new List<CompleteCard>(PlayerDiscard);
+    //             PlayerDiscard.Clear();
+    //             DrawACard((5-PlayerHand.Count), PlayerDeck, PlayerHand);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         for (int i =0; i < 5; i++)
+    //         {
+    //             PlayerHand.Add(PlayerDeck[0]);
+    //             _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerDeck[0], GameObject.Find("PlayerHandHolder").transform);
+    //             PlayerDeck.RemoveAt(0);
+    //         }
+    //     }
+    // }
 
-    public void EndPlayerTurn()
-    {
-        int PHC = PlayerHand.Count;
-        for (int i =0; i < PHC; i++)
-        {
-            PlayerDiscard.Add(PlayerHand[0]);
-            PlayerHand.RemoveAt(0);
-        }
+    // public void EndPlayerTurn()
+    // {
+    //     int PHC = PlayerHand.Count;
+    //     for (int i =0; i < PHC; i++)
+    //     {
+    //         PlayerDiscard.Add(PlayerHand[0]);
+    //         PlayerHand.RemoveAt(0);
+    //     }
         
         
-    }
+    // }
 
     public void ResetPlayerDeck()
     {
@@ -204,16 +212,34 @@ public class CardHandler : MonoBehaviour
 
     public void PlayerTurnEnd()
     {
+        foreach (Transform child in GameObject.Find("PlayerHandHolder").transform)
+        {
+            Destroy(child.gameObject);
+        }
         int PHC = PlayerHand.Count;
         for (int i = 0; i < PHC; i++)
         {
             PlayerDiscard.Add(PlayerHand[0]);
+            //Destroy(GameObject.Find("PlayerHandHolder").transform.Find(PlayerHand[0].name));
             PlayerHand.RemoveAt(0);
+            
         }
+
         if (PlayerDeck.Count <= 5)
         {
             PlayerHand.Clear();
+            
+
             PlayerHand = new List<CompleteCard>(PlayerDeck);
+            int i = 0;
+            foreach (CompleteCard card in PlayerHand)
+            {
+                
+               _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerHand[i], GameObject.Find("PlayerHandHolder").transform);
+               i++;
+            }
+            i = 0;
+
             PlayerDeck.Clear();
 
             if ( PlayerHand.Count < 5)
