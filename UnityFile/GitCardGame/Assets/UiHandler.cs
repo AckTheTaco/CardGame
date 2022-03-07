@@ -53,10 +53,13 @@ public class UiHandler : MonoBehaviour
 
         if (_thisCard.Type == "Action")
         {
+            _actionCard.refCard = null;
             var actionClone = _actionCard;
+            actionClone.refCard = null;
 
-            actionClone.refCard = _thisCard;
             actionClone.name = _thisCard.ToString();
+            actionClone.refCard = _thisCard;
+            
 
             ScriptableObject.Instantiate(actionClone, new Vector3(0,0) , Quaternion.identity, _location);
 
@@ -66,7 +69,9 @@ public class UiHandler : MonoBehaviour
         } 
         else if (_thisCard.Type == "Item" || _thisCard.Type == "Ammo")
         {
+            _itemCard.refCard = null;
             var itemClone = _itemCard;
+            itemClone.refCard = null;
 
             itemClone.refCard = _thisCard;
             itemClone.name = _thisCard.name.ToString();
@@ -79,7 +84,9 @@ public class UiHandler : MonoBehaviour
         }       
             else
         {
+            _weaponCard.refCard = null;
             var weaponClone = _weaponCard;
+            weaponClone.refCard = null;
 
             weaponClone.refCard = _thisCard;
             weaponClone.name = _thisCard.ToString();

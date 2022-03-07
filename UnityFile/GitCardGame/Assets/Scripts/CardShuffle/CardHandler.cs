@@ -23,13 +23,16 @@ public class CardHandler : MonoBehaviour
     [SerializeField]public  List<CompleteCard> PlayerDeck;
     [SerializeField]public  List<CompleteCard> PlayerHand = new List<CompleteCard>();
     [SerializeField]public  List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
+
+    [SerializeField]public  List<CompleteCard> ActiveWeapons = new List<CompleteCard>();
     [SerializeField]public  static List<CompleteCard> staticPlayerDiscard;
     public static int MansionCount;
     public static int HandCount;
     public static int DiscardCount;
     public static int DecCount;
 
-    #region ResourcePiles
+    #region ResourcePile Lists
+    
     public  static List<CompleteCard> pile1 = new List<CompleteCard>();
     public  static List<CompleteCard> pile2 = new List<CompleteCard>();
     public  static List<CompleteCard> pile3 = new List<CompleteCard>();
@@ -53,6 +56,7 @@ public class CardHandler : MonoBehaviour
   
     void Start()
     {
+        //FindObjectOfType<AudioManager>().PlaySound("Theme");
         staticMansionDeck = new List<CompleteCard>(MansionDeck);
         Scenario = ScriptableObject.Instantiate(_scenario1);
         Debug.Log(Scenario);
@@ -61,6 +65,7 @@ public class CardHandler : MonoBehaviour
             
         
         pile1 = Scenario.thisCollection[0].thesePiles;
+        Debug.Log(pile1[1].name);
         pile2 = Scenario.thisCollection[1].thesePiles;
         pile3 = Scenario.thisCollection[2].thesePiles;
         pile4 = Scenario.thisCollection[3].thesePiles;
@@ -103,6 +108,7 @@ public class CardHandler : MonoBehaviour
     }
     public void ShuffleAllDecksAtStart()
     {
+        FindObjectOfType<AudioManager>().PlaySound("Shuffle");
         Shuffler.ShuffleDeck(PlayerDeck);
         Shuffler.ShuffleDeck(MansionDeck);
         Shuffler.ShuffleDeck(staticMansionDeck);
@@ -124,6 +130,7 @@ public class CardHandler : MonoBehaviour
         Shuffler.ShuffleDeck(pile16);
         Shuffler.ShuffleDeck(pile17);
         Shuffler.ShuffleDeck(pile18);
+        
 
     }
    
@@ -267,6 +274,12 @@ public class CardHandler : MonoBehaviour
 
 
         
+    }
+
+    public void BuyACard()
+    {
+        
+        Debug.Log($"You can buy {GameManager.Buy} card(s)");
     }
 
 }

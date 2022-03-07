@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6170549810539168542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6170549810539168528}
+  - component: {fileID: 6170549810539168529}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6170549810539168528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170549810539168542}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1920, y: 1080, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6170549810539168529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6170549810539168542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de5cc770adea3e4bb76ef1eebcd5bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundName: 
+  sounds:
+  - name: Broken
+    clip: {fileID: 8300000, guid: f194b9df26319c240a8db8abb8c99eb6, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: 9e6db986411257344982fc0778b6b206, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: EmptyRoom
+    clip: {fileID: 8300000, guid: 3e016fc2bc4cf4b4098b6d264d4b0419, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: GamePlayTheme
+    clip: {fileID: 8300000, guid: e259abdd4369fd64699cde53a3c2b834, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Shuffle
+    clip: {fileID: 8300000, guid: c6dc6cb2eda34b1428b3aff6e9c6fc02, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Campfire
+    clip: {fileID: 8300000, guid: 1c4b206fb971bcd469da004cb62aa2b8, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: CardFlip
+    clip: {fileID: 8300000, guid: 76ea5501f458de243a64dcb3483427a2, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: CardPlace
+    clip: {fileID: 8300000, guid: fb89eec538870cf4399c06518bda241e, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Whoosh
+    clip: {fileID: 8300000, guid: 9c52ba2e09ab5bb4db65b8aa614eff06, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: MetalDeck
+    clip: {fileID: 8300000, guid: 2a5c4ebf4fc03da4d8450fca3afa2dd1, type: 3}
+    volume: 1
+    pitch: 1
+    volumeVariance: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
