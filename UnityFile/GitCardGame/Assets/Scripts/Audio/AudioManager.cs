@@ -49,11 +49,20 @@ public class AudioManager : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "MainMenu":
+                StopAllSound();
                 PlaySound("MainMenuTheme");
                 break;
             case "GameSetup":
-                StopPlayingSound("MainMenuTheme");
+                StopAllSound();
                 PlaySound("EmptyRoom");
+                break;
+            case "Options":
+                StopAllSound();
+                PlaySound("Campfire");
+                break;
+            case "Gameplay":
+                StopAllSound();
+                PlaySound("GamePlayTheme");
                 break;
 
 
@@ -130,6 +139,11 @@ public class AudioManager : MonoBehaviour
         {
             s.source.Stop();
         }
+    }
+
+    public void ChangeGlobalVolume(float value)
+    {
+        AudioListener.volume = value;
     }
 
 

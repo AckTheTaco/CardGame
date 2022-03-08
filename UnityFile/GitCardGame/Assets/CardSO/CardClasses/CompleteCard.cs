@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Complete Card", menuName = "Assets/Cards/New Complete Card")]
+[System.Serializable]
 public class CompleteCard : CardClass
 {
     public string Type;
