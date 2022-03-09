@@ -7,8 +7,9 @@ using TMPro;
 public class UiHandler : MonoBehaviour
 {
     //Card Counting
+    [Space]
     [SerializeField] private TMP_Text HandCountText, DeckCountText, TurnCountText, DiscardCountText, MansionCountText;
-
+    [Space]
     // Player Stats
     [SerializeField] private TMP_Text CurrHealthText, MaxHealthText, DamageText, AmmoText, BuyText, ActionText, ExploreText, GoldText, XPText;
 
@@ -24,20 +25,26 @@ public class UiHandler : MonoBehaviour
     {
         HandCountText.text = "Cards in Hand: " + GameManager.handCount.ToString();
         DeckCountText.text = "Deck: " + GameManager.deckListCount.ToString();
-        TurnCountText.text = "Turn Count: " + GameManager.turnCount.ToString();
-        DiscardCountText.text = "Discard: " + GameManager.discardCount.ToString();
-        MansionCountText.text = "Mansion: " + GameManager.mansionCount.ToString();
         
-        CurrHealthText.text = "Current Health: " + GameManager.playerCurrentHealth.ToString();
-        MaxHealthText.text = "Max Health: " + GameManager.playerMaxHealth.ToString();
+        TurnCountText.text = " Turn " + GameManager.turnCount.ToString(); // Added Icon beside number and removed words
+        
+        DiscardCountText.text = " Discard: " + GameManager.discardCount.ToString(); // Added Discard count to the Discard button
+        MansionCountText.text = "" + GameManager.mansionCount.ToString(); // Added Icon along side number
+
+        
+        CurrHealthText.text = " " + GameManager.playerCurrentHealth.ToString() + " / " + GameManager.playerMaxHealth.ToString(); // Combined CUrrent and Max Health in one line and Added Icon
+        
+       
+     
+        BuyText.text = " " + GameManager.Buy.ToString(); // Icon added with number
+        ActionText.text = "Actions: " + GameManager.Action.ToString();
+        ExploreText.text = "Explores: " + GameManager.Explore.ToString();
         
         DamageText.text = "Attack Damage: " + GameManager.Damage.ToString();
         AmmoText.text = "Ammo: " + GameManager.Ammo.ToString();
-        BuyText.text = "Buys: " + GameManager.Buy.ToString();
-        ActionText.text = "Actions: " + GameManager.Action.ToString();
-        ExploreText.text = "Explores: " + GameManager.Explore.ToString();
         GoldText.text = "Gold: " + GameManager.Gold.ToString();
-        XPText.text = "Decorations: " + GameManager.XP.ToString();
+        
+        XPText.text = " " + GameManager.XP.ToString(); // Decorations Medal Icon
     }
 
 
