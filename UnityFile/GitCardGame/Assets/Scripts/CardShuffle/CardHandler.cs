@@ -108,7 +108,7 @@ public class CardHandler : MonoBehaviour
     }
     public void ShuffleAllDecksAtStart()
     {
-        FindObjectOfType<AudioManager>().PlaySound("Shuffle");
+        AudioManager.instance.PlaySound("Shuffle");
         Shuffler.ShuffleDeck(PlayerDeck);
         Shuffler.ShuffleDeck(MansionDeck);
         Shuffler.ShuffleDeck(staticMansionDeck);

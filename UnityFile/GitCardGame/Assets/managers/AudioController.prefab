@@ -70,8 +70,8 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: GamePlayTheme
-    clip: {fileID: 8300000, guid: e259abdd4369fd64699cde53a3c2b834, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 3cabc1d3537f64941a4bdf757a788e20, type: 3}
+    volume: 0.107
     pitch: 1
     volumeVariance: 0
     pitchVariance: 0
