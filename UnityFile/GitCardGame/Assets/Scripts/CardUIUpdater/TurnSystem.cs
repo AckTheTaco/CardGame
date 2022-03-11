@@ -49,15 +49,15 @@ public class TurnSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isYourTurn == true)
-            turnText.text = "your Turn";
-        else    
-        {
-            turnText.text = "Opponet Turn";
-        }
+        // if (isYourTurn == true)
+        //     turnText.text = "your Turn";
+        // else    
+        // {
+        //     turnText.text = "Opponet Turn";
+        // }
             
         
-        turnCountText.text = currentTurnCount + " / " + MaxTurnCount;
+        //turnCountText.text = currentTurnCount + " / " + MaxTurnCount;
     }
 
     public void EndYourTurn()
@@ -71,7 +71,7 @@ public class TurnSystem : MonoBehaviour
     {
         isYourTurn = true;
         if (currentTurnCount + 1 > MaxTurnCount)
-            gameOverScreen.SetActive(true);
+            Instantiate(gameOverScreen);
         else
         {
             currentTurnCount += 1;
