@@ -1,26 +1,33 @@
 
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private GameObject parentToReturnTo = null;
+    private GameObject _parentToReturnTo = null;
     public string listName;
     string destinationHolder;
 
+    private RaycastHit2D[] _raycastAll;
 
+    private void Awake()
+    {
+        
+    }
    
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         listName = gameObject.transform.parent.name;
         ITransfering();
-        parentToReturnTo = this.transform.parent.gameObject;
+        _parentToReturnTo = this.transform.parent.gameObject;
         this.transform.SetParent(this.transform.root);
         
 
         
-        Debug.Log($"{this} will return to {parentToReturnTo}");
+        Debug.Log($"{this} will return to {_parentToReturnTo}");
         this.GetComponent<CanvasGroup>().blocksRaycasts = false;
         this.GetComponent<CanvasGroup>().alpha = .6f;
         
@@ -28,11 +35,22 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
     public void OnDrag(PointerEventData eventData)
     {
         this.transform.position = eventData.position;
+        _raycastAll = Physics2D.RaycastAll(transform.position, transform.forward, 100f);
+        
+        Debug.Log($"{_raycastAll.Length} raycast lenghts");
+
+        
         
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        
+        
+        
+        
+        
+
         Debug.Log(eventData.pointerCurrentRaycast.gameObject.transform.name);
         destinationHolder = eventData.pointerCurrentRaycast.gameObject.transform.name;
         ITransfered();
@@ -55,23 +73,23 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
         }
         else
         {
-            Debug.Log($"{this.name} has returned to {parentToReturnTo.ToString()}");
-            this.transform.SetParent(parentToReturnTo.transform);
+            Debug.Log($"{this.name} has returned to {_parentToReturnTo.ToString()}");
+            this.transform.SetParent(_parentToReturnTo.transform);
         }
         
         
 
 
-        // if (eventData.pointerCurrentRaycast.gameObject.transform != parentToReturnTo.transform )  // this work? GameObject.Find("ExploreArea")
+        // if (eventData.pointerCurrentRaycast.gameObject.transform != _parentToReturnTo.transform )  // this work? GameObject.Find("ExploreArea")
         // {
         //     //this.transform.SetParent(GameObject.Find("ExploreArea").transform);
            
-        //     this.transform.SetParent(parentToReturnTo.transform);
+        //     this.transform.SetParent(_parentToReturnTo.transform);
             
         // }
         // else
         // {
-        //     this.transform.SetParent(parentToReturnTo.transform);
+        //     this.transform.SetParent(_parentToReturnTo.transform);
         // }
         // if (eventData.pointerCurrentRaycast.gameObject == GameObject.Find("Card Placees"))
         // {
