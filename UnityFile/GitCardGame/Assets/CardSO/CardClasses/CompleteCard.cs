@@ -14,4 +14,8 @@ public class CompleteCard : CardClass
     public int Health;
     //public int Damage;
     public int Decorations;
+
+    public List<CompleteCard> CurrentListPosition;
+    public List<CompleteCard> ListPosition;
+
 }

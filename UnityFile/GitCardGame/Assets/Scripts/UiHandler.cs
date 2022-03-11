@@ -6,6 +6,8 @@ using TMPro;
 
 public class UiHandler : MonoBehaviour
 {
+    public static UiHandler instance;
+
     //Card Counting
     [Space]
     [SerializeField] private TMP_Text HandCountText, DeckCountText, TurnCountText, DiscardCountText, MansionCountText;
@@ -14,6 +16,18 @@ public class UiHandler : MonoBehaviour
     [SerializeField] private TMP_Text CurrHealthText, MaxHealthText, DamageText, AmmoText, BuyText, ActionText, ExploreText, GoldText, XPText;
 
 
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -23,28 +37,28 @@ public class UiHandler : MonoBehaviour
 
     void Update()
     {
-        HandCountText.text = "" + GameManager.handCount.ToString(); // Added Icon beside number and removed words
-        DeckCountText.text = " " + GameManager.deckListCount.ToString(); // Added Icon beside number and removed words
+        HandCountText.text = "" + GameManager.instance.handCount.ToString(); // Added Icon beside number and removed words
+        DeckCountText.text = " " + GameManager.instance.deckListCount.ToString(); // Added Icon beside number and removed words
         
-        TurnCountText.text = " Turn " + GameManager.turnCount.ToString(); // Added Icon beside number and removed words
+        TurnCountText.text = " Turn " + GameManager.instance.turnCount.ToString(); // Added Icon beside number and removed words
         
-        DiscardCountText.text = " " + GameManager.discardCount.ToString(); // Added Discard count to the Discard button
-        MansionCountText.text = "" + GameManager.mansionCount.ToString(); // Added Icon along side number
+        DiscardCountText.text = " " + GameManager.instance.discardCount.ToString(); // Added Discard count to the Discard button
+        MansionCountText.text = "" + GameManager.instance.mansionCount.ToString(); // Added Icon along side number
 
         
-        CurrHealthText.text = " " + GameManager.playerCurrentHealth.ToString() + " / " + GameManager.playerMaxHealth.ToString(); // Combined CUrrent and Max Health in one line and Added Icon
+        CurrHealthText.text = " " + GameManager.instance.playerCurrentHealth.ToString() + " / " + GameManager.instance.playerMaxHealth.ToString(); // Combined CUrrent and Max Health in one line and Added Icon
         
        
      
-        BuyText.text = "" + GameManager.Buy.ToString(); // Icon added with number
-        ActionText.text = "Actions: " + GameManager.Action.ToString();
-        ExploreText.text = "Explores: " + GameManager.Explore.ToString();
+        BuyText.text = "" + GameManager.instance.Buy.ToString(); // Icon added with number
+        ActionText.text = "" + GameManager.instance.Action.ToString();
+        ExploreText.text = "" + GameManager.instance.Explore.ToString();
         
-        DamageText.text = "Attack Damage: " + GameManager.Damage.ToString();
-        AmmoText.text = "Ammo: " + GameManager.Ammo.ToString();
-        GoldText.text = "Gold: " + GameManager.Gold.ToString();
+        DamageText.text = "" + GameManager.instance.Damage.ToString();
+        AmmoText.text = "" + GameManager.instance.Ammo.ToString();
+        GoldText.text = "" + GameManager.instance.Gold.ToString();
         
-        XPText.text = " " + GameManager.XP.ToString(); // Decorations Medal Icon
+        XPText.text = " " + GameManager.instance.XP.ToString(); // Decorations Medal Icon
     }
 
 
@@ -105,4 +119,7 @@ public class UiHandler : MonoBehaviour
             Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
         }
     }
+
+
+
 }

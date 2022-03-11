@@ -27,7 +27,7 @@ public class HandSpread : MonoBehaviour
         handCount = transform.childCount;
         
 
-        Debug.Log(handCount);
+        //Debug.Log(handCount);
         
          
 

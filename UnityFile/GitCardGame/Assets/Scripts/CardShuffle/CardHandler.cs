@@ -6,15 +6,20 @@ using TMPro;
 
 public class CardHandler : MonoBehaviour
 {
-    [Space]
-    [SerializeField] private GameObject _uiHandler;
-    [Space]
-   public EmptyPlayerDeck StartingInventory;
-   public MansionDatabaseClass MansionData;
+    public static CardHandler instance;
 
-   [SerializeField] public ResourceCollectionBase _scenario1;
 
-   public static ResourceCollectionBase Scenario;
+
+
+    public EmptyPlayerDeck StartingInventory;
+    public MansionDatabaseClass MansionData;
+    [Space]
+
+    [SerializeField] public ResourceCollectionBase _scenario1;
+
+    public static ResourceCollectionBase Scenario;
+    [Space]
+
    
    
     [SerializeField]public List<CompleteCard> MansionDeck;
@@ -56,16 +61,48 @@ public class CardHandler : MonoBehaviour
   
     void Start()
     {
-        //FindObjectOfType<AudioManager>().PlaySound("Theme");
-        staticMansionDeck = new List<CompleteCard>(MansionDeck);
-        Scenario = ScriptableObject.Instantiate(_scenario1);
-        Debug.Log(Scenario);
+        #region Now an Instance
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+        #endregion
 
-        #region PileAssignment
+        ShuffleAllDecksAtStart();
+
+        Debug.Log(Scenario);
+        
+        
+   
+    
+    }
+    void Update()
+    {
+        staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
+        MansionCount = MansionDeck.Count;
+        HandCount = PlayerHand.Count;
+        DiscardCount = PlayerDiscard.Count;
+        DecCount = PlayerDeck.Count;
+    }
+   void Awake()
+   {
+        //DeckTest = new List<CompleteCard>();
+        PlayerDeck = new List<CompleteCard>(StartingInventory.aDeck);
+        MansionDeck = new List<CompleteCard>(MansionData.thisMansion);
+
+             staticMansionDeck = new List<CompleteCard>(MansionDeck);
+        Scenario = ScriptableObject.Instantiate(_scenario1);
+        
+
+        #region Resource Area Pile Assignment
             
         
         pile1 = Scenario.thisCollection[0].thesePiles;
-        Debug.Log(pile1[1].name);
+        //Debug.Log(pile1[1].name);
         pile2 = Scenario.thisCollection[1].thesePiles;
         pile3 = Scenario.thisCollection[2].thesePiles;
         pile4 = Scenario.thisCollection[3].thesePiles;
@@ -85,21 +122,6 @@ public class CardHandler : MonoBehaviour
         pile18 = Scenario.thisCollection[17].thesePiles;
 
         #endregion
-    }
-    void Update()
-    {
-        staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
-        MansionCount = MansionDeck.Count;
-        HandCount = PlayerHand.Count;
-        DiscardCount = PlayerDiscard.Count;
-        DecCount = PlayerDeck.Count;
-    }
-   void Awake()
-   {
-        //DeckTest = new List<CompleteCard>();
-        PlayerDeck = new List<CompleteCard>(StartingInventory.aDeck);
-        MansionDeck = new List<CompleteCard>(MansionData.thisMansion);
-
 
         
         
@@ -146,64 +168,12 @@ public class CardHandler : MonoBehaviour
             for (int i = 0; i < n; i++)
             {
                 toDeck.Add(fromDeck[0]);
-                _uiHandler.GetComponent<UiHandler>().CreateCardUI(fromDeck[0], GameObject.Find("PlayerHandHolder").transform);
+                UiHandler.instance.CreateCardUI(fromDeck[0], GameObject.Find("PlayerHandHolder").transform);
                 fromDeck.RemoveAt(0);
             }
         }
     }
 
-    // public void NewTurnDraw()
-    // {
-    //     int PDC = PlayerDeck.Count;
-    //     if ( PDC < 5 && PlayerDiscard.Count > 0)
-    //     {
-    //         if (PDC == 0)
-    //         {
-    //             Shuffler.ShuffleDeck(PlayerDiscard);
-    //             PlayerDeck = new List<CompleteCard>(PlayerDiscard);
-    //             PlayerDiscard.Clear();
-    //             for (int i = 0; i <= PDC; i++)
-    //             {
-    //                 PlayerHand.Add(PlayerDeck[i]);
-    //                 _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerDeck[i], GameObject.Find("PlayerHandHolder").transform);
-    //             }
-    //         }
-    //         else
-    //         {
-    //             for (int i = 0; i <= PDC; i++)
-    //             {
-    //                 PlayerHand.Add(PlayerDeck[i]);
-    //                 _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerDeck[i], GameObject.Find("PlayerHandHolder").transform);
-    //             }
-    //             PlayerDeck.Clear();
-    //             Shuffler.ShuffleDeck(PlayerDiscard);
-    //             PlayerDeck = new List<CompleteCard>(PlayerDiscard);
-    //             PlayerDiscard.Clear();
-    //             DrawACard((5-PlayerHand.Count), PlayerDeck, PlayerHand);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         for (int i =0; i < 5; i++)
-    //         {
-    //             PlayerHand.Add(PlayerDeck[0]);
-    //             _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerDeck[0], GameObject.Find("PlayerHandHolder").transform);
-    //             PlayerDeck.RemoveAt(0);
-    //         }
-    //     }
-    // }
-
-    // public void EndPlayerTurn()
-    // {
-    //     int PHC = PlayerHand.Count;
-    //     for (int i =0; i < PHC; i++)
-    //     {
-    //         PlayerDiscard.Add(PlayerHand[0]);
-    //         PlayerHand.RemoveAt(0);
-    //     }
-        
-        
-    // }
 
     public void ResetPlayerDeck()
     {
@@ -242,7 +212,7 @@ public class CardHandler : MonoBehaviour
             foreach (CompleteCard card in PlayerHand)
             {
                 
-               _uiHandler.GetComponent<UiHandler>().CreateCardUI(PlayerHand[i], GameObject.Find("PlayerHandHolder").transform);
+               UiHandler.instance.CreateCardUI(PlayerHand[i], GameObject.Find("PlayerHandHolder").transform);
                i++;
             }
             i = 0;
@@ -260,7 +230,7 @@ public class CardHandler : MonoBehaviour
         {
             DrawACard(5,PlayerDeck,PlayerHand);
         }
-        GameManager.turnCount++;
+        GameManager.instance.turnCount++;
     }
 
     public void PlayerDieReset()
@@ -279,7 +249,12 @@ public class CardHandler : MonoBehaviour
     public void BuyACard()
     {
         
-        Debug.Log($"You can buy {GameManager.Buy} card(s)");
+        Debug.Log($"You can buy {GameManager.instance.Buy} card(s)");
+    }
+
+    public void MoveCardInList(CompleteCard thisCard, List<CompleteCard> currentList)
+    {
+        thisCard.CurrentListPosition = currentList;
     }
 
 }

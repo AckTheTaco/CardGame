@@ -4,18 +4,39 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     // Broung in from Character SO
-    public static int playerMaxHealth, playerCurrentHealth, Lvl1Req, Lvl2Req;
+    public int playerMaxHealth, playerCurrentHealth, Lvl1Req, Lvl2Req;
+
+    
 
     // Updated as things change passively
-    public static int  turnCount, deckListCount,discardCount, mansionCount, handCount;
+    public int  turnCount, deckListCount,discardCount, mansionCount, handCount;
 
     // Player modified info for min-to-min gameplay
-    public static int Ammo, Gold, Buy, Explore, Action, Damage,  XP;
+    public int Ammo, Gold, Buy, Explore, Action, Damage,  XP;
 
+    [Space]
     [SerializeField] private  CharacterClass avatar;
     [Space]
-    [SerializeField] private GameObject UI_Handler;
+    [SerializeField] public GameObject DiscardWindow;
+
+    [SerializeField] public GameObject GameOverScreen;
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+    }
 
     void Start()
     {
@@ -37,7 +58,11 @@ public class GameManager : MonoBehaviour
         mansionCount = CardHandler.MansionCount;
     }
 
+    public void GameOver()
+    {
+        Instantiate(GameOverScreen, GameObject.Find("Canvas").transform);
+    }
 
-
+    
 
 }

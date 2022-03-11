@@ -8,24 +8,20 @@ public class DiscardWindow : MonoBehaviour
     [SerializeField] private ItemCardUI _itemCard; 
     [SerializeField] private WeaponCardUI _weaponCard;
 
-    [SerializeField] private GameObject _uiHandler;
+    [SerializeField] public GameObject _discardWindow;
+
+   
 
 
   public void OpenDiscardZone()
   {
-    gameObject.SetActive(true);
+    Instantiate(_discardWindow, GameObject.Find("Canvas").transform);
     Debug.Log($"{CardHandler.DiscardCount} cards in discard pile");
     _actionCard.refCard = null;
     _itemCard.refCard = null;
     _weaponCard.refCard = null;
-
-     //Debug.Log(CardHandler.staticPlayerDiscard[i]);
-        DisplayCard();
-
-    // for (int i = 0; i < CardHandler.DiscardCount; i++)
-    // {
-           
-    // }
+      
+    DisplayCard();
 
   }
 
@@ -35,9 +31,7 @@ public class DiscardWindow : MonoBehaviour
     {
       Destroy(child.gameObject);
     } 
-
-    gameObject.SetActive(false);
-   
+    Destroy(gameObject);
   }
 
 
@@ -52,7 +46,7 @@ public class DiscardWindow : MonoBehaviour
           var TopDiscard = CardHandler.staticPlayerDiscard[i];
           Debug.Log(CardHandler.staticPlayerDiscard[i]);
 
-          _uiHandler.GetComponent<UiHandler>().CreateCardUI(TopDiscard, GameObject.Find("DiscardHolder").transform);
+          UiHandler.instance.CreateCardUI(TopDiscard, GameObject.Find("DiscardHolder").transform);
         } 
   }
 }

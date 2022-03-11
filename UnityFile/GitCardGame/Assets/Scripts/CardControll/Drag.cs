@@ -48,7 +48,7 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
             Debug.Log($"{this.name} could move to {destinationHolder.ToString()}");
             this.gameObject.transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform);
         }
-        else if (name.Contains("IT-") || name.Contains("AM-") && destinationHolder == "ItemHolder")
+        else if ((name.Contains("IT-") || name.Contains("AM-")) && destinationHolder == "ItemHolder")
         {
             Debug.Log($"{this.name} could move to {destinationHolder.ToString()}");
             this.gameObject.transform.SetParent(eventData.pointerCurrentRaycast.gameObject.transform);
