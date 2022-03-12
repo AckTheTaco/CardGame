@@ -20,7 +20,10 @@ public class CardHandler : MonoBehaviour
     public static ResourceCollectionBase Scenario;
     [Space]
 
-   
+   /*
+   *Make a dictionary here for reasons
+   * public Dictionary<string, List<CompleteCard>> = new Dictionary<string, List<CompleteCard>>();
+   */
    
     [SerializeField]public List<CompleteCard> MansionDeck;
     public static List<CompleteCard> staticMansionDeck;
@@ -29,7 +32,11 @@ public class CardHandler : MonoBehaviour
     [SerializeField]public  List<CompleteCard> PlayerHand = new List<CompleteCard>();
     [SerializeField]public  List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
 
-    [SerializeField]public  List<CompleteCard> ActiveWeapons = new List<CompleteCard>();
+    [SerializeField]public List<CompleteCard> ActiveWeapons = new List<CompleteCard>();
+
+    [SerializeField]public List<CompleteCard> ActiveItems = new List<CompleteCard>();
+
+    [SerializeField]public List<CompleteCard> ActiveActions = new List<CompleteCard>();
     [SerializeField]public  static List<CompleteCard> staticPlayerDiscard;
     public static int MansionCount;
     public static int HandCount;
@@ -55,41 +62,17 @@ public class CardHandler : MonoBehaviour
     public  static List<CompleteCard> pile15 = new List<CompleteCard>();
     public  static List<CompleteCard> pile16 = new List<CompleteCard>();
     public  static List<CompleteCard> pile17 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile18 = new List<CompleteCard>();
+    public  List<CompleteCard> pile18 = new List<CompleteCard>();
     #endregion
 
-  
-    void Start()
-    {
-        #region Now an Instance
-        if (instance == null)
-            instance = this;
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
-        #endregion
-
-        ShuffleAllDecksAtStart();
-
-        Debug.Log(Scenario);
-        
-        
    
+
     
-    }
-    void Update()
-    {
-        staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
-        MansionCount = MansionDeck.Count;
-        HandCount = PlayerHand.Count;
-        DiscardCount = PlayerDiscard.Count;
-        DecCount = PlayerDeck.Count;
-    }
-   void Awake()
+
+  void Awake()
    {
+       
+
         //DeckTest = new List<CompleteCard>();
         PlayerDeck = new List<CompleteCard>(StartingInventory.aDeck);
         MansionDeck = new List<CompleteCard>(MansionData.thisMansion);
@@ -101,8 +84,11 @@ public class CardHandler : MonoBehaviour
         #region Resource Area Pile Assignment
             
         
+
+
+
+
         pile1 = Scenario.thisCollection[0].thesePiles;
-        //Debug.Log(pile1[1].name);
         pile2 = Scenario.thisCollection[1].thesePiles;
         pile3 = Scenario.thisCollection[2].thesePiles;
         pile4 = Scenario.thisCollection[3].thesePiles;
@@ -125,9 +111,44 @@ public class CardHandler : MonoBehaviour
 
         
         
+        
 
     
     }
+    void Start()
+    {
+        #region Now an Instance
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+        #endregion
+
+        ShuffleAllDecksAtStart();
+
+        DrawACard(5, PlayerDeck, PlayerHand);
+
+      
+
+        Debug.Log(Scenario);
+        
+        
+   
+    
+    }
+    void Update()
+    {
+        staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
+        MansionCount = MansionDeck.Count;
+        HandCount = PlayerHand.Count;
+        DiscardCount = PlayerDiscard.Count;
+        DecCount = PlayerDeck.Count;
+    }
+   
     public void ShuffleAllDecksAtStart()
     {
         AudioManager.instance.PlaySound("Shuffle");
@@ -193,11 +214,45 @@ public class CardHandler : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        foreach (Transform child in GameObject.Find("WeaponHolder").transform)
+        {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < ActiveWeapons.Count; i++)
+        {
+            PlayerDiscard.Add(ActiveWeapons[0]);
+        }
+
+        foreach (Transform child in GameObject.Find("ItemHolder").transform)
+        {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < ActiveItems.Count; i++)
+        {
+            PlayerDiscard.Add(ActiveItems[0]);
+        }
+
+        foreach (Transform child in GameObject.Find("ActionHolder").transform)
+        {
+            Destroy(child.gameObject);
+        }
+        for (int i = 0; i < ActiveActions.Count; i++)
+        {
+            PlayerDiscard.Add(ActiveActions[0]);
+        }
+
+
+        ActiveWeapons.Clear();
+        ActiveItems.Clear();
+        ActiveActions.Clear();
+
+
+
         int PHC = PlayerHand.Count;
+
         for (int i = 0; i < PHC; i++)
         {
             PlayerDiscard.Add(PlayerHand[0]);
-            //Destroy(GameObject.Find("PlayerHandHolder").transform.Find(PlayerHand[0].name));
             PlayerHand.RemoveAt(0);
             
         }
@@ -256,5 +311,7 @@ public class CardHandler : MonoBehaviour
     {
         thisCard.CurrentListPosition = currentList;
     }
+
+
 
 }

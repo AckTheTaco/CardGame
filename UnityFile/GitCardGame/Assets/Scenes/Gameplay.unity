@@ -2142,6 +2142,9 @@ MonoBehaviour:
   PlayerHand: []
   PlayerDiscard: []
   ActiveWeapons: []
+  ActiveItems: []
+  ActiveActions: []
+  pile18: []
 --- !u!4 &198386748
 Transform:
   m_ObjectHideFlags: 0
@@ -6114,10 +6117,10 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_Spacing: -95
   m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
+  m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!1 &759321285
