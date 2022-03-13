@@ -2138,7 +2138,17 @@ MonoBehaviour:
   MansionData: {fileID: 11400000, guid: 08952d1c148ef5c4ca6d481e8743e185, type: 2}
   _scenario1: {fileID: 11400000, guid: f0ff69ebbd7fcc74ea8c6abde0c7ffff, type: 2}
   MansionDeck: []
-  PlayerDeck: []
+  PlayerDeck:
+  - {fileID: 11400000, guid: b113e381df866af429551959fac166be, type: 2}
+  - {fileID: 11400000, guid: 42985fe2f53b03844bc4bc6945dff949, type: 2}
+  - {fileID: 11400000, guid: 085a5f1452cacb8409054075f41dd9ce, type: 2}
+  - {fileID: 11400000, guid: d22ea4f2012d0774b8352adecfbe2cef, type: 2}
+  - {fileID: 11400000, guid: 52d20e6951c80304e81afa29e90f243e, type: 2}
+  - {fileID: 11400000, guid: 8805845cd3c39f042850b3a3e080a564, type: 2}
+  - {fileID: 11400000, guid: 205ba1e52ae403345b195ce85b34ea76, type: 2}
+  - {fileID: 11400000, guid: 79bc7dd8c6944b145b6efe7eddfa968f, type: 2}
+  - {fileID: 11400000, guid: 02a15955b46543044b68da6f4a5ea4c7, type: 2}
+  - {fileID: 11400000, guid: 3dc11a19058199c479ae8e7c6be54476, type: 2}
   PlayerHand: []
   PlayerDiscard: []
   ActiveWeapons: []
@@ -3728,8 +3738,8 @@ GameObject:
   - component: {fileID: 433470571}
   - component: {fileID: 433470574}
   - component: {fileID: 433470573}
-  - component: {fileID: 433470572}
   - component: {fileID: 433470575}
+  - component: {fileID: 433470572}
   m_Layer: 5
   m_Name: PlayerHandHolder
   m_TagString: Untagged
@@ -3753,8 +3763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37.789536}
-  m_SizeDelta: {x: 0, y: 75.5791}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433470572
 MonoBehaviour:
@@ -3769,16 +3779,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 1
-    m_Right: 1
+    m_Left: 3
+    m_Right: 3
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 3
   m_ChildAlignment: 4
-  m_Spacing: -15.8
-  m_ChildForceExpandWidth: 1
+  m_Spacing: -162.3
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
@@ -3795,7 +3805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0.27058825}
+  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6115,13 +6125,13 @@ MonoBehaviour:
     m_Top: 3
     m_Bottom: 3
   m_ChildAlignment: 4
-  m_Spacing: -95
-  m_ChildForceExpandWidth: 0
+  m_Spacing: -59
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
-  m_ChildScaleHeight: 1
+  m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!1 &759321285
 GameObject:
@@ -6665,8 +6675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -75.76611, y: 0}
-  m_SizeDelta: {x: -271.4363, y: 50.1173}
+  m_AnchoredPosition: {x: -59.400024, y: 0}
+  m_SizeDelta: {x: -271.4363, y: 95.4539}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &881173038
 GameObject:
@@ -16107,13 +16117,13 @@ MonoBehaviour:
     m_Top: 3
     m_Bottom: 3
   m_ChildAlignment: 4
-  m_Spacing: -95
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 1
+  m_Spacing: -59
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!225 &1908532053
 CanvasGroup:
@@ -16222,13 +16232,13 @@ MonoBehaviour:
     m_Top: 3
     m_Bottom: 3
   m_ChildAlignment: 4
-  m_Spacing: -95
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 1
+  m_Spacing: -59
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!225 &1911320581
 CanvasGroup:

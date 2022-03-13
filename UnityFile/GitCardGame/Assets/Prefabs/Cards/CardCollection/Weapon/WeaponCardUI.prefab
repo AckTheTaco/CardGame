@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 6245604585150306732}
   - component: {fileID: 6013632695297864768}
   - component: {fileID: -1442003514323981664}
+  - component: {fileID: -7855895690849673821}
   m_Layer: 5
   m_Name: WeaponCardUI
   m_TagString: Untagged
@@ -818,6 +819,20 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &-7855895690849673821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6635916239274606492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 0.75
 --- !u!1 &6635916239647881790
 GameObject:
   m_ObjectHideFlags: 0
