@@ -3671,10 +3671,10 @@ MonoBehaviour:
   _selectedScenario: {fileID: 452776710}
   _selectedMansion: {fileID: 2123560527}
   _charactersDB: {fileID: 11400000, guid: ad5f0e9e8b7adc04e81be4e734ac13eb, type: 2}
-  _scenariosDB: {fileID: 11400000, guid: f0ff69ebbd7fcc74ea8c6abde0c7ffff, type: 2}
-  _mansionsDB: {fileID: 11400000, guid: 08952d1c148ef5c4ca6d481e8743e185, type: 2}
   _characterList: []
+  _scenariosDB: {fileID: 11400000, guid: 06faff872758c314dab72deb736c93c9, type: 2}
   _scenarioList: []
+  _mansionsDB: {fileID: 11400000, guid: 0c6923ef83a2d354a9ea68279fcf09a4, type: 2}
   _mansionList: []
 --- !u!1 &1749736917
 GameObject:

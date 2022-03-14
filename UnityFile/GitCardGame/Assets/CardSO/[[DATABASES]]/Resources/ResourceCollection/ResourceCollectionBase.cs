@@ -6,6 +6,7 @@ using UnityEngine;
 public class ResourceCollectionBase : ScriptableObject
 {
    public List<ResourcePileBase> thisCollection; 
+   public static ResourceCollectionBase instance; 
    public int Amount()
    {
       return thisCollection.Count;

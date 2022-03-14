@@ -12,15 +12,20 @@ public class Selection : MonoBehaviour
    [SerializeField] private TMP_Text _selectedScenario;
    [SerializeField] private TMP_Text _selectedMansion;
 
-
+   [Space]
    [SerializeField] private CharacterCollection _charactersDB;
-   [SerializeField] private ResourceCollectionBase _scenariosDB;
-   [SerializeField] private MansionDatabaseClass _mansionsDB;
-
    [SerializeField] private List<CharacterClass> _characterList;
-
+   [Space]
+   [SerializeField] private ScenarioCollection _scenariosDB;
    [SerializeField] private List<ResourceCollectionBase> _scenarioList;
+   [Space]
+   [SerializeField] private MansionCollectionDatabase _mansionsDB;
    [SerializeField] private List<MansionDatabaseClass> _mansionList;
+
+   
+
+   
+   
 
    private void Awake()
    {
@@ -29,8 +34,8 @@ public class Selection : MonoBehaviour
    private void Start()
    {
       _characterList = new List<CharacterClass>(_charactersDB.characterCollection);
-      _scenarioList.Add(_scenariosDB);
-      _mansionList.Add(_mansionsDB);
+      _scenarioList = new List<ResourceCollectionBase>(_scenariosDB.thisScenarioCollection);
+      _mansionList = new List<MansionDatabaseClass>(_mansionsDB.thisMansionCollection);
 
       var name = _characterList[0].name;    
       _selectedCharacter.text = name.Substring(name.IndexOf(" "));
