@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnMansion : MonoBehaviour
 {
-    public MansionCardUI mansionCardExplore;
+    public MansionCardUIsmall mansionCardExplore;
     public void TopMansionCard()
     {
         mansionCardExplore.refCard = Instantiate(CardHandler.staticMansionDeck[0]);

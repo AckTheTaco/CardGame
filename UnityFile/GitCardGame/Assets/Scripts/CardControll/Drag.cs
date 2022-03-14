@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
 
 public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -32,8 +34,10 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
         
 
         ITransfering();
+
         _parentToReturnTo = this.transform.parent.gameObject;
         this.transform.SetParent(this.transform.root);
+        
         
 
         
@@ -49,7 +53,8 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
 
     public void OnEndDrag(PointerEventData eventData)
     {
-      
+        
+
         EventSystem.current.RaycastAll(eventData, _raycastAllHits);
         
         for (int i = 0; i < _raycastAllHits.Count; i++)
@@ -127,6 +132,17 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
                 Debug.Log($"{this.name} has returned to {_parentToReturnTo.ToString()}");
                 this.transform.SetParent(_parentToReturnTo.transform);
             }
+
+            
+        }
+
+        if (_parentToReturnTo.name == "PlayerHandHolder" )
+        {     
+            GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
+        }
+        else
+        {
+            GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
         }
 
         this.GetComponent<CanvasGroup>().blocksRaycasts = true;
@@ -136,7 +152,7 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
     public void ITransfering()
     {
         Debug.Log($"You are tring to transfer {this.name} from {listName}");
-        //Debug.Log(CardHandler.pile1[1].name);
+        
     }
     public void ITransfered()
     {

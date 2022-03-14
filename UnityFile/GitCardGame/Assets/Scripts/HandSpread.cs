@@ -25,29 +25,18 @@ public class HandSpread : MonoBehaviour
 
     private void Update()
     {
-        handCount = transform.childCount;
-
-        
-
-        // foreach (Transform childCard in transform)
+        // foreach (Transform child in transform)
         // {
-        //     GetComponentInChildren<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
+        //     GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
         // }
-
-        
-
-        
-        
-
-        //Debug.Log(handCount);
-        
-         
-
-        
+        handCount = transform.childCount;
     }
+
     private void FixedUpdate()
     {
         AdjustSpread(handCount);
+
+        
    
     }
 

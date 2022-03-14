@@ -26,15 +26,8 @@ public class ActionCardUI : MonoBehaviour
      cardIDText.text =  refCard.ID;
      cardEditionText.text =  refCard.Edition;
 
-     if (this.transform.parent.gameObject.name != "PlayerHandHolder" )
-     {     
-          GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
-          //Debug.Log(GetComponent<AspectRatioFitter>().aspectMode + " This is in hand");
-     }
-     //    else{
-     //        GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
-     //        //Debug.Log("not in hand");
-     //    }
+   
+  
    }
 
    

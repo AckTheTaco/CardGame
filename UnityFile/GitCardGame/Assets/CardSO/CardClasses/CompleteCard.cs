@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Complete Card", menuName = "Assets/Cards/New Complete Card")]
 [System.Serializable]
-public class CompleteCard : CardClass
+public class CompleteCard : CardClass, IPlayable
 {
     public string Type;
     public int Cost;
@@ -17,5 +17,11 @@ public class CompleteCard : CardClass
 
     public List<CompleteCard> CurrentListPosition;
     public List<CompleteCard> ListPosition;
+
+    public void IPlayed()
+    {
+        Debug.Log("This card was played");
+    }
+
 
 }
