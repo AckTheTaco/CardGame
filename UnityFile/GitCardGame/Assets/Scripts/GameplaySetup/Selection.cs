@@ -21,6 +21,10 @@ public class Selection : MonoBehaviour
    [Space]
    [SerializeField] private MansionCollectionDatabase _mansionsDB;
    [SerializeField] private List<MansionDatabaseClass> _mansionList;
+   [Space]
+   public CharacterClass ChosenCharacter;
+   public ResourceCollectionBase ChosenScenario;
+   public MansionDatabaseClass ChosenMansion;
 
    
 
@@ -125,6 +129,41 @@ public class Selection : MonoBehaviour
 
 
 
+   public void RandomGameplaySetup()
+   {
+      RandomMansion();
+      RandomCharacter();
+      RandomScenario();
+   }
+
+   private void RandomMansion()
+   {
+      var range = Random.Range(0, _mansionList.Count);
+
+      _selectedMansion.text = _mansionList[range].name;
+   }
+   private void RandomCharacter()
+   {
+      var range = Random.Range(0, _characterList.Count);
+
+      var rand = _characterList[range].name;    
+      _selectedCharacter.text = rand.Substring(rand.IndexOf(" "));
+   }
+
+   private void RandomScenario()
+   {
+      var range = Random.Range(0, _scenarioList.Count);
+
+      _selectedScenario.text = _scenarioList[range].name;
+   }
+
+   public void SaveSetup()
+   {
+      PlayerPrefs.SetString("Character", ChosenCharacter.name);
+      PlayerPrefs.SetString("Scenario", ChosenScenario.name);
+      PlayerPrefs.SetString("Mansion", ChosenMansion.name);
+      
+   }
 
 
 }

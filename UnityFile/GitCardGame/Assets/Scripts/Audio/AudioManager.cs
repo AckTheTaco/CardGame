@@ -39,13 +39,13 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
             s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
-        }  
+        }
+        
     }
 
     void Start()
     {
-    
-
+        
         switch (SceneManager.GetActiveScene().name)
         {
             case "MainMenu":
@@ -82,6 +82,8 @@ public class AudioManager : MonoBehaviour
             
             FadeOut("MainMenuTheme");
         }
+        Debug.Log(PlayerPrefs.HasKey("MyVolume") + " i do have playerprefs volume"+PlayerPrefs.GetFloat("MyVolume"));
+        ChangeGlobalVolume(PlayerPrefs.GetFloat("MyVolume", .2f));
     }
 
     public void PlaySound(string name)
