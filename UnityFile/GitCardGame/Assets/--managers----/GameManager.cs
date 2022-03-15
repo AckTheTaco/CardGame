@@ -18,11 +18,18 @@ public class GameManager : MonoBehaviour
     public int Ammo, Gold, Buy, Explore, Action, Damage,  XP;
 
     [Space]
-    [SerializeField] private  CharacterClass avatar;
+    [SerializeField] public CharacterClass avatar;
     [Space]
     [SerializeField] public GameObject DiscardWindow;
 
     [SerializeField] public GameObject GameOverScreen;
+
+    [Space]
+    [SerializeField] public List<CharacterClass> _listOfCharacters;
+    [SerializeField] public List<ResourceCollectionBase> ListOfScenarios;
+    [SerializeField] public MansionDatabaseClass chosenMansion;
+    [SerializeField] public ResourceCollectionBase chosenScenario;
+
 
     private void Awake()
     {
@@ -35,14 +42,35 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        print("I have a character, scenario. mansion");
+            avatar = Selection.instance.ListOfCharacters[PlayerPrefs.GetInt("Character", 0)];
+            chosenScenario = Selection.instance.ListOfScenarios[PlayerPrefs.GetInt("Scenario", 0)];
+            chosenMansion = Selection.instance.ListOfMansions[PlayerPrefs.GetInt("Mansion", 0)];
 
     }
 
     void Start()
     {
+        
         Buy = 1;
         Explore = 1;
         Action = 1;
+
+        // if(Selection.instance != null)
+        // {}
+            
+
+            
+            
+        
+
+
+        
+        print(avatar.name);
+        print(chosenMansion.name);
+        print(chosenScenario.name);
+
+       
     }
 
 
@@ -56,6 +84,8 @@ public class GameManager : MonoBehaviour
         handCount = CardHandler.HandCount;
         discardCount = CardHandler.DiscardCount;
         mansionCount = CardHandler.MansionCount;
+
+        
     }
 
     public void GameOver()

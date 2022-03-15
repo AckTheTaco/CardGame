@@ -7,7 +7,8 @@ using TMPro;
 public class UiHandler : MonoBehaviour
 {
     public static UiHandler instance;
-
+    [Space]
+    [SerializeField] private TMP_Text _avatarName;
     //Card Counting
     [Space]
     [SerializeField] private TMP_Text HandCountText, DeckCountText, TurnCountText, DiscardCountText, MansionCountText;
@@ -59,6 +60,8 @@ public class UiHandler : MonoBehaviour
         GoldText.text = "" + GameManager.instance.Gold.ToString();
         
         XPText.text = " " + GameManager.instance.XP.ToString(); // Decorations Medal Icon
+
+        _avatarName.text = GameManager.instance.avatar.name.Substring(GameManager.instance.avatar.name.IndexOf(" "));
     }
 
 

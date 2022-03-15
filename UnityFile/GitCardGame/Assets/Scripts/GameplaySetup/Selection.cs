@@ -8,23 +8,24 @@ using UnityEngine.EventSystems;
 
 public class Selection : MonoBehaviour
 {
+   public static Selection instance;
    [SerializeField] private TMP_Text _selectedCharacter;
    [SerializeField] private TMP_Text _selectedScenario;
    [SerializeField] private TMP_Text _selectedMansion;
 
    [Space]
    [SerializeField] private CharacterCollection _charactersDB;
-   [SerializeField] private List<CharacterClass> _characterList;
+   [SerializeField] public List<CharacterClass> ListOfCharacters;
    [Space]
    [SerializeField] private ScenarioCollection _scenariosDB;
-   [SerializeField] private List<ResourceCollectionBase> _scenarioList;
+   [SerializeField] public List<ResourceCollectionBase> ListOfScenarios;
    [Space]
-   [SerializeField] private MansionCollectionDatabase _mansionsDB;
-   [SerializeField] private List<MansionDatabaseClass> _mansionList;
+   [SerializeField] public MansionCollectionDatabase _mansionsDB;
+   [SerializeField] public List<MansionDatabaseClass> ListOfMansions;
    [Space]
-   public CharacterClass ChosenCharacter;
-   public ResourceCollectionBase ChosenScenario;
-   public MansionDatabaseClass ChosenMansion;
+   public int ChosenCharacter;
+   public int ChosenScenario;
+   public int ChosenMansion;
 
    
 
@@ -33,33 +34,47 @@ public class Selection : MonoBehaviour
 
    private void Awake()
    {
-      
+      if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
    }
    private void Start()
    {
-      _characterList = new List<CharacterClass>(_charactersDB.characterCollection);
-      _scenarioList = new List<ResourceCollectionBase>(_scenariosDB.thisScenarioCollection);
-      _mansionList = new List<MansionDatabaseClass>(_mansionsDB.thisMansionCollection);
 
-      var name = _characterList[0].name;    
+      ListOfCharacters = new List<CharacterClass>(_charactersDB.characterCollection);
+      ListOfScenarios = new List<ResourceCollectionBase>(_scenariosDB.thisScenarioCollection);
+      ListOfMansions = new List<MansionDatabaseClass>(_mansionsDB.thisMansionCollection);
+
+      var name = ListOfCharacters[0].name;    
       _selectedCharacter.text = name.Substring(name.IndexOf(" "));
 
-      _selectedScenario.text = _scenarioList[0].name;
-      _selectedMansion.text = _mansionList[0].name;
+      _selectedScenario.text = ListOfScenarios[0].name;
+      _selectedMansion.text = ListOfMansions[0].name;
+      SetIntPlayerPrefs("Character", 0);
+      SetIntPlayerPrefs("Scenario", 0);
+      SetIntPlayerPrefs("Mansion", 0);
+      
    }
 
    int index;
    public void NextCharacter()
    {
       index++;
-      if ( (index+1) > _characterList.Count)
+      if ( (index+1) > ListOfCharacters.Count)
       {  
          index = 0;
          
       }
-      var name = _characterList[index].name;    
+      
+      var name = ListOfCharacters[index].name;    
       _selectedCharacter.text = name.Substring(name.IndexOf(" "));
-
+      SetIntPlayerPrefs("Character", index);
    }
 
    public void PreviousCharacter()
@@ -67,11 +82,14 @@ public class Selection : MonoBehaviour
       index--;
       if (index < 0)
       {  
-         index = _characterList.Count-1;
+         index = ListOfCharacters.Count-1;
          
       }
-      var name = _characterList[index].name;    
+      var name = ListOfCharacters[index].name;
+      
       _selectedCharacter.text = name.Substring(name.IndexOf(" "));
+
+      SetIntPlayerPrefs("Character", index);
 
    }
     public void PreviousScenario()
@@ -79,24 +97,27 @@ public class Selection : MonoBehaviour
       index--;
       if (index < 0)
       {  
-         index = _scenarioList.Count-1;
+         index = ListOfScenarios.Count-1;
          
       }
-      var name = _scenarioList[index].name;    
+      var name = ListOfScenarios[index].name;    
       _selectedScenario.text = name;
+      SetIntPlayerPrefs("Scenario", index);
 
    }
 
     public void NextScenario()
    {
       index++;
-      if ( (index+1) > _scenarioList.Count)
+      if ( (index+1) > ListOfScenarios.Count)
       {  
          index = 0;
          
       }
-      var name = _scenarioList[index].name;    
+      var name = ListOfScenarios[index].name;    
       _selectedScenario.text = name;
+
+      SetIntPlayerPrefs("Scenario", index);
 
    }
 
@@ -104,14 +125,15 @@ public class Selection : MonoBehaviour
    public void NextMansion()
    {
       index++;
-      if ( (index+1) > _mansionList.Count)
+      if ( (index+1) > ListOfMansions.Count)
       {  
          index = 0;
          
       }
-      var name = _mansionList[index].name;    
+      var name = ListOfMansions[index].name;    
       _selectedMansion.text = name;
-
+      
+      SetIntPlayerPrefs("Mansion", index);
    }
 
     public void PreviousMansion()
@@ -119,12 +141,13 @@ public class Selection : MonoBehaviour
       index--;
       if (index < 0)
       {  
-         index = _mansionList.Count-1;
+         index = ListOfMansions.Count-1;
          
       }
-      var name = _mansionList[index].name;    
+      var name = ListOfMansions[index].name;    
       _selectedMansion.text = name;
 
+      SetIntPlayerPrefs("Mansion", index);
    }
 
 
@@ -138,32 +161,39 @@ public class Selection : MonoBehaviour
 
    private void RandomMansion()
    {
-      var range = Random.Range(0, _mansionList.Count);
-
-      _selectedMansion.text = _mansionList[range].name;
+      var range = Random.Range(0, ListOfMansions.Count);
+      SetIntPlayerPrefs("Mansion", range);
+      _selectedMansion.text = ListOfMansions[range].name;
    }
    private void RandomCharacter()
    {
-      var range = Random.Range(0, _characterList.Count);
+      var range = Random.Range(0, ListOfCharacters.Count);
 
-      var rand = _characterList[range].name;    
+      var rand = ListOfCharacters[range].name; 
+      SetIntPlayerPrefs("Character", range);   
       _selectedCharacter.text = rand.Substring(rand.IndexOf(" "));
    }
 
    private void RandomScenario()
    {
-      var range = Random.Range(0, _scenarioList.Count);
-
-      _selectedScenario.text = _scenarioList[range].name;
+      var range = Random.Range(0, ListOfScenarios.Count);
+      SetIntPlayerPrefs("Scenario", range);
+      _selectedScenario.text = ListOfScenarios[range].name;
    }
 
-   public void SaveSetup()
-   {
-      PlayerPrefs.SetString("Character", ChosenCharacter.name);
-      PlayerPrefs.SetString("Scenario", ChosenScenario.name);
-      PlayerPrefs.SetString("Mansion", ChosenMansion.name);
+   // public void SaveSetup()
+   // {
+   //    PlayerPrefs.SetInt("Character", ChosenCharacter);
+   //    PlayerPrefs.SetInt("Scenario", ChosenScenario);
+   //    PlayerPrefs.SetInt("Mansion", ChosenMansion);
       
-   }
+   // }
 
+   private void SetIntPlayerPrefs(string name, int index)
+   {
+      PlayerPrefs.SetInt(name, index);
+      PlayerPrefs.Save();
+   }
+     
 
 }

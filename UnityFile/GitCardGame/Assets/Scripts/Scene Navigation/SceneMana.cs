@@ -34,6 +34,7 @@ public class SceneMana : MonoBehaviour
         FindObjectOfType<AudioManager>().StopAllSound();
         SceneManager.LoadScene("Options");
         FindObjectOfType<AudioManager>().PlaySound("Campfire");
+        PlayerPrefs.Save();
     }
 
     public void BtnMainMenuScene()
@@ -41,6 +42,7 @@ public class SceneMana : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         FindObjectOfType<AudioManager>().StopAllSound();
         FindObjectOfType<AudioManager>().PlaySound("MainMenuTheme");
+        PlayerPrefs.Save();
         
     }
 
@@ -50,6 +52,7 @@ public class SceneMana : MonoBehaviour
         FindObjectOfType<AudioManager>().StopAllSound();
         SceneManager.LoadScene("Gameplay");
         FindObjectOfType<AudioManager>().PlaySound("GamePlayTheme");
+        PlayerPrefs.Save();
         
     }
 
@@ -58,6 +61,7 @@ public class SceneMana : MonoBehaviour
         FindObjectOfType<AudioManager>().StopAllSound();
         SceneManager.LoadScene("GameSetup");
         FindObjectOfType<AudioManager>().PlaySound("EmptyRoom");
+        PlayerPrefs.Save();
         
     }
 
@@ -66,11 +70,13 @@ public class SceneMana : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().StopAllSound();
         FindObjectOfType<AudioManager>().PlaySound("Whoosh");
+        PlayerPrefs.Save();
         Application.Quit();
     }
 
     public void RestartGame()
     {
+        
         gameOverScreen.SetActive(false);
         SceneManager.LoadScene("Gameplay");
     }

@@ -71,23 +71,31 @@ public class CardHandler : MonoBehaviour
 
   void Awake()
    {
-       
+       #region Now an Instance
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+        #endregion
 
+        
+    }
+    void Start()
+    {
         //DeckTest = new List<CompleteCard>();
         PlayerDeck = new List<CompleteCard>(StartingInventory.aDeck);
-        MansionDeck = new List<CompleteCard>(MansionData.thisMansion);
+        MansionDeck = new List<CompleteCard>(GameManager.instance.chosenMansion.thisMansion);
+        print(GameManager.instance.chosenMansion.name);
 
-             staticMansionDeck = new List<CompleteCard>(MansionDeck);
-        Scenario = ScriptableObject.Instantiate(_scenario1);
+        staticMansionDeck = new List<CompleteCard>(MansionDeck);
+        Scenario = ScriptableObject.Instantiate(GameManager.instance.chosenScenario);
         
 
         #region Resource Area Pile Assignment
-            
-        
-
-
-
-
         pile1 = Scenario.thisCollection[0].thesePiles;
         pile2 = Scenario.thisCollection[1].thesePiles;
         pile3 = Scenario.thisCollection[2].thesePiles;
@@ -106,26 +114,6 @@ public class CardHandler : MonoBehaviour
         pile16 = Scenario.thisCollection[15].thesePiles;
         pile17 = Scenario.thisCollection[16].thesePiles;
         pile18 = Scenario.thisCollection[17].thesePiles;
-
-        #endregion
-
-        
-        
-        
-
-    
-    }
-    void Start()
-    {
-        #region Now an Instance
-        if (instance == null)
-            instance = this;
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
         #endregion
 
         ShuffleAllDecksAtStart();
