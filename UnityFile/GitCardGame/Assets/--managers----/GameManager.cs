@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         print("I have a character, scenario. mansion");
-            avatar = Selection.instance.ListOfCharacters[PlayerPrefs.GetInt("Character", 0)];
-            chosenScenario = Selection.instance.ListOfScenarios[PlayerPrefs.GetInt("Scenario", 0)];
-            chosenMansion = Selection.instance.ListOfMansions[PlayerPrefs.GetInt("Mansion", 0)];
+            // avatar = Selection.instance.ListOfCharacters[PlayerPrefs.GetInt("Character", 0)];
+            // chosenScenario = Selection.instance.ListOfScenarios[PlayerPrefs.GetInt("Scenario", 0)];
+            // chosenMansion = Selection.instance.ListOfMansions[PlayerPrefs.GetInt("Mansion", 0)];
 
     }
 

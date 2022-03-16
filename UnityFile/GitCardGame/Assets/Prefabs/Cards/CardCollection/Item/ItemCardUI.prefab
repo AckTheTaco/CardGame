@@ -1178,6 +1178,7 @@ GameObject:
   - component: {fileID: 8339616461943150223}
   - component: {fileID: -7340625983421736941}
   - component: {fileID: 3448642675181189314}
+  - component: {fileID: -2206053700851958744}
   m_Layer: 5
   m_Name: ItemCardUI
   m_TagString: Untagged
@@ -1286,6 +1287,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 0.75
+--- !u!114 &-2206053700851958744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559352125385291317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e467ab1f96511f4e960090bd1496e54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1257652261287011843
 GameObject:
   m_ObjectHideFlags: 0
