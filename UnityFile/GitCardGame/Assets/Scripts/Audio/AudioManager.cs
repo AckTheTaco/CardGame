@@ -82,7 +82,7 @@ public class AudioManager : MonoBehaviour
             
             FadeOut("MainMenuTheme");
         }
-        Debug.Log(PlayerPrefs.HasKey("MyVolume") + " i do have playerprefs volume"+PlayerPrefs.GetFloat("MyVolume"));
+        //Debug.Log(PlayerPrefs.HasKey("MyVolume") + " i do have playerprefs volume"+PlayerPrefs.GetFloat("MyVolume"));
         ChangeGlobalVolume(PlayerPrefs.GetFloat("MyVolume", .2f));
     }
 

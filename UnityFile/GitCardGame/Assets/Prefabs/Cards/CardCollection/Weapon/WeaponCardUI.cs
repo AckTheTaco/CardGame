@@ -7,6 +7,7 @@ using TMPro;
 public class WeaponCardUI : MonoBehaviour
 {
     public CompleteCard refCard;
+    public string beaconList;
 
     
     public TMP_Text cardNameText;

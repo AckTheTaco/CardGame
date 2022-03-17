@@ -8,12 +8,12 @@ public class HoverCardEffect : MonoBehaviour, IPointerEnterHandler, IPointerExit
 {
    public void OnPointerEnter(PointerEventData eventData)
    {
-        print("you moused over" + gameObject.name);
+     //    print("you moused over" + gameObject.name);
         
    }
 
    public void OnPointerExit(PointerEventData eventData)
    {
-        print("your mouse left" + gameObject.name);
+     //    print("your mouse left" + gameObject.name);
    }
 }

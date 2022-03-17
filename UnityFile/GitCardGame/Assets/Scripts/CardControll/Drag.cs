@@ -18,16 +18,39 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
 
     private List<RaycastResult> _raycastAllHits = new List<RaycastResult>();
 
+    private bool _isDraggable;
+
     
     private void Start()
     {
+        if (this.transform.parent.gameObject.name == "PlayerHandHolder")
+        {
+            _isDraggable = true;
+        }
+        else
+        {
+            _isDraggable = false;
+        }
+
+       // print(CardHandler.instance.listDictionary.Keys);
+
         
 
     }
-   
+    void Update()
+    {
+        /*
+        * This needs to be activated to stop unautherorized drag-n-drop from the resource area and playerFeild
+        */
+        // if (_isDraggable != true)
+        // {
+        //     GetComponent<Drag>().enabled = false;
+        // }
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        
         homeList = gameObject.transform.parent.name;
 
         oldList = homeList;
@@ -44,6 +67,16 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
         Debug.Log($"{this} will return to {_parentToReturnTo}");
         this.GetComponent<CanvasGroup>().blocksRaycasts = false;
         this.GetComponent<CanvasGroup>().alpha = .6f;
+
+        if(!CardHandler.instance.listDictionary.ContainsKey(_parentToReturnTo.name))
+        {
+            print("Dict does not exsist");
+            return;
+        }
+        else
+        {
+            print($"{this.name} is in the list {CardHandler.instance.listDictionary.Values}");
+        }
         
     }
     public void OnDrag(PointerEventData eventData)

@@ -12,15 +12,15 @@ public class CompleteCard : CardClass, IPlayable
     public int Damage;
     [Space]
     public int Health;
-    //public int Damage;
+    
     public int Decorations;
 
-    public List<CompleteCard> CurrentListPosition;
+    
     public List<CompleteCard> ListPosition;
 
     public void IPlayed()
     {
-        Debug.Log("This card was played");
+        Debug.Log($"This card was played");
     }
 
 

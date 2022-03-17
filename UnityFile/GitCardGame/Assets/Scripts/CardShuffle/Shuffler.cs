@@ -29,7 +29,7 @@ public class Shuffler
             } 
         } else
         {
-            Debug.Log($"This {thisDeck} has no cards");
+            //Debug.Log($"This {thisDeck} has no cards");
         }
     }
 }

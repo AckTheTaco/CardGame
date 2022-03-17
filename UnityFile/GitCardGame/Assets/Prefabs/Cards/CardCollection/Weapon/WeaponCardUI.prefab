@@ -763,6 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refCard: {fileID: 0}
+  beaconList: 
   cardNameText: {fileID: 6635916240133828759}
   cardCostText: {fileID: 6635916239972671185}
   cardEffectText: {fileID: 6635916240099422404}

@@ -42,11 +42,14 @@ public class DiscardWindow : MonoBehaviour
     var discardCount = CardHandler.DiscardCount;
       
       for (int i = 0; i < discardCount; i++)
-        {
-          var TopDiscard = CardHandler.staticPlayerDiscard[i];
-          Debug.Log(CardHandler.staticPlayerDiscard[i]);
+      {
+        var TopDiscard = CardHandler.staticPlayerDiscard[i];
+        Debug.Log(CardHandler.staticPlayerDiscard[i]);
+        _actionCard.refCard = null;
+        _itemCard.refCard = null;
+        _weaponCard.refCard = null;
 
-          UiHandler.instance.CreateCardUI(TopDiscard, GameObject.Find("DiscardHolder").transform);
-        } 
+        UiHandler.instance.CreateCardUI(TopDiscard, GameObject.Find("DiscardHolder").transform, TopDiscard.ToString());
+      } 
   }
 }

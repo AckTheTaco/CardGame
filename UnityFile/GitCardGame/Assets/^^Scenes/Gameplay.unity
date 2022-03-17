@@ -2137,18 +2137,9 @@ MonoBehaviour:
   StartingInventory: {fileID: 11400000, guid: 5c0ce07d00f92dd46b824eeb900d37ee, type: 2}
   MansionData: {fileID: 11400000, guid: 08952d1c148ef5c4ca6d481e8743e185, type: 2}
   _scenario1: {fileID: 11400000, guid: f0ff69ebbd7fcc74ea8c6abde0c7ffff, type: 2}
+  testList: []
   MansionDeck: []
-  PlayerDeck:
-  - {fileID: 11400000, guid: b113e381df866af429551959fac166be, type: 2}
-  - {fileID: 11400000, guid: 42985fe2f53b03844bc4bc6945dff949, type: 2}
-  - {fileID: 11400000, guid: 085a5f1452cacb8409054075f41dd9ce, type: 2}
-  - {fileID: 11400000, guid: d22ea4f2012d0774b8352adecfbe2cef, type: 2}
-  - {fileID: 11400000, guid: 52d20e6951c80304e81afa29e90f243e, type: 2}
-  - {fileID: 11400000, guid: 8805845cd3c39f042850b3a3e080a564, type: 2}
-  - {fileID: 11400000, guid: 205ba1e52ae403345b195ce85b34ea76, type: 2}
-  - {fileID: 11400000, guid: 79bc7dd8c6944b145b6efe7eddfa968f, type: 2}
-  - {fileID: 11400000, guid: 02a15955b46543044b68da6f4a5ea4c7, type: 2}
-  - {fileID: 11400000, guid: 3dc11a19058199c479ae8e7c6be54476, type: 2}
+  PlayerDeck: []
   PlayerHand: []
   PlayerDiscard: []
   ActiveWeapons: []
@@ -6675,7 +6666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -59.400024, y: 0}
+  m_AnchoredPosition: {x: -59.399902, y: 0}
   m_SizeDelta: {x: -271.4363, y: 95.4539}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &881173038
@@ -12257,9 +12248,6 @@ MonoBehaviour:
   itemPile: {fileID: 559352125385291319, guid: aa6271c7d7d8f964d9a288f2910128a9, type: 3}
   weaponPile: {fileID: 88925648244985799, guid: 442f51ca1f697fd46a224d83ea908a8c, type: 3}
   theseScenarios: []
-  _actionCard: {fileID: 6828461423262650587, guid: 9747af3bfdbd41c4fab146174d9ecfc3, type: 3}
-  _itemCard: {fileID: 559352125385291319, guid: aa6271c7d7d8f964d9a288f2910128a9, type: 3}
-  _weaponCard: {fileID: 88925648244985799, guid: 442f51ca1f697fd46a224d83ea908a8c, type: 3}
 --- !u!114 &1464044013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14876,12 +14864,12 @@ MonoBehaviour:
   Damage: 0
   XP: 0
   avatar: {fileID: 11400000, guid: e70471a45d12d6e458c45ef3c7e044cb, type: 2}
+  chosenMansion: {fileID: 11400000, guid: 08952d1c148ef5c4ca6d481e8743e185, type: 2}
+  chosenScenario: {fileID: 11400000, guid: f0ff69ebbd7fcc74ea8c6abde0c7ffff, type: 2}
   DiscardWindow: {fileID: 5099705414372550987, guid: c32be6c0e98af564aa3ed45d23466d7a, type: 3}
   GameOverScreen: {fileID: 1893363196412506880, guid: 07c1de440a7117c4e916cc5a1fc488aa, type: 3}
   _listOfCharacters: []
   ListOfScenarios: []
-  chosenMansion: {fileID: 11400000, guid: 08952d1c148ef5c4ca6d481e8743e185, type: 2}
-  chosenScenario: {fileID: 11400000, guid: f0ff69ebbd7fcc74ea8c6abde0c7ffff, type: 2}
 --- !u!4 &1817122706
 Transform:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class HandSpread : MonoBehaviour
     {
         GetComponent<HorizontalLayoutGroup>().spacing = -162.3f;
         float handspacing = GetComponent<HorizontalLayoutGroup>().spacing;
-        adjusted =5;
+        adjusted = 5;
         
         
         

@@ -192,7 +192,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 308.3, y: 122}
-  m_SizeDelta: {x: 114.5, y: 0}
+  m_SizeDelta: {x: 0, y: 169.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6828461423262650587
 MonoBehaviour:
@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refCard: {fileID: 0}
+  beaconList: pile13
   cardNameText: {fileID: 7369907926970054364}
   cardCostText: {fileID: 7369907926743357594}
   cardEffectText: {fileID: 7369907926868276879}
@@ -1170,7 +1171,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.7
+  m_fontSize: 9.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

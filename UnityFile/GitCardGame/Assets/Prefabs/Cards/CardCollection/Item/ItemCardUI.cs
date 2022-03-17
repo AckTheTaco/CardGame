@@ -8,6 +8,8 @@ public class ItemCardUI : MonoBehaviour
 {
     public CompleteCard refCard;
 
+    public string beaconList;
+
     
     public TMP_Text cardNameText;
     public TMP_Text cardCostText;

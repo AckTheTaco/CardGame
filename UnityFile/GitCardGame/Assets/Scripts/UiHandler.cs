@@ -71,7 +71,7 @@ public class UiHandler : MonoBehaviour
     [SerializeField] private ItemCardUI _itemCard; 
     [SerializeField] private WeaponCardUI _weaponCard;
 
-    public void CreateCardUI(CompleteCard _thisCard, Transform _location)
+    public void CreateCardUI(CompleteCard _thisCard, Transform _location, string originList)
     {
         
 
@@ -83,13 +83,14 @@ public class UiHandler : MonoBehaviour
 
             actionClone.name = _thisCard.ToString();
             actionClone.refCard = _thisCard;
+            actionClone.beaconList = originList;
             
 
             ScriptableObject.Instantiate(actionClone, new Vector3(0,0) , Quaternion.identity, _location);
 
             actionClone.refCard = null;
 
-            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+            //Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
         } 
         else if (_thisCard.Type == "Item" || _thisCard.Type == "Ammo")
         {
@@ -99,12 +100,14 @@ public class UiHandler : MonoBehaviour
 
             itemClone.refCard = _thisCard;
             itemClone.name = _thisCard.name.ToString();
+            itemClone.beaconList = originList;
+           
 
             ScriptableObject.Instantiate(itemClone, new Vector3(0,0) , Quaternion.identity, _location);
 
             itemClone.refCard = null;
 
-            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+            //Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
         }       
             else
         {
@@ -114,12 +117,13 @@ public class UiHandler : MonoBehaviour
 
             weaponClone.refCard = _thisCard;
             weaponClone.name = _thisCard.ToString();
+            
 
             ScriptableObject.Instantiate(weaponClone, new Vector3(0,0) , Quaternion.identity, _location);
 
             weaponClone.refCard = null;
 
-            Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
+            //Debug.Log($"UpdateCardUI made a {_thisCard.name} {_thisCard.Type} in the {_location.ToString()}");
         }
     }
 

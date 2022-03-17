@@ -14,6 +14,8 @@ public abstract class CardClass : ScriptableObject
     public string CardEffect;
     //public enum CardType {ITEM,ACTION,MANSION,WEAPON}
 
+    
+
     public void Trash()
     {
 

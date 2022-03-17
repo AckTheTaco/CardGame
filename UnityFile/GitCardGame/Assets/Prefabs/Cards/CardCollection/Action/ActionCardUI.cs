@@ -8,6 +8,8 @@ public class ActionCardUI : MonoBehaviour
 {
    
     public CompleteCard refCard;
+
+    public string beaconList;
     
 
      // this is an action card

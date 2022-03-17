@@ -8,7 +8,7 @@ public class CardHandler : MonoBehaviour
 {
     public static CardHandler instance;
 
-
+    
 
 
     public EmptyPlayerDeck StartingInventory;
@@ -19,11 +19,15 @@ public class CardHandler : MonoBehaviour
 
     public static ResourceCollectionBase Scenario;
     [Space]
+    [SerializeField] private List<CardClass> testList;
+    [Space]
 
    /*
    *Make a dictionary here for reasons
    * public Dictionary<string, List<CompleteCard>> = new Dictionary<string, List<CompleteCard>>();
    */
+
+    public Dictionary<string, List<CompleteCard>> listDictionary = new Dictionary<string, List<CompleteCard>>();
    
     [SerializeField]public List<CompleteCard> MansionDeck;
     public static List<CompleteCard> staticMansionDeck;
@@ -45,23 +49,23 @@ public class CardHandler : MonoBehaviour
 
     #region ResourcePile Lists
     
-    public  static List<CompleteCard> pile1 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile2 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile3 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile4 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile5 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile6 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile7 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile8 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile9 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile10 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile11 = new List<CompleteCard>();
-    public static List<CompleteCard> pile12 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile13 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile14 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile15 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile16 = new List<CompleteCard>();
-    public  static List<CompleteCard> pile17 = new List<CompleteCard>();
+    public  List<CompleteCard> pile1 = new List<CompleteCard>();
+    public  List<CompleteCard> pile2 = new List<CompleteCard>();
+    public   List<CompleteCard> pile3 = new List<CompleteCard>();
+    public   List<CompleteCard> pile4 = new List<CompleteCard>();
+    public   List<CompleteCard> pile5 = new List<CompleteCard>();
+    public   List<CompleteCard> pile6 = new List<CompleteCard>();
+    public   List<CompleteCard> pile7 = new List<CompleteCard>();
+    public   List<CompleteCard> pile8 = new List<CompleteCard>();
+    public   List<CompleteCard> pile9 = new List<CompleteCard>();
+    public   List<CompleteCard> pile10 = new List<CompleteCard>();
+    public   List<CompleteCard> pile11 = new List<CompleteCard>();
+    public  List<CompleteCard> pile12 = new List<CompleteCard>();
+    public   List<CompleteCard> pile13 = new List<CompleteCard>();
+    public   List<CompleteCard> pile14 = new List<CompleteCard>();
+    public   List<CompleteCard> pile15 = new List<CompleteCard>();
+    public   List<CompleteCard> pile16 = new List<CompleteCard>();
+    public   List<CompleteCard> pile17 = new List<CompleteCard>();
     public  List<CompleteCard> pile18 = new List<CompleteCard>();
     #endregion
 
@@ -82,39 +86,76 @@ public class CardHandler : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         #endregion
 
+        listDictionary.Add("PlayerHandHolder", PlayerHand);
+        listDictionary.Add("PlayerDeck", PlayerDeck);
+        listDictionary.Add("WeaponsHolder", ActiveWeapons);
+
+        
+        
+
         
     }
     void Start()
     {
-        //DeckTest = new List<CompleteCard>();
         PlayerDeck = new List<CompleteCard>(StartingInventory.aDeck);
         MansionDeck = new List<CompleteCard>(GameManager.instance.chosenMansion.thisMansion);
-        print(GameManager.instance.chosenMansion.name);
+        //print(GameManager.instance.chosenMansion.name);
 
         staticMansionDeck = new List<CompleteCard>(MansionDeck);
         Scenario = ScriptableObject.Instantiate(GameManager.instance.chosenScenario);
-        
 
-        #region Resource Area Pile Assignment
-        pile1 = Scenario.thisCollection[0].thesePiles;
-        pile2 = Scenario.thisCollection[1].thesePiles;
-        pile3 = Scenario.thisCollection[2].thesePiles;
-        pile4 = Scenario.thisCollection[3].thesePiles;
-        pile5 = Scenario.thisCollection[4].thesePiles;
-        pile6 = Scenario.thisCollection[5].thesePiles;
-        pile7 = Scenario.thisCollection[6].thesePiles;
-        pile8 = Scenario.thisCollection[7].thesePiles;
-        pile9 = Scenario.thisCollection[8].thesePiles;
-        pile10 = Scenario.thisCollection[9].thesePiles;
-        pile11 = Scenario.thisCollection[10].thesePiles;
-        pile12 = Scenario.thisCollection[11].thesePiles;
-        pile13 = Scenario.thisCollection[12].thesePiles;
-        pile14 = Scenario.thisCollection[13].thesePiles;
-        pile15 = Scenario.thisCollection[14].thesePiles;
-        pile16 = Scenario.thisCollection[15].thesePiles;
-        pile17 = Scenario.thisCollection[16].thesePiles;
-        pile18 = Scenario.thisCollection[17].thesePiles;
-        #endregion
+        for (int i = 0; i < Scenario.thisCollection.Count; i++)
+        {
+            
+           // print($"I have a pile of {pileOfCards.thesePiles.Count}x {pileOfCards.name}'s ");
+            MakePileIntoLists(Scenario.thisCollection[i], i);
+        }
+
+        void MakePileIntoLists(ResourcePileBase pile, int pileNumber)
+        {
+            
+            string pileName =  "pile"+ (pileNumber+1).ToString();
+
+            if(!listDictionary.ContainsKey(pileName))
+            {
+                listDictionary.Add(pileName, pile.thesePiles);
+                listDictionary[pileName] = new List<CompleteCard>(pile.thesePiles);
+
+                
+
+               // print($"I made {pileName} in a Key in the dictionary: {listDictionary[pileName]}");
+            }
+            else
+            {
+                listDictionary[pileName] = new List<CompleteCard>(pile.thesePiles);
+                //print($"I have {pileName} in a Key in the dictionary: {listDictionary[pileName]} ** and added {pile.thesePiles}");
+            }
+            
+           
+            
+            
+            
+            //print($"I Made this pile");
+
+            // Dictionary<string, List<CompleteCard>>.KeyCollection values = listDictionary.Keys;
+            
+            // foreach(string val in values)
+            // {
+            //     print($"Values: {val}");
+            // }
+
+            
+            
+            
+        }
+
+        var pilesCount = Scenario.thisCollection.Count;
+
+        for (int i = 0; i < pilesCount; i++)
+        {
+            string pile = "pile" + (i+1).ToString();
+            UiHandler.instance.CreateCardUI(CardHandler.ScenarioList().thisCollection[i].thesePiles[0], GameObject.Find(pile).transform, pile);
+        }
 
         ShuffleAllDecksAtStart();
 
@@ -122,14 +163,40 @@ public class CardHandler : MonoBehaviour
 
       
 
-        Debug.Log(Scenario);
+        //Debug.Log(Scenario);
         
         
-   
+        Dictionary<string, List<CompleteCard>>.KeyCollection values = listDictionary.Keys;
+        
+        foreach(string val in values)
+        {
+            print($"Keys: {val}");
+        }
+
+        //DrawACard(2)
     
     }
     void Update()
     {
+        pile1 = new List<CompleteCard>(listDictionary["pile1"]);
+        pile2 = new List<CompleteCard>(listDictionary["pile2"]);
+        pile3 = new List<CompleteCard>(listDictionary["pile3"]);
+        pile4 = new List<CompleteCard>(listDictionary["pile4"]);
+        pile5 = new List<CompleteCard>(listDictionary["pile5"]);
+        pile6 = new List<CompleteCard>(listDictionary["pile6"]);
+        pile7 = new List<CompleteCard>(listDictionary["pile7"]);
+        pile8 = (listDictionary["pile8"]);
+        pile9 = (listDictionary["pile9"]);
+        pile10 = (listDictionary["pile10"]);
+        pile11 = (listDictionary["pile11"]);
+        pile12 = (listDictionary["pile12"]);
+        pile13 = (listDictionary["pile13"]);
+        pile14 = (listDictionary["pile14"]);
+        pile15 = (listDictionary["pile15"]);
+        pile16 = (listDictionary["pile16"]);
+        pile17 = (listDictionary["pile17"]);
+        pile18 = (listDictionary["pile18"]);
+
         staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
         MansionCount = MansionDeck.Count;
         HandCount = PlayerHand.Count;
@@ -177,7 +244,7 @@ public class CardHandler : MonoBehaviour
             for (int i = 0; i < n; i++)
             {
                 toDeck.Add(fromDeck[0]);
-                UiHandler.instance.CreateCardUI(fromDeck[0], GameObject.Find("PlayerHandHolder").transform);
+                UiHandler.instance.CreateCardUI(fromDeck[0], GameObject.Find("PlayerHandHolder").transform, "PlayerHandHolder");
                 fromDeck.RemoveAt(0);
             }
         }
@@ -195,7 +262,10 @@ public class CardHandler : MonoBehaviour
        }
     }
 
-
+    public static ResourceCollectionBase ScenarioList()
+    {
+        return Scenario;
+    }
     public void PlayerTurnEnd()
     {
         foreach (Transform child in GameObject.Find("PlayerHandHolder").transform)
@@ -208,7 +278,7 @@ public class CardHandler : MonoBehaviour
         }
         for (int i = 0; i < ActiveWeapons.Count; i++)
         {
-            PlayerDiscard.Add(ActiveWeapons[0]);
+            PlayerDiscard.Add(ActiveWeapons[i]);
         }
 
         foreach (Transform child in GameObject.Find("ItemHolder").transform)
@@ -217,7 +287,7 @@ public class CardHandler : MonoBehaviour
         }
         for (int i = 0; i < ActiveItems.Count; i++)
         {
-            PlayerDiscard.Add(ActiveItems[0]);
+            PlayerDiscard.Add(ActiveItems[i]);
         }
 
         foreach (Transform child in GameObject.Find("ActionHolder").transform)
@@ -226,7 +296,7 @@ public class CardHandler : MonoBehaviour
         }
         for (int i = 0; i < ActiveActions.Count; i++)
         {
-            PlayerDiscard.Add(ActiveActions[0]);
+            PlayerDiscard.Add(ActiveActions[i]);
         }
 
 
@@ -255,7 +325,7 @@ public class CardHandler : MonoBehaviour
             foreach (CompleteCard card in PlayerHand)
             {
                 
-               UiHandler.instance.CreateCardUI(PlayerHand[i], GameObject.Find("PlayerHandHolder").transform);
+               UiHandler.instance.CreateCardUI(PlayerHand[i], GameObject.Find("PlayerHandHolder").transform, PlayerHand.ToString());
                i++;
             }
             i = 0;
@@ -295,10 +365,10 @@ public class CardHandler : MonoBehaviour
         Debug.Log($"You can buy {GameManager.instance.Buy} card(s)");
     }
 
-    public void MoveCardInList(CompleteCard thisCard, List<CompleteCard> currentList)
-    {
-        thisCard.CurrentListPosition = currentList;
-    }
+    // public void MoveCardInList(CompleteCard thisCard, List<CompleteCard> currentList)
+    // {
+    //     thisCard.CurrentListPosition = currentList;
+    // }
 
 
 

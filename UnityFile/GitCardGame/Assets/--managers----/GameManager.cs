@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     [Space]
     [SerializeField] public CharacterClass avatar;
+    [SerializeField] public MansionDatabaseClass chosenMansion;
+    [SerializeField] public ResourceCollectionBase chosenScenario;
     [Space]
     [SerializeField] public GameObject DiscardWindow;
 
@@ -27,8 +29,7 @@ public class GameManager : MonoBehaviour
     [Space]
     [SerializeField] public List<CharacterClass> _listOfCharacters;
     [SerializeField] public List<ResourceCollectionBase> ListOfScenarios;
-    [SerializeField] public MansionDatabaseClass chosenMansion;
-    [SerializeField] public ResourceCollectionBase chosenScenario;
+    
 
 
     private void Awake()
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        print("I have a character, scenario. mansion");
+        //print("I have a character, scenario. mansion");
             // avatar = Selection.instance.ListOfCharacters[PlayerPrefs.GetInt("Character", 0)];
             // chosenScenario = Selection.instance.ListOfScenarios[PlayerPrefs.GetInt("Scenario", 0)];
             // chosenMansion = Selection.instance.ListOfMansions[PlayerPrefs.GetInt("Mansion", 0)];
@@ -66,9 +67,9 @@ public class GameManager : MonoBehaviour
 
 
         
-        print(avatar.name);
-        print(chosenMansion.name);
-        print(chosenScenario.name);
+        // print(avatar.name);
+        // print(chosenMansion.name);
+        // print(chosenScenario.name);
 
        
     }
