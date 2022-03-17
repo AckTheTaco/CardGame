@@ -6,6 +6,7 @@ public class Shuffler
 {
    public static void ShuffleDeck(List<CompleteCard> thisDeck)// static can be called from anywhere. assign the "Shuffle" method in unity to a Button. Choose the deck object to shuffle does the shuffle 5 times on the deck that is passed through
     {
+        AudioManager.instance.PlaySound("Shuffle");
         if (thisDeck.Count > 0)
         {
         List<CompleteCard> mCon = new List<CompleteCard>();

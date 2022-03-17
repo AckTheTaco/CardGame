@@ -24,9 +24,9 @@ public class WeaponCardUI : MonoBehaviour
    private void Update()
    {
         cardNameText.text = refCard.Name;
-        cardCostText.text = refCard.Cost.ToString();
+        cardCostText.text = refCard.GoldCost.ToString();
         cardEffectText.text = refCard.CardEffect;
-        cardAmmoText.text = refCard.Ammo.ToString();
+        cardAmmoText.text = refCard.AmmoCost.ToString();
         cardDamageText.text = refCard.Damage.ToString();
         cardWeaponType.text = refCard.Type;
 

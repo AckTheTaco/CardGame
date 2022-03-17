@@ -24,7 +24,7 @@ public class GenerateActions
             actionCards.ID = splitData[0];
             actionCards.Name = splitData[1];
             actionCards.Edition = splitData[2];
-            actionCards.Cost = int.Parse(splitData[4].Replace("null","0"));
+            actionCards.GoldCost = int.Parse(splitData[4].Replace("null","0"));
             actionCards.CardEffect = splitData[7].Replace("~","");
             actionCards.Type = "Action";
 

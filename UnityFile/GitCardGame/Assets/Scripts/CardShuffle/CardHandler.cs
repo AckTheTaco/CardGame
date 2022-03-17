@@ -32,21 +32,29 @@ public class CardHandler : MonoBehaviour
     [SerializeField]public List<CompleteCard> MansionDeck;
     public static List<CompleteCard> staticMansionDeck;
 
+    [Space]
+    [Header("Players Cards")]
+    
     [SerializeField]public  List<CompleteCard> PlayerDeck;
     [SerializeField]public  List<CompleteCard> PlayerHand = new List<CompleteCard>();
     [SerializeField]public  List<CompleteCard> PlayerDiscard = new List<CompleteCard>();
 
+    [Space]
+    [Header("Player Area")]
     [SerializeField]public List<CompleteCard> ActiveWeapons = new List<CompleteCard>();
 
     [SerializeField]public List<CompleteCard> ActiveItems = new List<CompleteCard>();
 
     [SerializeField]public List<CompleteCard> ActiveActions = new List<CompleteCard>();
+
+    
     [SerializeField]public  static List<CompleteCard> staticPlayerDiscard;
     public static int MansionCount;
     public static int HandCount;
     public static int DiscardCount;
     public static int DecCount;
-
+    [Space]
+    [Header("Resource Area")]
     #region ResourcePile Lists
     
     public  List<CompleteCard> pile1 = new List<CompleteCard>();
@@ -69,6 +77,10 @@ public class CardHandler : MonoBehaviour
     public  List<CompleteCard> pile18 = new List<CompleteCard>();
     #endregion
 
+    [Space]
+    [Header("Defeated Zombies Area")]
+    public List<CompleteCard> ZombiesDefeated = new List<CompleteCard>();
+
    
 
     
@@ -86,9 +98,14 @@ public class CardHandler : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         #endregion
 
+        listDictionary.Add("Mansion", MansionDeck);
         listDictionary.Add("PlayerHandHolder", PlayerHand);
         listDictionary.Add("PlayerDeck", PlayerDeck);
-        listDictionary.Add("WeaponsHolder", ActiveWeapons);
+        listDictionary.Add("WeaponHolder", ActiveWeapons);
+        listDictionary.Add("ActionHolder", ActiveActions);
+        listDictionary.Add("ItemHolder", ActiveItems);        
+        listDictionary.Add("KilledZombies", ZombiesDefeated);
+        listDictionary.Add("PlayerDiscard", PlayerDiscard);
 
         
         
@@ -97,9 +114,10 @@ public class CardHandler : MonoBehaviour
     }
     void Start()
     {
-        PlayerDeck = new List<CompleteCard>(StartingInventory.aDeck);
-        MansionDeck = new List<CompleteCard>(GameManager.instance.chosenMansion.thisMansion);
-        //print(GameManager.instance.chosenMansion.name);
+        
+        listDictionary["PlayerDeck"] = new List<CompleteCard>(StartingInventory.aDeck);
+        listDictionary["MansionDeck"] = new List<CompleteCard>(GameManager.instance.chosenMansion.thisMansion);
+        
 
         staticMansionDeck = new List<CompleteCard>(MansionDeck);
         Scenario = ScriptableObject.Instantiate(GameManager.instance.chosenScenario);
@@ -119,34 +137,13 @@ public class CardHandler : MonoBehaviour
             if(!listDictionary.ContainsKey(pileName))
             {
                 listDictionary.Add(pileName, pile.thesePiles);
-                listDictionary[pileName] = new List<CompleteCard>(pile.thesePiles);
-
-                
-
-               // print($"I made {pileName} in a Key in the dictionary: {listDictionary[pileName]}");
+                listDictionary[pileName] = new List<CompleteCard>(pile.thesePiles); 
             }
             else
             {
                 listDictionary[pileName] = new List<CompleteCard>(pile.thesePiles);
-                //print($"I have {pileName} in a Key in the dictionary: {listDictionary[pileName]} ** and added {pile.thesePiles}");
             }
-            
-           
-            
-            
-            
-            //print($"I Made this pile");
 
-            // Dictionary<string, List<CompleteCard>>.KeyCollection values = listDictionary.Keys;
-            
-            // foreach(string val in values)
-            // {
-            //     print($"Values: {val}");
-            // }
-
-            
-            
-            
         }
 
         var pilesCount = Scenario.thisCollection.Count;
@@ -159,25 +156,25 @@ public class CardHandler : MonoBehaviour
 
         ShuffleAllDecksAtStart();
 
-        DrawACard(5, PlayerDeck, PlayerHand);
+        DrawACard(5, listDictionary["PlayerDeck"], listDictionary["PlayerHandHolder"]);
 
       
 
         //Debug.Log(Scenario);
         
         
-        Dictionary<string, List<CompleteCard>>.KeyCollection values = listDictionary.Keys;
         
-        foreach(string val in values)
-        {
-            print($"Keys: {val}");
-        }
 
         //DrawACard(2)
-    
+
+       
     }
     void Update()
     {
+        #region Visualize Dictionary Lists as they change
+
+        MansionDeck = listDictionary["MansionDeck"];
+
         pile1 = new List<CompleteCard>(listDictionary["pile1"]);
         pile2 = new List<CompleteCard>(listDictionary["pile2"]);
         pile3 = new List<CompleteCard>(listDictionary["pile3"]);
@@ -185,51 +182,43 @@ public class CardHandler : MonoBehaviour
         pile5 = new List<CompleteCard>(listDictionary["pile5"]);
         pile6 = new List<CompleteCard>(listDictionary["pile6"]);
         pile7 = new List<CompleteCard>(listDictionary["pile7"]);
-        pile8 = (listDictionary["pile8"]);
-        pile9 = (listDictionary["pile9"]);
-        pile10 = (listDictionary["pile10"]);
-        pile11 = (listDictionary["pile11"]);
-        pile12 = (listDictionary["pile12"]);
-        pile13 = (listDictionary["pile13"]);
-        pile14 = (listDictionary["pile14"]);
-        pile15 = (listDictionary["pile15"]);
-        pile16 = (listDictionary["pile16"]);
-        pile17 = (listDictionary["pile17"]);
-        pile18 = (listDictionary["pile18"]);
+        pile8 = new List<CompleteCard>(listDictionary["pile8"]);
+        pile9 = new List<CompleteCard>(listDictionary["pile9"]);
+        pile10 = new List<CompleteCard>(listDictionary["pile10"]);
+        pile11 = new List<CompleteCard>(listDictionary["pile11"]);
+        pile12 = new List<CompleteCard>(listDictionary["pile12"]);
+        pile13 = new List<CompleteCard>(listDictionary["pile13"]);
+        pile14 = new List<CompleteCard>(listDictionary["pile14"]);
+        pile15 = new List<CompleteCard>(listDictionary["pile15"]);
+        pile16 = new List<CompleteCard>(listDictionary["pile16"]);
+        pile17 = new List<CompleteCard>(listDictionary["pile17"]);
+        pile18 = new List<CompleteCard>(listDictionary["pile18"]);
 
-        staticPlayerDiscard = new List<CompleteCard>(PlayerDiscard);
-        MansionCount = MansionDeck.Count;
-        HandCount = PlayerHand.Count;
-        DiscardCount = PlayerDiscard.Count;
-        DecCount = PlayerDeck.Count;
+        PlayerDeck = new List<CompleteCard>(listDictionary["PlayerDeck"]);
+        PlayerHand = new List<CompleteCard>(listDictionary["PlayerHandHolder"]);
+        PlayerDiscard = new List<CompleteCard>(listDictionary["PlayerDiscard"]);
+
+        ActiveItems = new List<CompleteCard>(listDictionary["ItemHolder"]);
+        ActiveWeapons = new List<CompleteCard>(listDictionary["WeaponHolder"]);
+        ActiveActions = new List<CompleteCard>(listDictionary["ActionHolder"]);
+
+        #endregion
+
+        staticPlayerDiscard = new List<CompleteCard>(listDictionary["PlayerDiscard"]);
+        MansionCount = listDictionary["MansionDeck"].Count;
+        HandCount = listDictionary["PlayerHandHolder"].Count;
+        DiscardCount = listDictionary["PlayerDiscard"].Count;
+        DecCount = listDictionary["PlayerDeck"].Count;
     }
    
     public void ShuffleAllDecksAtStart()
     {
-        AudioManager.instance.PlaySound("Shuffle");
-        Shuffler.ShuffleDeck(PlayerDeck);
-        Shuffler.ShuffleDeck(MansionDeck);
-        Shuffler.ShuffleDeck(staticMansionDeck);
-        Shuffler.ShuffleDeck(pile1);
-        Shuffler.ShuffleDeck(pile2);
-        Shuffler.ShuffleDeck(pile3);
-        Shuffler.ShuffleDeck(pile4);
-        Shuffler.ShuffleDeck(pile5);
-        Shuffler.ShuffleDeck(pile6);
-        Shuffler.ShuffleDeck(pile7);
-        Shuffler.ShuffleDeck(pile8);
-        Shuffler.ShuffleDeck(pile9);
-        Shuffler.ShuffleDeck(pile10);
-        Shuffler.ShuffleDeck(pile11);
-        Shuffler.ShuffleDeck(pile12);
-        Shuffler.ShuffleDeck(pile13);
-        Shuffler.ShuffleDeck(pile14);
-        Shuffler.ShuffleDeck(pile15);
-        Shuffler.ShuffleDeck(pile16);
-        Shuffler.ShuffleDeck(pile17);
-        Shuffler.ShuffleDeck(pile18);
-        
-
+        Dictionary<string, List<CompleteCard>>.KeyCollection keys = listDictionary.Keys;
+        foreach(string val in keys)
+        {
+            Shuffler.ShuffleDeck(listDictionary[val]);
+            //print($"I shuffled Keys: {val}");
+        }
     }
    
     public void DrawACard(int n, List<CompleteCard> fromDeck, List<CompleteCard> toDeck )
@@ -253,12 +242,12 @@ public class CardHandler : MonoBehaviour
 
     public void ResetPlayerDeck()
     {
-       if( PlayerDeck.Count < 5)
+       if( listDictionary["PlayerDeck"].Count < 5)
        {
-           Shuffler.ShuffleDeck(PlayerDiscard);
-           PlayerDeck.Clear();
-           PlayerDeck = new List<CompleteCard>(PlayerDiscard);
-           PlayerDiscard.Clear();
+           Shuffler.ShuffleDeck(listDictionary["PlayerDiscard"]);
+           listDictionary["PlayerDeck"].Clear();
+           listDictionary["PlayerDeck"] = new List<CompleteCard>(listDictionary["PlayerDiscard"]);
+           listDictionary["PlayerDiscard"].Clear();
        }
     }
 
@@ -268,91 +257,33 @@ public class CardHandler : MonoBehaviour
     }
     public void PlayerTurnEnd()
     {
-        foreach (Transform child in GameObject.Find("PlayerHandHolder").transform)
-        {
-            Destroy(child.gameObject);
-        }
-        foreach (Transform child in GameObject.Find("WeaponHolder").transform)
-        {
-            Destroy(child.gameObject);
-        }
-        for (int i = 0; i < ActiveWeapons.Count; i++)
-        {
-            PlayerDiscard.Add(ActiveWeapons[i]);
-        }
-
-        foreach (Transform child in GameObject.Find("ItemHolder").transform)
-        {
-            Destroy(child.gameObject);
-        }
-        for (int i = 0; i < ActiveItems.Count; i++)
-        {
-            PlayerDiscard.Add(ActiveItems[i]);
-        }
-
-        foreach (Transform child in GameObject.Find("ActionHolder").transform)
-        {
-            Destroy(child.gameObject);
-        }
-        for (int i = 0; i < ActiveActions.Count; i++)
-        {
-            PlayerDiscard.Add(ActiveActions[i]);
-        }
+        
+        ClearExploreArea();
+        
+        SendToDiscard("WeaponHolder");
+        SendToDiscard("ItemHolder");
+        SendToDiscard("ActionHolder");
+        SendToDiscard("PlayerHandHolder");
 
 
-        ActiveWeapons.Clear();
-        ActiveItems.Clear();
-        ActiveActions.Clear();
+        listDictionary["WeaponHolder"].Clear();
+        listDictionary["ItemHolder"].Clear();
+        listDictionary["ActionHolder"].Clear();
 
 
-
-        int PHC = PlayerHand.Count;
-
-        for (int i = 0; i < PHC; i++)
-        {
-            PlayerDiscard.Add(PlayerHand[0]);
-            PlayerHand.RemoveAt(0);
-            
-        }
-
-        if (PlayerDeck.Count <= 5)
-        {
-            PlayerHand.Clear();
-            
-
-            PlayerHand = new List<CompleteCard>(PlayerDeck);
-            int i = 0;
-            foreach (CompleteCard card in PlayerHand)
-            {
-                
-               UiHandler.instance.CreateCardUI(PlayerHand[i], GameObject.Find("PlayerHandHolder").transform, PlayerHand.ToString());
-               i++;
-            }
-            i = 0;
-
-            PlayerDeck.Clear();
-
-            if ( PlayerHand.Count < 5)
-            {
-               ResetPlayerDeck();
-               DrawACard((5-PlayerHand.Count), PlayerDeck, PlayerHand);
-            }
-
-        }
-        else
-        {
-            DrawACard(5,PlayerDeck,PlayerHand);
-        }
+        GameManager.instance.Buy = 1;
+        GameManager.instance.Explore = 1;
+        GameManager.instance.Action = 1;
         GameManager.instance.turnCount++;
     }
 
     public void PlayerDieReset()
     {
-       PlayerDiscard.AddRange(PlayerHand);
-       PlayerDiscard.AddRange(PlayerDeck);
-       PlayerHand.Clear();
-       PlayerDeck.Clear();
-       Shuffler.ShuffleDeck(PlayerDiscard);
+       listDictionary["PlayerDiscard"].AddRange(listDictionary["PlayerHandHolder"]);
+       listDictionary["PlayerDiscard"].AddRange(listDictionary["PlayerDeck"]);
+       listDictionary["PlayerHandHolder"].Clear();
+       listDictionary["PlayerDeck"].Clear();
+       Shuffler.ShuffleDeck(listDictionary["PlayerDiscard"]);
     
 
 
@@ -365,11 +296,72 @@ public class CardHandler : MonoBehaviour
         Debug.Log($"You can buy {GameManager.instance.Buy} card(s)");
     }
 
-    // public void MoveCardInList(CompleteCard thisCard, List<CompleteCard> currentList)
-    // {
-    //     thisCard.CurrentListPosition = currentList;
-    // }
+    void SendToDiscard(string locationName)
+    {
+        
 
+        if (locationName == "PlayerHandHolder")
+        {
+            foreach (Transform child in GameObject.Find(locationName).transform)
+            {
+                Destroy(child.gameObject);
+            }
+            int PHC = listDictionary[locationName].Count;
 
+            for (int i = 0; i < PHC; i++)
+            {
+                listDictionary["PlayerDiscard"].Add(listDictionary[locationName][0]);
+                listDictionary[locationName].RemoveAt(0);
+                
+            }
 
+            if (listDictionary["PlayerDeck"].Count <= 5)
+            {
+                listDictionary[locationName].Clear();
+                
+
+                listDictionary[locationName] = new List<CompleteCard>(listDictionary["PlayerDeck"]);
+                int i = 0;
+                foreach (CompleteCard card in listDictionary[locationName]) // TODO this could be a for loop
+                {
+                    
+                UiHandler.instance.CreateCardUI(listDictionary[locationName][i], GameObject.Find(locationName).transform, locationName);
+                i++;
+                }
+                i = 0;
+
+                listDictionary["PlayerDeck"].Clear();
+
+                if ( listDictionary[locationName].Count < 5)
+                {
+                ResetPlayerDeck();
+                DrawACard((5-listDictionary[locationName].Count), listDictionary["PlayerDeck"], listDictionary[locationName]);
+                }
+
+            }
+            else
+            {
+                DrawACard(5,listDictionary["PlayerDeck"],listDictionary[locationName]);
+            }
+        }
+        else
+        {
+            foreach (Transform child in GameObject.Find(locationName).transform)
+            {
+                Destroy(child.gameObject);
+            }
+            for (int i = 0; i < listDictionary[locationName].Count; i++)
+            {
+                listDictionary["PlayerDiscard"].Add(listDictionary[locationName][i]);
+            }
+        }
+    }
+
+    void ClearExploreArea()
+    {
+        foreach (Transform child in GameObject.Find("ExploreArea").transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
 }

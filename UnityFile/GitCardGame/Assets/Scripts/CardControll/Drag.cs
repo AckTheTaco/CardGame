@@ -20,6 +20,10 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
 
     private bool _isDraggable;
 
+    [SerializeField] private CompleteCard _thisCard;
+    
+    private Dictionary<string, List<CompleteCard>> _listDictionary;
+
     
     private void Start()
     {
@@ -32,9 +36,17 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
             _isDraggable = false;
         }
 
-       // print(CardHandler.instance.listDictionary.Keys);
-
+        if(IsWeapon())
+            _thisCard = GetComponent<WeaponCardUI>().refCard;
+        else if (IsAction())
+            _thisCard = GetComponent<ActionCardUI>().refCard;
+        else    
+            _thisCard = GetComponent<ItemCardUI>().refCard;
         
+
+       
+
+        _listDictionary = CardHandler.instance.listDictionary;
 
     }
     void Update()
@@ -54,29 +66,25 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
         homeList = gameObject.transform.parent.name;
 
         oldList = homeList;
-        
 
-        ITransfering();
+        
 
         _parentToReturnTo = this.transform.parent.gameObject;
         this.transform.SetParent(this.transform.root);
-        
-        
 
+        if (_listDictionary.ContainsKey(homeList))
+        {
+            _listDictionary[homeList].Remove(_thisCard);
+        }
+        else
+        {
+            print($"{_thisCard} was not found to be in a list called {homeList}");
+        }
         
         Debug.Log($"{this} will return to {_parentToReturnTo}");
         this.GetComponent<CanvasGroup>().blocksRaycasts = false;
         this.GetComponent<CanvasGroup>().alpha = .6f;
 
-        if(!CardHandler.instance.listDictionary.ContainsKey(_parentToReturnTo.name))
-        {
-            print("Dict does not exsist");
-            return;
-        }
-        else
-        {
-            print($"{this.name} is in the list {CardHandler.instance.listDictionary.Values}");
-        }
         
     }
     public void OnDrag(PointerEventData eventData)
@@ -86,43 +94,44 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        
-
         EventSystem.current.RaycastAll(eventData, _raycastAllHits);
         
         for (int i = 0; i < _raycastAllHits.Count; i++)
         {
             var hitName = _raycastAllHits[i].gameObject.name;
-
             
-            
-            if (name.Contains("WE-") && hitName == "WeaponHolder")
+            if (IsWeapon() && hitName == "WeaponHolder")
             {
                 
 
                 _parentToReturnTo = _raycastAllHits[i].gameObject;
+
+                AspectSetter( _parentToReturnTo.name);
                 
                 this.transform.SetParent(_parentToReturnTo.transform);
                 
                 listName = gameObject.transform.parent.name;
                 homeList = listName;
                 
-                CardHandler.instance.ActiveWeapons
-                    .Add(GetComponent<WeaponCardUI>().refCard);
-                CardHandler.instance.PlayerHand
-                    .Remove(GetComponent<WeaponCardUI>().refCard);
+                _listDictionary[homeList].Add(_thisCard);
+
+                if (_listDictionary[oldList].Count > 0 && oldList != "PlayerHandHolder")
+                    UiHandler.instance.CreateCardUI(_listDictionary[oldList][0], GameObject.Find(oldList).transform, oldList);
+                else
+                {
+                    print($"No cards at location or card came from hand");
+                }
+
+               
+                
                 
                
             }
-            else if (name.Contains("AC-") && hitName == "ActionHolder")
+            else if (IsAction() && hitName == "ActionHolder")
             {
-                
-
                 _parentToReturnTo = _raycastAllHits[i].gameObject;
-                
                 this.transform.SetParent(_parentToReturnTo.transform);
-
-                
+                AspectSetter( _parentToReturnTo.name);
 
                 listName = gameObject.transform.parent.name;
                 homeList = listName;
@@ -130,20 +139,23 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
                
                 
 
-                CardHandler.instance.ActiveActions
-                    .Add(GetComponent<ActionCardUI>().refCard);
-                CardHandler.instance.PlayerHand
-                    .Remove(GetComponent<ActionCardUI>().refCard);
+                _listDictionary[homeList].Add(_thisCard);
+
+                if (_listDictionary[oldList].Count > 0 && oldList != "PlayerHandHolder")
+                    UiHandler.instance.CreateCardUI(_listDictionary[oldList][0], GameObject.Find(oldList).transform, oldList);
+                else
+                {
+                    print($"No cards at location");
+                    return;
+                }
                 
                 
             }
-            else if ((name.Contains("IT-") || name.Contains("AM-")) && hitName == "ItemHolder")
+            else if (IsItem() && hitName == "ItemHolder")
             {
-                
-
                 _parentToReturnTo = _raycastAllHits[i].gameObject;
-                
                 this.transform.SetParent(_parentToReturnTo.transform);
+                AspectSetter( _parentToReturnTo.name);
 
                 
 
@@ -152,11 +164,17 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
 
                
                 
+                _listDictionary[homeList].Add(_thisCard);
+                UpdateAmmoAndGold(_thisCard);
 
-                CardHandler.instance.ActiveItems
-                    .Add(GetComponent<ItemCardUI>().refCard);
-                CardHandler.instance.PlayerHand
-                    .Remove(GetComponent<ItemCardUI>().refCard);
+                if (_listDictionary[oldList].Count > 0 && oldList != "PlayerHandHolder")
+                    UiHandler.instance.CreateCardUI(_listDictionary[oldList][0], GameObject.Find(oldList).transform, oldList);
+                else
+                {
+                    print($"No cards at location");
+                    return;
+                }
+                
                 
                 
             }
@@ -165,26 +183,16 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
                 Debug.Log($"{this.name} has returned to {_parentToReturnTo.ToString()}");
                 this.transform.SetParent(_parentToReturnTo.transform);
             }
-
-            
         }
 
-        if (_parentToReturnTo.name == "PlayerHandHolder" )
-        {     
-            GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
-        }
-        else
-        {
-            GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
-        }
+        
 
-        this.GetComponent<CanvasGroup>().blocksRaycasts = true;
-        this.GetComponent<CanvasGroup>().alpha = 1f;
+        
     }
 
     public void ITransfering()
     {
-        Debug.Log($"You are tring to transfer {this.name} from {listName}");
+        Debug.Log($"You are tring to transfer {this.name} from {homeList}");
         
     }
     public void ITransfered()
@@ -199,4 +207,48 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
 
     }
 
+    bool IsWeapon()
+    {
+        if (name.Contains("WE-"))
+            return true;
+        else
+            return false;
+        
+    }
+
+    bool IsAction()
+    {
+        if (name.Contains("AC-"))
+            return true;
+        else 
+            return false;
+    }
+
+    bool IsItem()
+    {
+        if ((name.Contains("IT-") || name.Contains("AM-")))
+            return true;
+        else
+            return false;
+    }
+
+    void AspectSetter(string parentName)
+    {
+        if (parentName == "PlayerHandHolder" )
+        {     
+            GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.HeightControlsWidth;
+        }
+        else
+        {
+            GetComponent<AspectRatioFitter>().aspectMode = AspectRatioFitter.AspectMode.WidthControlsHeight;
+        }
+        this.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        this.GetComponent<CanvasGroup>().alpha = 1f;
+    }
+
+    void UpdateAmmoAndGold(CompleteCard thisCard)
+    {
+        GameManager.instance.Ammo += thisCard.AmmoGiven;
+        //GameManager.instance.Gold += thisCard.
+    }
 }

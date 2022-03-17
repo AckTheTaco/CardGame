@@ -249,6 +249,7 @@ MonoBehaviour:
   listName: 
   oldList: 
   homeList: 
+  _thisCard: {fileID: 0}
 --- !u!225 &-662249490233162409
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -23,8 +23,8 @@ public class GenerateWeapons
             weaponCards.Name = splitData[1].Replace("/"," ");
             weaponCards.Edition = splitData[2];
             weaponCards.Type = splitData[3];
-            weaponCards.Cost = int.Parse(splitData[4].Replace("null","").Replace("X", "0"));
-            weaponCards.Ammo = int.Parse(splitData[5].Replace("null","").Replace("X", "0"));
+            weaponCards.GoldCost = int.Parse(splitData[4].Replace("null","").Replace("X", "0"));
+            weaponCards.AmmoCost = int.Parse(splitData[5].Replace("null","").Replace("X", "0"));
             weaponCards.Damage = int.Parse(splitData[6].Replace("null","").Replace("X", "0"));
             weaponCards.CardEffect = splitData[7].Replace("~","").Replace("null","");
 

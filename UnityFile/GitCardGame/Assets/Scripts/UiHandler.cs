@@ -16,6 +16,11 @@ public class UiHandler : MonoBehaviour
     // Player Stats
     [SerializeField] private TMP_Text CurrHealthText, MaxHealthText, DamageText, AmmoText, BuyText, ActionText, ExploreText, GoldText, XPText;
 
+    [Space]
+    [SerializeField] private ActionCardUI _actionCard;
+    [SerializeField] private ItemCardUI _itemCard; 
+    [SerializeField] public WeaponCardUI _weaponCard;
+    [SerializeField] public CardBack CardBackBlank;
 
     private void Awake()
     {
@@ -66,10 +71,7 @@ public class UiHandler : MonoBehaviour
 
 
 
-    [Space]
-    [SerializeField] private ActionCardUI _actionCard;
-    [SerializeField] private ItemCardUI _itemCard; 
-    [SerializeField] private WeaponCardUI _weaponCard;
+    
 
     public void CreateCardUI(CompleteCard _thisCard, Transform _location, string originList)
     {
@@ -127,6 +129,6 @@ public class UiHandler : MonoBehaviour
         }
     }
 
-
+    
 
 }

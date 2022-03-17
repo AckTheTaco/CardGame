@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refCard: {fileID: 0}
-  beaconList: PlayerHandHolder
+  beaconList: pile3
   cardNameText: {fileID: 559352124625549630}
   cardCostText: {fileID: 559352124716570488}
   cardEffectText: {fileID: 559352124590881133}
@@ -1242,6 +1242,7 @@ MonoBehaviour:
   listName: 
   oldList: 
   homeList: 
+  _thisCard: {fileID: 0}
 --- !u!225 &8339616461943150223
 CanvasGroup:
   m_ObjectHideFlags: 0

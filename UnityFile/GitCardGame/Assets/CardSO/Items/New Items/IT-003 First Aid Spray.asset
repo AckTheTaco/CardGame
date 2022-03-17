@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
-  m_Name: AM-001 Ammo x 10
+  m_Name: IT-003 First Aid Spray
   m_EditorClassIdentifier: 
-  Name: Ammo x 10
-  ID: AM-001
+  Name: First Aid Spray
+  ID: IT-003
   Edition: Premier
-  CardEffect: +10 Gold and +10 Ammo
+  CardEffect: Trash this item to fully heal one character
   Type: Item
-  GoldCost: 0
+  GoldCost: 60
   AmmoCost: 0
   Damage: 0
-  AmmoGiven: 10
-  GoldGiven: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
   ListPosition: []

@@ -21,7 +21,7 @@ public class ItemCardUI : MonoBehaviour
    {
           
         cardNameText.text = refCard.Name;
-        cardCostText.text = refCard.Cost.ToString();
+        cardCostText.text = refCard.GoldCost.ToString();
         cardEffectText.text = refCard.CardEffect;
         cardIDText.text =  refCard.ID;
         cardEditionText.text =  refCard.Edition;

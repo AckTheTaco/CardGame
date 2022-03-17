@@ -2145,7 +2145,25 @@ MonoBehaviour:
   ActiveWeapons: []
   ActiveItems: []
   ActiveActions: []
+  pile1: []
+  pile2: []
+  pile3: []
+  pile4: []
+  pile5: []
+  pile6: []
+  pile7: []
+  pile8: []
+  pile9: []
+  pile10: []
+  pile11: []
+  pile12: []
+  pile13: []
+  pile14: []
+  pile15: []
+  pile16: []
+  pile17: []
   pile18: []
+  ZombiesDefeated: []
 --- !u!4 &198386748
 Transform:
   m_ObjectHideFlags: 0
@@ -12223,7 +12241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1464044014}
   - component: {fileID: 1464044013}
-  - component: {fileID: 1464044012}
   m_Layer: 0
   m_Name: UIHandler
   m_TagString: Untagged
@@ -12231,23 +12248,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1464044012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464044011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010936730164cc54da7df419ea858533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  usingScenario: {fileID: 0}
-  actionPile: {fileID: 6828461423262650587, guid: 9747af3bfdbd41c4fab146174d9ecfc3, type: 3}
-  itemPile: {fileID: 559352125385291319, guid: aa6271c7d7d8f964d9a288f2910128a9, type: 3}
-  weaponPile: {fileID: 88925648244985799, guid: 442f51ca1f697fd46a224d83ea908a8c, type: 3}
-  theseScenarios: []
 --- !u!114 &1464044013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12278,6 +12278,7 @@ MonoBehaviour:
   _actionCard: {fileID: 6828461423262650587, guid: 9747af3bfdbd41c4fab146174d9ecfc3, type: 3}
   _itemCard: {fileID: 559352125385291319, guid: aa6271c7d7d8f964d9a288f2910128a9, type: 3}
   _weaponCard: {fileID: 88925648244985799, guid: 442f51ca1f697fd46a224d83ea908a8c, type: 3}
+  CardBackBlank: {fileID: 0}
 --- !u!4 &1464044014
 Transform:
   m_ObjectHideFlags: 0
@@ -12532,6 +12533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mansionCardExplore: {fileID: 2524608411959349054, guid: 74707965e78ad7b4390ac7e12e0f33dd, type: 3}
+  i: 0
 --- !u!114 &1474966338
 MonoBehaviour:
   m_ObjectHideFlags: 0

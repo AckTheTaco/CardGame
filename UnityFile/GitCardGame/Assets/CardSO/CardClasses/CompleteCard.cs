@@ -7,9 +7,12 @@ using UnityEngine;
 public class CompleteCard : CardClass, IPlayable
 {
     public string Type;
-    public int Cost;
-    public int Ammo;
+    public int GoldCost;
+    public int AmmoCost;
     public int Damage;
+
+    public int AmmoGiven;
+    public int GoldGiven;
     [Space]
     public int Health;
     

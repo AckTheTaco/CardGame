@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
-  m_Name: AM-001 Ammo x 10
+  m_Name: IT-001 Green Herb (2)
   m_EditorClassIdentifier: 
-  Name: Ammo x 10
-  ID: AM-001
-  Edition: Premier
-  CardEffect: +10 Gold and +10 Ammo
+  Name: Green Herb (2)
+  ID: IT-001
+  Edition: Alliance
+  CardEffect: Trash this item to heal a character's health by 20~ or~ trash two green
+    herbs to heal a character's health by 60
   Type: Item
-  GoldCost: 0
+  GoldCost: 20
   AmmoCost: 0
   Damage: 0
-  AmmoGiven: 10
-  GoldGiven: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
   ListPosition: []

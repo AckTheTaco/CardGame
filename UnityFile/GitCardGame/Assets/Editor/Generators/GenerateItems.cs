@@ -20,11 +20,11 @@ public class GenerateItems
             //CompleteCard.itemQuantity = int.Parse(splitData[2]);
             itemClass.Edition = splitData[2];
             itemClass.Type = splitData[3];
-            itemClass.Cost = int.Parse(splitData[4]);
+            itemClass.GoldCost = int.Parse(splitData[4]);
             itemClass.CardEffect = splitData[7];
             
 
-            AssetDatabase.CreateAsset(itemClass, $"Assets/CardSO/Items/{itemClass.ID} {itemClass.Name}.asset");
+            AssetDatabase.CreateAsset(itemClass, $"Assets/CardSO/Items/New Items/{itemClass.ID} {itemClass.Name}.asset");
             
         }
 
