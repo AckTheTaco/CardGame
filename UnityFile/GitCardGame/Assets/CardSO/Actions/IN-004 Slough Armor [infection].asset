@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: When your infected character is attacked you may discard this card
     from your hand. If you do reduce the damage of one weapon being used by 20
   Type: Action
-  Cost: 0
-  Ammo: 0
+  GoldCost: 0
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

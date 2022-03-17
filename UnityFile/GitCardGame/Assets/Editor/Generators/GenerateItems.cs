@@ -24,7 +24,7 @@ public class GenerateItems
             itemClass.CardEffect = splitData[7];
             
 
-            AssetDatabase.CreateAsset(itemClass, $"Assets/CardSO/Items/New Items/{itemClass.ID} {itemClass.Name}.asset");
+            AssetDatabase.CreateAsset(itemClass, $"Assets/CardSO/Items/{itemClass.ID} {itemClass.Name}.asset");
             
         }
 

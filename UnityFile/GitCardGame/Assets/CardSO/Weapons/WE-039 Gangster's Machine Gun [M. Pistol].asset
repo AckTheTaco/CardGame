@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: "This weapon gets +10 damage this turn for each \u201CMachine Gun\u201D
     weapon in your discard pile"
   Type: Machine Gun
-  Cost: 80
-  Ammo: 50
+  GoldCost: 80
+  AmmoCost: 50
   Damage: 50
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

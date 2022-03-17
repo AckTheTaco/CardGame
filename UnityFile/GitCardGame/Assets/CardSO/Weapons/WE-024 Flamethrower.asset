@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Alliance
   CardEffect: '"""X"" = 5 times the number of cards in your discard pile"'
   Type: null
-  Cost: 90
-  Ammo: 0
+  GoldCost: 90
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

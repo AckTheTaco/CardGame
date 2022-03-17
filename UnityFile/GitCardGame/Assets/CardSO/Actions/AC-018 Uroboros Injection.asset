@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +2 actions and +1 buy. During another player's turn you may
     trash this card to give +20 health to a revealed infected of your choice
   Type: Action
-  Cost: 60
-  Ammo: 0
+  GoldCost: 60
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

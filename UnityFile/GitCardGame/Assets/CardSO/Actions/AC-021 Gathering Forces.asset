@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +20 gold +1 action and +1 buy. Any cards you gain this turn
     go to your hand instead of your discard pile.
   Type: Action
-  Cost: 90
-  Ammo: 0
+  GoldCost: 90
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -19,8 +19,11 @@ MonoBehaviour:
     or more infected you may move one of those infected with 20 or less health to
     the top of the mansion
   Type: Melee
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

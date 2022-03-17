@@ -14863,7 +14863,7 @@ MonoBehaviour:
   Buy: 0
   Explore: 0
   Action: 0
-  Damage: 0
+  PlayerDamage: 0
   XP: 0
   avatar: {fileID: 11400000, guid: e70471a45d12d6e458c45ef3c7e044cb, type: 2}
   chosenMansion: {fileID: 11400000, guid: 08952d1c148ef5c4ca6d481e8743e185, type: 2}

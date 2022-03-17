@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: When your character defeats an infected this turn you may move one
     card from your hand or discard pile to another player's discard pile
   Type: Shotgun
-  Cost: 50
-  Ammo: 40
+  GoldCost: 50
+  AmmoCost: 40
   Damage: 30
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

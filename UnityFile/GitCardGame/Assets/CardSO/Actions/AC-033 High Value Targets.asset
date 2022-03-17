@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +1 action. You get +5 gold and +5 ammo during this turn for
     each card in your inventory
   Type: Action
-  Cost: 60
-  Ammo: 0
+  GoldCost: 60
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

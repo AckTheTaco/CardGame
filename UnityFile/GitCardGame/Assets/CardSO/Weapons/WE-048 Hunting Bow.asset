@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: If there are no actions in your play area this weapon gets +10 damage
     during this turn. While this weapon is in your play area you cannot play actions
   Type: Bow
-  Cost: 100
-  Ammo: 0
+  GoldCost: 100
+  AmmoCost: 0
   Damage: 20
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

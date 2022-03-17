@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Alliance
   CardEffect: You get +10 gold and +1 action. If you have no partner you get +2 cards
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

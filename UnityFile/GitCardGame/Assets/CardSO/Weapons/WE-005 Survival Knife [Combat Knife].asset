@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: '"This weapon gets +5 damage for each other ""Knife"" weapon your character
     is using this turn"'
   Type: Knife
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: Look at the top three cards of your inventory. Trash all non-infection
     cards. Move the rest to the top of your inventory in any order
   Type: Action
-  Cost: 0
-  Ammo: 0
+  GoldCost: 0
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

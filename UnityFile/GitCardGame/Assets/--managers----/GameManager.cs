@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public int  turnCount, deckListCount,discardCount, mansionCount, handCount;
 
     // Player modified info for min-to-min gameplay
-    public int Ammo, Gold, Buy, Explore, Action, Damage,  XP;
+    public int Ammo, Gold, Buy, Explore, Action, PlayerDamage,  XP;
 
     [Space]
     [SerializeField] public CharacterClass avatar;

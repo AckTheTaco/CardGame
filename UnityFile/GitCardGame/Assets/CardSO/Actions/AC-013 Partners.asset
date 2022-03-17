@@ -19,8 +19,11 @@ MonoBehaviour:
     have one. If this card is attached to your partner at the beginning of the turn
     you get +1 action during this turn
   Type: Action
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

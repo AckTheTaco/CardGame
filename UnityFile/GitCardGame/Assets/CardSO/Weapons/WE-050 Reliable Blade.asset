@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: When you defeat one or more infected this turn you may choose to get
     +10 gold. If you do trash this weapon at end of turn
   Type: Knife
-  Cost: 0
-  Ammo: 0
+  GoldCost: 0
+  AmmoCost: 0
   Damage: 5
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

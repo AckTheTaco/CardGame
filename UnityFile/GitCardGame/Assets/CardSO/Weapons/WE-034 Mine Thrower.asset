@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: '"This weapon gets +10 damage this turn for each ""Ammo"" card in your
     play area"'
   Type: Explosive
-  Cost: 120
-  Ammo: 0
+  GoldCost: 120
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

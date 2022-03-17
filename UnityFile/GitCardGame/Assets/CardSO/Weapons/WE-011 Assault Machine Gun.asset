@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: 
   Type: Machine Gun
-  Cost: 30
-  Ammo: 40
+  GoldCost: 30
+  AmmoCost: 40
   Damage: 20
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

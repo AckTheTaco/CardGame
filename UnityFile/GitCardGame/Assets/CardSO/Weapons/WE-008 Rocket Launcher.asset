@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: Trash this card after use
   Type: Explosive
-  Cost: 130
-  Ammo: 0
+  GoldCost: 130
+  AmmoCost: 0
   Damage: 90
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +3 cards and +1 action. Discard two cards then trash one card
     from your hand
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

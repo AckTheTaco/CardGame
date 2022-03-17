@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: 'You get +10 gold and +1 action. If one of your characters is attacked
     you may discard this card to give one weapon being used -20 damage this turn  '
   Type: Action
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

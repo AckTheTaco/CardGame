@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: You get +1 explore this turn
   Type: Shotgun
-  Cost: 40
-  Ammo: 40
+  GoldCost: 40
+  AmmoCost: 40
   Damage: 25
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

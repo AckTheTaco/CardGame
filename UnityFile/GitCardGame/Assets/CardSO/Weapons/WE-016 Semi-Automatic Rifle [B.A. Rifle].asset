@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: This weapon gets +20 damage for each action played this turn
   Type: Rifle
-  Cost: 90
-  Ammo: 70
+  GoldCost: 90
+  AmmoCost: 70
   Damage: 30
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

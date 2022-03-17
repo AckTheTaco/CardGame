@@ -20,8 +20,11 @@ MonoBehaviour:
     ammo provided by the trashed card that player moves one \u201CAmmo x 10\u201D
     card to their hand. "
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

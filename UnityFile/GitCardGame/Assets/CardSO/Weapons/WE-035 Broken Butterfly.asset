@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: This weapon gets +20 damage this turn if you have 10 or more cards
     in your inventory
   Type: Magnum
-  Cost: 80
-  Ammo: 40
+  GoldCost: 80
+  AmmoCost: 40
   Damage: 40
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

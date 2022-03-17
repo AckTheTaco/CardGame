@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: Trash two cards from your hand. If those cards shared the same card
     type you get +20 gold during this turn
   Type: Action
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

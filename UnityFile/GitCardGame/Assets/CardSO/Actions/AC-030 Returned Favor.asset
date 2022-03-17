@@ -19,8 +19,11 @@ MonoBehaviour:
     of your turn if this card is attached to your character you get +1 card. Then
     discard this card
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

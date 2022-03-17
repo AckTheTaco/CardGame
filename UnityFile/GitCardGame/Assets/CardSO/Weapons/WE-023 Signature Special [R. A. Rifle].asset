@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Alliance
   CardEffect: '"You cannot use more than 60 ammo for ""X"""'
   Type: Machine Gun
-  Cost: 70
-  Ammo: 0
+  GoldCost: 70
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

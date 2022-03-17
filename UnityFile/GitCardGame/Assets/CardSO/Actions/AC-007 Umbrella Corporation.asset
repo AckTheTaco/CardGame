@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: You get +2 cards. Put one card from your hand on top of your inventory
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

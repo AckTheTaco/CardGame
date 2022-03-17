@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Alliance
   CardEffect: You get +1 explore this turn
   Type: Shotgun
-  Cost: 70
-  Ammo: 60
+  GoldCost: 70
+  AmmoCost: 60
   Damage: 45
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

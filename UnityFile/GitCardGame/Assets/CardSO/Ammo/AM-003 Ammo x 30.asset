@@ -17,8 +17,8 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: +30 Gold and +30 Ammo
   Type: Item
-  GoldCost: 0
-  AmmoCost: 60
+  GoldCost: 60
+  AmmoCost: 0
   Damage: 0
   AmmoGiven: 30
   GoldGiven: 30

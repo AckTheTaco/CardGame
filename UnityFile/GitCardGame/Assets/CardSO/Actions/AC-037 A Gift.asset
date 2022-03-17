@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8489a72e0a0c0bf4fb15a92ffa1c7089, type: 3}
   m_Name: AC-037 A Gift
   m_EditorClassIdentifier: 
-  Name: A Gift?
+  Name: A Gift
   ID: AC-037
   Edition: Nightmare
   CardEffect: You get +2 cards. Discard your inventory
   Type: Action
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

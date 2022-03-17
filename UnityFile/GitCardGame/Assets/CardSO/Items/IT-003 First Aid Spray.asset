@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: Trash this item to fully heal one character
   Type: Item
-  Cost: 60
-  Ammo: 0
+  GoldCost: 60
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

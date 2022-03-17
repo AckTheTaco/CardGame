@@ -19,8 +19,11 @@ MonoBehaviour:
     many actions as you like this turn. Each time you play another action this turn
     your character takes 10 damage '
   Type: Action
-  Cost: 40
-  Ammo: 0
+  GoldCost: 40
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: 
   Type: Knife
-  Cost: 0
-  Ammo: 0
+  GoldCost: 0
+  AmmoCost: 0
   Damage: 5
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

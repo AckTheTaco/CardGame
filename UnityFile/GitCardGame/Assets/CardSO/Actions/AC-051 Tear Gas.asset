@@ -19,8 +19,11 @@ MonoBehaviour:
     you discard a weapon. If you discarded a weapon one of your characters deals
     an additional 10 damage during this turn for each card discarded
   Type: Action
-  Cost: 70
-  Ammo: 0
+  GoldCost: 70
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: 'This card deals 5 damage when played. Heal your infected character''s
     health by 20 '
   Type: Action
-  Cost: 0
-  Ammo: 0
+  GoldCost: 0
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -19,8 +19,11 @@ MonoBehaviour:
     from your hand. If you do move that infected to the bottom of the mansion if
     it has more health than an exploring character
   Type: Action
-  Cost: 40
-  Ammo: 0
+  GoldCost: 40
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

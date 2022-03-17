@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Nightmare
   CardEffect: Choose a player. That player discards a card from his hand
   Type: Rifle
-  Cost: 50
-  Ammo: 40
+  GoldCost: 50
+  AmmoCost: 40
   Damage: 30
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

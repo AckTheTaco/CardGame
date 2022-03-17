@@ -19,8 +19,11 @@ MonoBehaviour:
     turn select a player. If you do that player moves 1 XP from one of his character's
     skills to your character. Then that player discards a card from his hand
   Type: Action
-  Cost: 40
-  Ammo: 0
+  GoldCost: 40
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

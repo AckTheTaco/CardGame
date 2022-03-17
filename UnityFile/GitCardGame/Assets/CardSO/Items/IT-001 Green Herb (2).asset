@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: Trash this item to heal a character's health by 20~ or~ trash two green
     herbs to heal a character's health by 60
   Type: Item
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

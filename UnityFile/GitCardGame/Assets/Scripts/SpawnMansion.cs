@@ -8,13 +8,14 @@ public class SpawnMansion : MonoBehaviour
     [SerializeField]private int i = 0;
     public void TopMansionCard()
     {
-        if (GameManager.instance.Explore > i)
+        if (GameManager.instance.Explore > 0)
         {
             mansionCardExplore.refCard = Instantiate(CardHandler.instance.listDictionary["MansionDeck"][i]);
             Instantiate(mansionCardExplore, new Vector3(0,0) , Quaternion.identity, GameObject.Find("ExploreArea").transform);
             Debug.Log(mansionCardExplore.refCard.ToString());
             mansionCardExplore.refCard = null;
-            i++;
+            GameManager.instance.Explore--;
+            
         }
         else
         {

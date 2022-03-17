@@ -274,6 +274,9 @@ public class CardHandler : MonoBehaviour
         GameManager.instance.Buy = 1;
         GameManager.instance.Explore = 1;
         GameManager.instance.Action = 1;
+        GameManager.instance.Gold = 0;
+        GameManager.instance.Ammo = 0;
+        GameManager.instance.PlayerDamage = 0;
         GameManager.instance.turnCount++;
     }
 

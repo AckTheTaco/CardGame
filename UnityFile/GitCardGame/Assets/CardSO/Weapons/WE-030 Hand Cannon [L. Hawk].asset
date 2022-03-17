@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: Trash one ammunition from your play area. This card cannot be attached
     to characters
   Type: Magnum
-  Cost: 120
-  Ammo: 80
+  GoldCost: 120
+  AmmoCost: 80
   Damage: 80
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

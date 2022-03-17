@@ -19,8 +19,11 @@ MonoBehaviour:
     10 damage during this turn. If you're playing Mercenaries Mode remove this card
     from the game. Then increase the amount of turns remaining by one
   Type: Action
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

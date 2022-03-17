@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: Look at up to the top three cards of your inventory. Trash one of those
     cards then return the others to the top or bottom of your inventory in any order
   Type: Action
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

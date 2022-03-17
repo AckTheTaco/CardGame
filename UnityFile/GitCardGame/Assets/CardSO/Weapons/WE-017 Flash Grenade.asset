@@ -19,8 +19,11 @@ MonoBehaviour:
     it immediately. While your characters are exploring you may move one infected
     with 20 or less health to the bottom of the mansion. Trash this card after use"'
   Type: Explosive
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

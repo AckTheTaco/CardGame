@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Alliance
   CardEffect: '"Trash this item and a ""Green Herb"" to fully heal all characters"'
   Type: Item
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

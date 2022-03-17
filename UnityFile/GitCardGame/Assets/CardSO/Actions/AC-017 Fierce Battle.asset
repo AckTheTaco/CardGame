@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Alliance
   CardEffect: You get +4 cards. Choose another player. That player gets +1 card.
   Type: Action
-  Cost: 80
-  Ammo: 0
+  GoldCost: 80
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

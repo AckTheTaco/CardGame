@@ -19,8 +19,11 @@ MonoBehaviour:
     card with a cost of 70 or less. That player discards that card then you copy
     its bonus icons and effects twice
   Type: Action
-  Cost: 80
-  Ammo: 0
+  GoldCost: 80
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +2 actions. Move up to two cards from a player's discard pile
     to the top of his inventory in any order
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

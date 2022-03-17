@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Nightmare
   CardEffect: You get +1 action. Draw one card for every five cards in your inventory
   Type: Action
-  Cost: 70
-  Ammo: 0
+  GoldCost: 70
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

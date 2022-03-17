@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: 'Trash up to two cards from your discard pile. Then trash this card '
   Type: Action
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

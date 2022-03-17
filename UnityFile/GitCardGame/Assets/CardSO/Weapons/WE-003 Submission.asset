@@ -19,8 +19,11 @@ MonoBehaviour:
     80 or more; (versus mode) The attacked player must also discard a weapon from
     his hand
   Type: Melee
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 5
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

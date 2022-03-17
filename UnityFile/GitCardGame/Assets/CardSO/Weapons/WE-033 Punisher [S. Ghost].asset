@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Nightmare
   CardEffect: You get +2 cards and +1 action this turn
   Type: Pistol
-  Cost: 70
-  Ammo: 30
+  GoldCost: 70
+  AmmoCost: 30
   Damage: 30
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

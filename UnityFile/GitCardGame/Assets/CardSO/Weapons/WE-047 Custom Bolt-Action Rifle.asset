@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: If you have 3 or more XP on your character this weapon gets +10 damage
     during this turn
   Type: Rifle
-  Cost: 60
-  Ammo: 50
+  GoldCost: 60
+  AmmoCost: 50
   Damage: 40
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

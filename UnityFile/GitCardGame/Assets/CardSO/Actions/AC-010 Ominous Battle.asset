@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: You get +10 gold and +3 cards. Then trash a card from your hand
   Type: Action
-  Cost: 60
-  Ammo: 0
+  GoldCost: 60
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

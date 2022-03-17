@@ -19,8 +19,11 @@ MonoBehaviour:
     reduced to 0 or less you may trash this card from your hand or play area. If
     you do set that character's health to 10 instead
   Type: Action
-  Cost: 40
-  Ammo: 0
+  GoldCost: 40
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

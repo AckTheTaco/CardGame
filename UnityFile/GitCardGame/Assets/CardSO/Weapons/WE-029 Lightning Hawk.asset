@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Outbreak
   CardEffect: 
   Type: Magnum
-  Cost: 100
-  Ammo: 60
+  GoldCost: 100
+  AmmoCost: 60
   Damage: 60
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

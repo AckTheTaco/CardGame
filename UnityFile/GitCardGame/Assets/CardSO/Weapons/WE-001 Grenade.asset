@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: This weapon does 5 damage to each adjacent player. Trash this card
     after use
   Type: Explosive
-  Cost: 40
-  Ammo: 0
+  GoldCost: 40
+  AmmoCost: 0
   Damage: 15
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 
-public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] private GameObject _parentToReturnTo = null;
     public string listName;
@@ -103,23 +103,32 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
             if (IsWeapon() && hitName == "WeaponHolder")
             {
                 
+                if (_thisCard.AmmoCost == 0 || GameManager.instance.Ammo >= _thisCard.AmmoCost)
+                {
+                    _parentToReturnTo = _raycastAllHits[i].gameObject;
 
-                _parentToReturnTo = _raycastAllHits[i].gameObject;
+                    AspectSetter( _parentToReturnTo.name);
+                    
+                    this.transform.SetParent(_parentToReturnTo.transform);
+                    
+                    listName = gameObject.transform.parent.name;
+                    homeList = listName;
+                    
+                    _listDictionary[homeList].Add(_thisCard);
+                    
+                    PlayerDamage(_thisCard);
 
-                AspectSetter( _parentToReturnTo.name);
-                
-                this.transform.SetParent(_parentToReturnTo.transform);
-                
-                listName = gameObject.transform.parent.name;
-                homeList = listName;
-                
-                _listDictionary[homeList].Add(_thisCard);
-
-                if (_listDictionary[oldList].Count > 0 && oldList != "PlayerHandHolder")
-                    UiHandler.instance.CreateCardUI(_listDictionary[oldList][0], GameObject.Find(oldList).transform, oldList);
+                    if (_listDictionary[oldList].Count > 0 && oldList != "PlayerHandHolder")
+                        UiHandler.instance.CreateCardUI(_listDictionary[oldList][0], GameObject.Find(oldList).transform, oldList);
+                    else
+                    {
+                        print($"No cards at location or card came from hand");
+                    }
+                }
                 else
                 {
-                    print($"No cards at location or card came from hand");
+                    Debug.Log($"{_thisCard} need more Ammo than you have produced");
+                    this.transform.SetParent(_parentToReturnTo.transform);
                 }
 
                
@@ -182,29 +191,13 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
             {
                 Debug.Log($"{this.name} has returned to {_parentToReturnTo.ToString()}");
                 this.transform.SetParent(_parentToReturnTo.transform);
+                AspectSetter(_parentToReturnTo.name);
             }
         }
 
         
 
         
-    }
-
-    public void ITransfering()
-    {
-        Debug.Log($"You are tring to transfer {this.name} from {homeList}");
-        
-    }
-    public void ITransfered()
-    {
-
-        if (destinationHolder == "WeaponHolder")
-        {
-            Debug.Log("This Is the Area for weapons");
-            Debug.Log($"You transfered to {destinationHolder}");
-        }
-        
-
     }
 
     bool IsWeapon()
@@ -249,6 +242,11 @@ public class Drag : MonoBehaviour, ITransferable, IBeginDragHandler, IDragHandle
     void UpdateAmmoAndGold(CompleteCard thisCard)
     {
         GameManager.instance.Ammo += thisCard.AmmoGiven;
-        //GameManager.instance.Gold += thisCard.
+        GameManager.instance.Gold += thisCard.GoldGiven;
+    }
+
+    void PlayerDamage(CompleteCard thisCard)
+    {
+        GameManager.instance.PlayerDamage += thisCard.Damage;
     }
 }

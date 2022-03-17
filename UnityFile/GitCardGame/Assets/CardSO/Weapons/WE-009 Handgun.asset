@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: 
   Type: Pistol
-  Cost: 20
-  Ammo: 20
+  GoldCost: 20
+  AmmoCost: 20
   Damage: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

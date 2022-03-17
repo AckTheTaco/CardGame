@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Outbreak
   CardEffect: This weapon gets +5 damage for each non-item gained this turn
   Type: Pistol
-  Cost: 30
-  Ammo: 10
+  GoldCost: 30
+  AmmoCost: 10
   Damage: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

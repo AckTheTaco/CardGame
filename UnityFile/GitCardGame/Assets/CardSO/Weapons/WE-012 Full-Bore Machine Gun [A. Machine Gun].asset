@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: If you have more than 100 ammo in your play area this weapon gets +30
     damage this turn
   Type: Machine Gun
-  Cost: 100
-  Ammo: 70
+  GoldCost: 100
+  AmmoCost: 70
   Damage: 40
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

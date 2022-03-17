@@ -20,8 +20,11 @@ MonoBehaviour:
     the end of this turn if you explored or attacked an infected character increase
     your infection level by one
   Type: Action
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

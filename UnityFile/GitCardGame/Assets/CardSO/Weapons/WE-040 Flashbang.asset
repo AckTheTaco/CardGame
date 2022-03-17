@@ -19,8 +19,11 @@ MonoBehaviour:
     revealed infected with 40 or less health deal 0 damage. Trash this card after
     use
   Type: Explosive
-  Cost: 20
-  Ammo: 0
+  GoldCost: 20
+  AmmoCost: 0
   Damage: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +20 ammo. Return one weapon from your discard pile to your
     hand
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

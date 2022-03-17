@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +1 explore this turn. The first time you reveal an infected
     with 40 or less health this turn defeat it immediately
   Type: Shotgun
-  Cost: 80
-  Ammo: 80
+  GoldCost: 80
+  AmmoCost: 80
   Damage: 50
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

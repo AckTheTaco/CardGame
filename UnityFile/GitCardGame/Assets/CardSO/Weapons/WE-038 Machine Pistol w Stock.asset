@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Nightmare
   CardEffect: You get +20 gold this turn
   Type: Machine Gun
-  Cost: 40
-  Ammo: 30
+  GoldCost: 40
+  AmmoCost: 30
   Damage: 20
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

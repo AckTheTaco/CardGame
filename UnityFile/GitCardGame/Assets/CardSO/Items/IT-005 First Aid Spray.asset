@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: If your character has 30 or less health~ heal his health by 50. Otherwise~
     heal his health by 30. Then~ trash this item
   Type: Item
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

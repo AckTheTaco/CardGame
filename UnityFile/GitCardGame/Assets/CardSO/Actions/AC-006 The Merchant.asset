@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: You get +10 gold +1 card and +1 buy
   Type: Action
-  Cost: 50
-  Ammo: 0
+  GoldCost: 50
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

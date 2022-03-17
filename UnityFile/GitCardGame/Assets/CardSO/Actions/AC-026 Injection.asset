@@ -19,8 +19,11 @@ MonoBehaviour:
     draw the same amount. Then you may trash this card. If you do decrease your character's
     infection level by one
   Type: Action
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

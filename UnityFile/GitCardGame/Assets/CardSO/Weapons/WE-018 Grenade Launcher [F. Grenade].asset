@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: '"All ""Explosive"" weapons your character uses this turn go to your
     discard pile instead of being trashed"'
   Type: Explosive
-  Cost: 80
-  Ammo: 0
+  GoldCost: 80
+  AmmoCost: 0
   Damage: 20
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

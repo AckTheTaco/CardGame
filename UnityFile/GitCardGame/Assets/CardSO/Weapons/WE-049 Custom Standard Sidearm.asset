@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You can give this weapon +20 damage this turn. If you do trash this
     weapon at end of turn
   Type: Pistol
-  Cost: 20
-  Ammo: 20
+  GoldCost: 20
+  AmmoCost: 20
   Damage: 10
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

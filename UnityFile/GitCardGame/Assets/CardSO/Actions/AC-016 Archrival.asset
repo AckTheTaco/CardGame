@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +2 cards. All players discard down to one or fewer cards attached
     to their partners
   Type: Action
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

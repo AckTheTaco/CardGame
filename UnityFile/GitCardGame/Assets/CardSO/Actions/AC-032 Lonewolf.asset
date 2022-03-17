@@ -19,8 +19,11 @@ MonoBehaviour:
     weapon he is using. That weapon gets +5 damage this turn for each card in your
     discard pile '
   Type: Action
-  Cost: 80
-  Ammo: 0
+  GoldCost: 80
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

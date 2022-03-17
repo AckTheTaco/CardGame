@@ -60,7 +60,7 @@ public class UiHandler : MonoBehaviour
         ActionText.text = "" + GameManager.instance.Action.ToString();
         ExploreText.text = "" + GameManager.instance.Explore.ToString();
         
-        DamageText.text = "" + GameManager.instance.Damage.ToString();
+        DamageText.text = "" + GameManager.instance.PlayerDamage.ToString();
         AmmoText.text = "" + GameManager.instance.Ammo.ToString();
         GoldText.text = "" + GameManager.instance.Gold.ToString();
         

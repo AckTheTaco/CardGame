@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +20 ammo and +1 action. Choose a weapon type. All weapons of
     that type get +10 damage this turn
   Type: Action
-  Cost: 70
-  Ammo: 0
+  GoldCost: 70
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -19,8 +19,11 @@ MonoBehaviour:
     have one. When your character explores if your partner is leading with this card
     attached one of your partner's weapons deals +10 damage this turn
   Type: Action
-  Cost: 40
-  Ammo: 0
+  GoldCost: 40
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

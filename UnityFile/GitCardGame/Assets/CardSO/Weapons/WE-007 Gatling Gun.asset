@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: 
   Type: Minigun
-  Cost: 110
-  Ammo: 0
+  GoldCost: 110
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

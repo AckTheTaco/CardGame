@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: When your character explores reveal cards from the bottom of the mansion
     instead of the top
   Type: Rifle
-  Cost: 50
-  Ammo: 50
+  GoldCost: 50
+  AmmoCost: 50
   Damage: 30
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

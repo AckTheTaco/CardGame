@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: Reveal the top card of your inventory. If the revealed card has a cost
     of 40 or more this weapon gets +30 damage this turn
   Type: Rifle
-  Cost: 50
-  Ammo: 50
+  GoldCost: 50
+  AmmoCost: 50
   Damage: 20
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

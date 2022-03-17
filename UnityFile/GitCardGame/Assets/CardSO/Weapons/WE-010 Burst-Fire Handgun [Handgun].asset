@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: This weapon gets +20 damage this turn if your character is using more
     than 1 weapon
   Type: Pistol
-  Cost: 60
-  Ammo: 30
+  GoldCost: 60
+  AmmoCost: 30
   Damage: 20
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

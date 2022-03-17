@@ -17,8 +17,11 @@ MonoBehaviour:
   Edition: Premier
   CardEffect: 
   Type: Magnum
-  Cost: 90
-  Ammo: 50
+  GoldCost: 90
+  AmmoCost: 50
   Damage: 50
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

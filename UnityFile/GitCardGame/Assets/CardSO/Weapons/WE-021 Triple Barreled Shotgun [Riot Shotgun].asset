@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You get +2 explore this turn. This weapon gets +10 damage for each
     infected your characters are battling this turn
   Type: Shotgun
-  Cost: 90
-  Ammo: 80
+  GoldCost: 90
+  AmmoCost: 80
   Damage: 50
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

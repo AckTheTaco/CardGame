@@ -18,8 +18,11 @@ MonoBehaviour:
   CardEffect: You may remove any amount of XP on your character from the game. If
     you do this weapon gets +10 damage during this turn for every XP removed
   Type: Magnum
-  Cost: 80
-  Ammo: 40
+  GoldCost: 80
+  AmmoCost: 40
   Damage: 40
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []

@@ -19,8 +19,11 @@ MonoBehaviour:
     characters is using. That weapon gets +10 damage during this turn for every 5
     XP on your character up to a maximum of +20 damage
   Type: Action
-  Cost: 30
-  Ammo: 0
+  GoldCost: 30
+  AmmoCost: 0
   Damage: 0
+  AmmoGiven: 0
+  GoldGiven: 0
   Health: 0
   Decorations: 0
+  ListPosition: []
