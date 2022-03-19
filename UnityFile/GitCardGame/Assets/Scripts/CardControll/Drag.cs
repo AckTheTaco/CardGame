@@ -18,7 +18,8 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
     private List<RaycastResult> _raycastAllHits = new List<RaycastResult>();
 
-    private bool _isDraggable;
+    [SerializeField]private bool _isDraggable;
+    [SerializeField] public bool IsSelected;
 
     [SerializeField] private CompleteCard _thisCard;
     
@@ -54,10 +55,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
         /*
         * This needs to be activated to stop unautherorized drag-n-drop from the resource area and playerFeild
         */
-        // if (_isDraggable != true)
-        // {
-        //     GetComponent<Drag>().enabled = false;
-        // }
+        if (_isDraggable != true)
+        {
+            GetComponent<Drag>().enabled = false;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)

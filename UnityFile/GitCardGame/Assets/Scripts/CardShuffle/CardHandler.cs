@@ -22,11 +22,6 @@ public class CardHandler : MonoBehaviour
     [SerializeField] private List<CardClass> testList;
     [Space]
 
-   /*
-   *Make a dictionary here for reasons
-   * public Dictionary<string, List<CompleteCard>> = new Dictionary<string, List<CompleteCard>>();
-   */
-
     public Dictionary<string, List<CompleteCard>> listDictionary = new Dictionary<string, List<CompleteCard>>();
    
     [SerializeField]public List<CompleteCard> MansionDeck;
@@ -46,6 +41,10 @@ public class CardHandler : MonoBehaviour
     [SerializeField]public List<CompleteCard> ActiveItems = new List<CompleteCard>();
 
     [SerializeField]public List<CompleteCard> ActiveActions = new List<CompleteCard>();
+
+    [Space]
+    [Header("Selected Cards")]
+    [SerializeField] public List<CompleteCard> SelectedCards = new List<CompleteCard>();
 
     
     [SerializeField]public  static List<CompleteCard> staticPlayerDiscard;
@@ -106,6 +105,8 @@ public class CardHandler : MonoBehaviour
         listDictionary.Add("ItemHolder", ActiveItems);        
         listDictionary.Add("KilledZombies", ZombiesDefeated);
         listDictionary.Add("PlayerDiscard", PlayerDiscard);
+        listDictionary.Add("SelectedCards", SelectedCards);
+        listDictionary["SelectedCards"].Clear();
 
         
         
@@ -202,6 +203,8 @@ public class CardHandler : MonoBehaviour
         ActiveWeapons = new List<CompleteCard>(listDictionary["WeaponHolder"]);
         ActiveActions = new List<CompleteCard>(listDictionary["ActionHolder"]);
 
+        SelectedCards = new List<CompleteCard>(listDictionary["SelectedCards"]);
+
         #endregion
 
         staticPlayerDiscard = new List<CompleteCard>(listDictionary["PlayerDiscard"]);
@@ -209,6 +212,8 @@ public class CardHandler : MonoBehaviour
         HandCount = listDictionary["PlayerHandHolder"].Count;
         DiscardCount = listDictionary["PlayerDiscard"].Count;
         DecCount = listDictionary["PlayerDeck"].Count;
+
+        
     }
    
     public void ShuffleAllDecksAtStart()

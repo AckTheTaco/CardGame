@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnMansion : MonoBehaviour
+public class DoTheExplore : MonoBehaviour
 {
     public MansionCardUIsmall mansionCardExplore;
     [SerializeField]private int i = 0;
